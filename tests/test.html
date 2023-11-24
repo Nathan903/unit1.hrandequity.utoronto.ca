@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <style type="text/css">
+table {
+            word-wrap: break-word;
+        } 
+
+        .select-container {
+            width: 20%;
+        }
+    </style>
 </head>
 <body>
 
@@ -41,7 +50,7 @@
     </tbody>
         <tfoot>
         <tr>
-            <th>Name</th>
+            <th>Name </th>
             <th>Position</th>
             <th>Office</th>
             <th>Age</th>
@@ -50,68 +59,69 @@
         </tr>
     </tfoot>
 </table>
-
 <script>
-$(document).ready(function() {
+$(document).ready(function () {
     // Setup - add a text input to each footer cell
-    $('#example tfoot th').each( function () {
-        var title = $('#example thead th').eq( $(this).index() ).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    } );
+    $('#example tfoot th').each(function () {
+        var title = $('#example thead th').eq($(this).index()).text();
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+    });
 
     // DataTable
-    var table = $('#example').DataTable(
-{
+    var table = $('#example').DataTable({
+        initComplete: function () {
+            // Separate logic for the first two columns
+            this.api()
+                .columns([0, 1])
+                .every(function () {
+                    let column = this;
 
-    initComplete: function () {
-        this.api()
-            .columns()
-            .every(function () {
-                let column = this;
- 
-                // Create select element
-                let select = document.createElement('select');
-                select.add(new Option(''));
-                column.footer().replaceChildren(select);
- 
-                // Apply listener for user change in value
-                select.addEventListener('change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(select.value);
- 
-                    column
-                        .search(val ? '^' + val + '$' : '', true, false)
-                        .draw();
-                });
- 
-                // Add list of options
-                column
-                    .data()
-                    .unique()
-                    .sort()
-                    .each(function (d, j) {
-                        select.add(new Option(d));
+                    // Create input element
+                    let input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    column.footer().replaceChildren(input);
+
+                    // Apply listener for user change in value
+                    input.addEventListener('keyup', function () {
+                        column
+                            .search(this.value)
+                            .draw();
                     });
-            });
-    }
+                });
 
+            // Separate logic for the remaining four columns
+            this.api()
+                .columns([2, 3, 4, 5])
+                .every(function () {
+                    let column = this;
 
+                    // Create select element
+                    let select = document.createElement('select');
+                    select.add(new Option(''));
+                    column.footer().replaceChildren(select);
 
-    
-}
-        );
+                    // Apply listener for user change in value
+                    select.addEventListener('change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(select.value);
 
-    // Apply the search
-    table.columns().eq( 0 ).each( function ( colIdx ) {
-        $( 'input', table.column( colIdx ).footer() ).on( 'keyup change', function () {
-            table
-                .column( colIdx )
-                .search( this.value )
-                .draw();
-        } );
-    } );
-} );
+                        column
+                            .search(val ? '^' + val + '$' : '', true, false)
+                            .draw();
+                    });
 
+                    // Add list of options
+                    column
+                        .data()
+                        .unique()
+                        .sort()
+                        .each(function (d, j) {
+                            select.add(new Option(d));
+                        });
+                });
+        },
+    });
+
+});
 </script>
-
 </body>
 </html>

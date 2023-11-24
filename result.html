@@ -4,28 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataTables Example</title>
-
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
-    <!-- Include DataTables CSS and JS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <style>
-    tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-    </style>
+    <title>DataTables Column Search Example</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 
-    <h2>DataTable Example</h2>
-
     <table id="example" border="1" style="width:100%" class="display">
-  <thead>
+  <tfoot>
+<th>course_id</th>
+ <th>job_title</th>
+ <th>department</th>
+ <th>campus</th>
+ <th>posting_date</th>
+ <th>closing_date</th>
+</tr>
+  </tfoot><thead>
     <tr style="text-align: right;">
       <th>course_id</th>
       <th>job_title</th>
@@ -36,6 +31,390 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>CHE460/JNC2503</td>
+      <td>Environmental Pathways and Impact Assessment</td>
+      <td>Department of Chemical Engineering and Applied Chemistry</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>SPA220Y1 LEC 5201</td>
+      <td>Intermediate Spanish</td>
+      <td>Department of Spanish &amp; Portuguese</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1232H</td>
+      <td>Advanced Negotiations &amp; Conflict Management</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1250H</td>
+      <td>Leadership Development Lab</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1282H</td>
+      <td>Principles of Marketing</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1231H</td>
+      <td>Canadian Income Taxation I</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1282H</td>
+      <td>Strategic Change &amp; Implementation</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1232H</td>
+      <td>Management Consulting Practicum</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1250H</td>
+      <td>Managerial Economics</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1282H</td>
+      <td>Management Accounting I</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1231H</td>
+      <td>Capital Market Theory</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>RSM1282H</td>
+      <td>Corporate Finance</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>30-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CRI210H1S L0101</td>
+      <td>Criminal Justice</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>23-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CRI2010HS</td>
+      <td>Methodological Issues in Criminology &amp; Sociolegal Studies</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>26-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHE222H1S</td>
+      <td>Process Dynamics: Modeling , Analysis and Situation</td>
+      <td>Department of Chemical Engineering and Applied Chemistry</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>25-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHE210H1S</td>
+      <td>Heat and Mass Transfer</td>
+      <td>Department of Chemical Engineering and Applied Chemistry</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>25-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>TMU231H1</td>
+      <td>Theory-Music Theory IV</td>
+      <td>MUSIC</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>MUS211H1</td>
+      <td>History&amp;Culture- The World of Popular Music</td>
+      <td>MUSIC</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>MUS303H1</td>
+      <td>History&amp;Culture-Music in the Contemporary World</td>
+      <td>MUSIC</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>DTS401H1S</td>
+      <td>Advanced Topics in Diaspora and Transnationalism</td>
+      <td>Centre for Diaspora and Transnational Studies</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>STA365H1S L0101</td>
+      <td>Applied Bayesian Statistics</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>STA255H1S L0101</td>
+      <td>Statistical Theory</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>STA261H1S L0301</td>
+      <td>Probability and Statistics II</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>22-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CCT454H5S</td>
+      <td>CCT454H5S Documentary Practices</td>
+      <td>ICCIT</td>
+      <td>UTM</td>
+      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHMA10H3</td>
+      <td>Introductory Chemistry I: Structure and Bonding</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHMB62H3</td>
+      <td>Introduction to Biochemistry</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHMC31Y3</td>
+      <td>Intermediate Inorganic Chemistry</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CHMC42H3</td>
+      <td>Organic Synthesis</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>EESA06H3</td>
+      <td>Introduction to Planet Earth</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>EESA10H3</td>
+      <td>Human Health and the Environment</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>EESC13H3</td>
+      <td>Environmental Impact Assessment and Auditing</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>EES1104H</td>
+      <td>Microorganisms And The Environment</td>
+      <td>Physical and Environmental Sciences - Graduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>EES1109H</td>
+      <td>Advanced Techniques In Geographic Information Systems</td>
+      <td>Physical and Environmental Sciences - Graduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>PHYA10H3</td>
+      <td>Physics I for Physical Sciences</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>PHYA21H3</td>
+      <td>Physics II for the Physical Sciences</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>PHYA22H3</td>
+      <td>Physics II for the Life Sciences</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>22-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>CSCC11H3</td>
+      <td>Introduction to Machine Learning and Data Mining</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>21-Nov-2023</td>
+      <td>23-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>ESC203H1F</td>
+      <td>Engineering Science -Engineering and Society</td>
+      <td>Division of Engineering Science</td>
+      <td>St. George</td>
+      <td>21-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>LINA02H3S</td>
+      <td>Applications of Linguistics</td>
+      <td>Department of Language Studies</td>
+      <td>UTSC</td>
+      <td>21-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>LINB18H3S</td>
+      <td>English Grammar</td>
+      <td>Department of Language Studies</td>
+      <td>UTSC</td>
+      <td>21-Nov-2023</td>
+      <td>28-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>PHLC80H3S</td>
+      <td>Philosophy of Language</td>
+      <td>Philosophy</td>
+      <td>UTSC</td>
+      <td>20-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>POL329H1 S</td>
+      <td>Experiences of Conflict</td>
+      <td>Political Science</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>APS1036</td>
+      <td>Formative Experiential Entrepreneurial</td>
+      <td>Faculty of Applied Science and Engineering</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>APS1012</td>
+      <td>Management of Business Innovation and Transformational Change</td>
+      <td>Faculty of Applied Science and Engineering</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>APS1028</td>
+      <td>Operations and Production Management for Manufacturing and Services</td>
+      <td>Faculty of Applied Science and Engineering</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>29-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>KPE100H1S</td>
+      <td>Physical Cultural Studies</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>24-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>FREC46H3 LEC01</td>
+      <td>Syntax II</td>
+      <td>Department of Language Studies</td>
+      <td>UTSC</td>
+      <td>20-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
+    <tr>
+      <td>SPA219Y1 LEC0101</td>
+      <td>Academic Spanish</td>
+      <td>Department of Spanish &amp; Portuguese</td>
+      <td>St. George</td>
+      <td>20-Nov-2023</td>
+      <td>27-Nov-2023</td>
+    </tr>
     <tr>
       <td>CHE462H1S</td>
       <td>Food Engineering</td>
@@ -1139,14 +1518,6 @@
       <td>St. George</td>
       <td>08-Nov-2023</td>
       <td>16-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Computer and Mathematical Sciences</td>
-      <td>UTSC</td>
-      <td>08-Nov-2023</td>
-      <td>08-Nov-2023</td>
     </tr>
     <tr>
       <td>MATA31H3</td>
@@ -3221,28 +3592,12 @@
       <td>21-Nov-2023</td>
     </tr>
     <tr>
-      <td>ENGC10H3F</td>
-      <td>Studies in Shakespeare (T11-2)</td>
-      <td>English</td>
-      <td>UTSC</td>
-      <td>31-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
       <td>PSYC73H3</td>
       <td>Wellness &amp; Resilience Laboratory</td>
       <td>Department of Psychology</td>
       <td>UTSC</td>
       <td>31-Oct-2023</td>
       <td>21-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ENGC26H3F</td>
-      <td>Drama: Tragedy (W9-12)</td>
-      <td>English</td>
-      <td>UTSC</td>
-      <td>31-Oct-2023</td>
-      <td>02-Nov-2023</td>
     </tr>
     <tr>
       <td>PSYC75H3</td>
@@ -3258,7 +3613,7 @@
       <td>English</td>
       <td>St. George</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>ENG100H5S LEC103</td>
@@ -3266,7 +3621,7 @@
       <td>English</td>
       <td>UTM</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>ENG203H5S</td>
@@ -3274,7 +3629,7 @@
       <td>English</td>
       <td>UTM</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>ENG291H5S</td>
@@ -3282,7 +3637,7 @@
       <td>English</td>
       <td>UTM</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>ENGA03H3S</td>
@@ -3290,7 +3645,7 @@
       <td>English</td>
       <td>UTSC</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>ENGB30H3S</td>
@@ -3298,7 +3653,7 @@
       <td>English</td>
       <td>UTSC</td>
       <td>31-Oct-2023</td>
-      <td>22-Nov-2023</td>
+      <td>28-Nov-2023</td>
     </tr>
     <tr>
       <td>PSYC73H3</td>
@@ -3307,14 +3662,6 @@
       <td>UTSC</td>
       <td>31-Oct-2023</td>
       <td>21-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>APD2293H S 0132</td>
-      <td>Interpretation of Educational Research [RM]</td>
-      <td>Department of Applied Psychology and Human Development</td>
-      <td>St. George</td>
-      <td>31-Oct-2023</td>
-      <td>02-Nov-2023</td>
     </tr>
     <tr>
       <td>PSYD33H3</td>
@@ -3379,14 +3726,6 @@
       <td>St. George</td>
       <td>31-Oct-2023</td>
       <td>10-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>APD2212H S 0130</td>
-      <td>Mathematics Learning and Instruction</td>
-      <td>Department of Applied Psychology and Human Development</td>
-      <td>St. George</td>
-      <td>31-Oct-2023</td>
-      <td>02-Nov-2023</td>
     </tr>
     <tr>
       <td>CSC148H1S</td>
@@ -3763,14 +4102,6 @@
       <td>St. George</td>
       <td>30-Oct-2023</td>
       <td>17-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECO220Y5 Y</td>
-      <td>Introduction to Data Analysis and Applied Econometrics</td>
-      <td>Department of Economics</td>
-      <td>UTM</td>
-      <td>30-Oct-2023</td>
-      <td>04-Nov-2023</td>
     </tr>
     <tr>
       <td>RSM333H1</td>
@@ -5637,14 +5968,6 @@
       <td>16-Nov-2023</td>
     </tr>
     <tr>
-      <td>CHM101H5S</td>
-      <td>Science of Human Health</td>
-      <td>Chemical and Physical Sciences</td>
-      <td>UTM</td>
-      <td>26-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
       <td>PSY320H1S - LEC0101</td>
       <td>Social Psychology: Attitudes</td>
       <td>Psychology - Undergraduate</td>
@@ -5675,46 +5998,6 @@
       <td>St. George</td>
       <td>25-Oct-2023</td>
       <td>15-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>CLAA06H3S</td>
-      <td>Ancient Mythology II: Greece and Rome</td>
-      <td>Historical and Cultural Studies</td>
-      <td>UTSC</td>
-      <td>25-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>CLAB06H3S</td>
-      <td>History and Culture of the Roman World</td>
-      <td>Historical and Cultural Studies</td>
-      <td>UTSC</td>
-      <td>25-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>HISA05</td>
-      <td>Themes in World History II</td>
-      <td>Historical and Cultural Studies</td>
-      <td>UTSC</td>
-      <td>25-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>HISB40</td>
-      <td>Early Canada and the Atlantic World</td>
-      <td>Historical and Cultural Studies</td>
-      <td>UTSC</td>
-      <td>25-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>HISB40</td>
-      <td>Early Canada and the Atlantic World</td>
-      <td>Historical and Cultural Studies</td>
-      <td>UTSC</td>
-      <td>25-Oct-2023</td>
-      <td>02-Nov-2023</td>
     </tr>
     <tr>
       <td>RSM341H1</td>
@@ -5843,14 +6126,6 @@
       <td>UTM</td>
       <td>24-Oct-2023</td>
       <td>10-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC340H1S</td>
-      <td>Comparative Political Sociology</td>
-      <td>Sociology</td>
-      <td>St. George</td>
-      <td>24-Oct-2023</td>
-      <td>07-Nov-2023</td>
     </tr>
     <tr>
       <td>IRW230H1S</td>
@@ -6733,14 +7008,6 @@
       <td>10-Nov-2023</td>
     </tr>
     <tr>
-      <td>MBP1023H</td>
-      <td>Clinical Radiation Physics and Dosimetry</td>
-      <td>Department of Medical Biophysics</td>
-      <td>St. George</td>
-      <td>19-Oct-2023</td>
-      <td>08-Nov-2023</td>
-    </tr>
-    <tr>
       <td>FREA97H3S</td>
       <td>Introductory French II</td>
       <td>Department of Language Studies</td>
@@ -6803,14 +7070,6 @@
       <td>UTSC</td>
       <td>19-Oct-2023</td>
       <td>09-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>PMU401H1</td>
-      <td>The Business of Music</td>
-      <td>MUSIC</td>
-      <td>St. George</td>
-      <td>19-Oct-2023</td>
-      <td>08-Nov-2023</td>
     </tr>
     <tr>
       <td>HIS112H1S</td>
@@ -7397,1628 +7656,12 @@
       <td>17-Nov-2023</td>
     </tr>
     <tr>
-      <td>HMB406H1S</td>
-      <td>Health Care Ethics</td>
-      <td>Human Biology Program</td>
-      <td>St. George</td>
-      <td>17-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ENG/DRE122H5S - Modern &amp; Contemporary Theatre &amp; Drama</td>
-      <td>NaN</td>
-      <td>Department of English and Drama</td>
-      <td>UTM</td>
-      <td>17-Oct-2023</td>
-      <td>07-Nov-2023</td>
-    </tr>
-    <tr>
       <td>PPG1002H</td>
       <td>Microeconomics: Assistant Invigilators</td>
       <td>Munk School of Global Affairs and Public Policy</td>
       <td>St. George</td>
       <td>17-Oct-2023</td>
       <td>09-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>HMB431H1S</td>
-      <td>Innovation in Genome Engineering and Translational Research</td>
-      <td>Human Biology Program</td>
-      <td>St. George</td>
-      <td>16-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC100H5S</td>
-      <td>Introduction to Sociology</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC109H5S</td>
-      <td>Introduction to Criminology, Law and Society</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC205H5S</td>
-      <td>Theories in Criminology</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC208H5S</td>
-      <td>Crime and Organizations</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC211H5S</td>
-      <td>Law and Social Control</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC221H5S</td>
-      <td>The Logic of Social Inquiry</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC222H5S</td>
-      <td>Measuring the Social World</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC222H5S</td>
-      <td>Measuring the Social World</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC224H5S</td>
-      <td>Sociology of Education</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC231H5S</td>
-      <td>Classical Sociological Theory</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC322H5S</td>
-      <td>Criminal Justice &amp; Inequality</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC333H5S</td>
-      <td>Criminal Groups &amp; Organizations</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC334H5S</td>
-      <td>Aging and Society</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC336H5S</td>
-      <td>Special Topics in Sociology</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC346H5S</td>
-      <td>Special Topics in Criminology, Law and Society</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC356H5S</td>
-      <td>Population and Society</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC358H5S</td>
-      <td>Indigenous People:  Legal Orders &amp; Law</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC363H5S</td>
-      <td>Sexuality and Crime</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC384H5S</td>
-      <td>Media Ethics &amp; Policy</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC388H5S</td>
-      <td>Race and Indigeneity</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC409H5S</td>
-      <td>Masculinity and the Internet</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC425H5S</td>
-      <td>Gender in the Global Contexts</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC445H5S</td>
-      <td>Advanced Topics in Sociology</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC457H5S</td>
-      <td>Sociology of Race and Ethnicity</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC465H5S</td>
-      <td>Climate Change and Society</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC485H5S</td>
-      <td>Investigation through Study Abroad</td>
-      <td>Sociology</td>
-      <td>UTM</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC150H1S-L0101</td>
-      <td>Sociological Inquiries</td>
-      <td>Sociology</td>
-      <td>St. George</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>SOC150H1S-NTA</td>
-      <td>Sociological Inquiries</td>
-      <td>Sociology</td>
-      <td>St. George</td>
-      <td>16-Oct-2023</td>
-      <td>05-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE222H1</td>
-      <td>Mechanics of Solids I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE222H1</td>
-      <td>Mechanics of Solids I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE222H1</td>
-      <td>Mechanics of Solids I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE223H1</td>
-      <td>Data Science</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE223H1</td>
-      <td>Data Science</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE237H1</td>
-      <td>Statistics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE240H1</td>
-      <td>Human Centred Systems Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE240H1</td>
-      <td>Human Centred Systems Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE245H1</td>
-      <td>Data Structures and Algorithms</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE245H1</td>
-      <td>Data Structures and Algorithms</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE263H1</td>
-      <td>Operations Research II: Stochastic OR</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE304H1</td>
-      <td>Introduction to Quality Control</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE304H1</td>
-      <td>Introduction to Quality Control</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE311H1</td>
-      <td>Thermal Energy Conversion</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE311H1</td>
-      <td>Thermal Energy Conversion</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE313H1</td>
-      <td>Heat and Mass Transfer</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE315H1</td>
-      <td>Design for the Environment</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE320H1</td>
-      <td>Mechanics of Solids II</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE320H1</td>
-      <td>Mechanics of Solids II</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE334H1</td>
-      <td>Numerical Methods I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE334H1</td>
-      <td>Numerical Methods I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE334H1</td>
-      <td>Numerical Methods I</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE345H1</td>
-      <td>Case Studies in Human Factors and Ergonomics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE346H1</td>
-      <td>Analog and Digital Electronics for Mechatronics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE346H1</td>
-      <td>Analog and Digital Electronics for Mechatronics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE346H1</td>
-      <td>Analog and Digital Electronics for Mechatronics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE363H1</td>
-      <td>Resource and Production Modelling</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE363H1</td>
-      <td>Resource and Production Modelling</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE363H1</td>
-      <td>Resource and Production Modelling</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE364H1</td>
-      <td>Quality Control and Improvement</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE364H1</td>
-      <td>Quality Control and Improvement</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE367H1</td>
-      <td>Cases in Operations Research</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE369H1</td>
-      <td>Introduction to Artificial Intelligence</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE376H1</td>
-      <td>Mathematical Programming (Optimization)</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE377H1</td>
-      <td>Financial Optimization Models</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE402H1</td>
-      <td>Vibrations</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE402H1</td>
-      <td>Vibrations</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE424H1</td>
-      <td>Optimization in Machine Learning</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE438H1</td>
-      <td>Microprocessors and Embedded Microcontrollers</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE441H1</td>
-      <td>Design Optimization</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE443H1</td>
-      <td>Mechatronics Systems: Design and Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE443H1</td>
-      <td>Mechatronics Systems: Design and Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE443H1</td>
-      <td>Mechatronics Systems: Design and Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE443H1</td>
-      <td>Mechatronics Systems: Design and Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE457H1</td>
-      <td>Knowledge Modelling and Management</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE459H1</td>
-      <td>Organization Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE459H1</td>
-      <td>Organization Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE469H1</td>
-      <td>Reliability and Maintainability Engineering</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE490Y1</td>
-      <td>Capstone Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE504H1</td>
-      <td>Applied Computational Fluid Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE506H1</td>
-      <td>MEMS Design and Microfabrication</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE540H1</td>
-      <td>Product Design</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE542H1</td>
-      <td>Human Factors Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE567H1</td>
-      <td>Dynamic and Distributed Decision Making</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC101H5S</td>
-      <td>The Real Law &amp; Order</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC210H5S</td>
-      <td>Physical Evidence and Microscopy</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC302H5S</td>
-      <td>Advanced Forensic Identification</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC303H5S</td>
-      <td>Techniques of Crime Scene Investigation</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC330H5S</td>
-      <td>Best Practices in Forensic Science</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC350H5S</td>
-      <td>Special Topics in Forensic Science</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FSC401H5S</td>
-      <td>Forensic Pathology</td>
-      <td>Forensic Science Program</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>JSC270H1S L0101</td>
-      <td>Data Science I</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>JSC370H1S L0101</td>
-      <td>Data Science II</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>STA238H1S L0101</td>
-      <td>Probability; Statistics and Data Analysis II</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>STA255H1S L0101</td>
-      <td>Statistical Theory</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>STA303H1S L5101</td>
-      <td>Methods of Data Analysis II</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>STA313H1S L5101</td>
-      <td>Data Visualization</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>APS105H1S</td>
-      <td>Computer Fundamentals</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE191H1S\n(formerly ECE101H1S)</td>
-      <td>Seminar Course:  Introduction to Electrical and Computer\nEngineering</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE110H1S</td>
-      <td>Electrical Fundamentals</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE159H1S</td>
-      <td>Fundamentals of Electric Circuits</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE216H1S</td>
-      <td>Signals and Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE221H1S</td>
-      <td>Electric and Magnetic Fields</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE231H1S</td>
-      <td>Introductory Electronics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE243H1S</td>
-      <td>Computer Organization</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE259H1S</td>
-      <td>Electromagnetism</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE286H1S</td>
-      <td>Probability &amp; Statistics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE295H1S</td>
-      <td>Communication and Design - Hardware Section</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE297H1S</td>
-      <td>Communication and Design - Software Section</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE302H1S</td>
-      <td>Probability and Applications</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE311H1S</td>
-      <td>Introduction to Control Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE313H1S</td>
-      <td>Energy Systems and Distributed Generation</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE316H1S</td>
-      <td>Communication Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE318H1S</td>
-      <td>Fundamentals of Optics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE324H1S</td>
-      <td>Machine Intelligence, Software and Neural Networks</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE330H1S</td>
-      <td>Semiconductor and Device Physics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE334H1S</td>
-      <td>Digital Electronics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE342H1S</td>
-      <td>Computer Hardware</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE344H1S</td>
-      <td>Operating Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE345H1S</td>
-      <td>Algorithms and Data Structures</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE350H1S</td>
-      <td>Semiconductor Electronic Devices</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE353H1S</td>
-      <td>Systems Software</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE354H1S</td>
-      <td>Electronic Circuits</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE356H1S</td>
-      <td>Introduction to Control Theory</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE357H1S</td>
-      <td>Electromagnetic Fields</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE361H1S</td>
-      <td>Computer Networks I</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE363H1S</td>
-      <td>Communication Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE368H1S</td>
-      <td>Probabilistic Reasoning</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE411H1S</td>
-      <td>Adaptive Control and Reinforcement Learning</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE412H1S</td>
-      <td>Analog Signal Processing Circuits</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE419H1S</td>
-      <td>Distributed Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE421H1S</td>
-      <td>Introduction to Machine Learning</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE422H1S</td>
-      <td>Radio and Microwave Wireless Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE437H1S</td>
-      <td>VLSI Technology</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE448H1S</td>
-      <td>Biocomputation</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE462H1S</td>
-      <td>Multimedia Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE463H1S</td>
-      <td>Electric Drives</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE464H1S</td>
-      <td>Wireless Communication</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE466H1S</td>
-      <td>Computer Networks II</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE469H1S</td>
-      <td>Optical Communications and Networks</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE470H1S</td>
-      <td>Robot Modelling and Control</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE472H1S</td>
-      <td>Engineering Economic Analysis and Entrepreneurship</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE516H1S</td>
-      <td>Intelligent Image Processing</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE532H1S</td>
-      <td>Digital Systems Design</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE568H1S</td>
-      <td>Computer Security</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1365HS</td>
-      <td>High Frequency Integrated Circuits</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1392HS</td>
-      <td>Integrated Circuits for Digital Communication</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1395HS</td>
-      <td>Power Semiconductor Devices &amp; Applications</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1475HS</td>
-      <td>Bio-Photonics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1508HS</td>
-      <td>Special Topics in Communications: Multiuser Information Theory</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1513HS</td>
-      <td>Introduction to Machine Learning</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1528HS</td>
-      <td>Special Topics in Data Communications: Internet of Things and Edge/Fog Computing</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1659HS</td>
-      <td>Robust and Optimal Control</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1718HS</td>
-      <td>Special Topics in Computer Hardware Design: Advanced Computer Architecture</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1718HS</td>
-      <td>Special Topics in Computer Hardware Design: Hardware-Accelerated Digital Systems</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1762HS</td>
-      <td>Algorithms and Data Structures</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1770HS</td>
-      <td>Trends in Middleware Systems – Blockchain Technology</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1776HS</td>
-      <td>Computer Security, Cryptography and Privacy</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ECE1779HS</td>
-      <td>Introduction to Cloud Computing</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>IFA1906H</td>
-      <td>Money Laundering, Asset Tracing &amp; Recovery, &amp; International Aspects of Fraud</td>
-      <td>Institute for Management and Innovation</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>IFA2906H</td>
-      <td>Business Valuation, Bankruptcy &amp; Insolvency, and Adv Loss Quantification</td>
-      <td>Institute for Management and Innovation</td>
-      <td>UTM</td>
-      <td>13-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE100H1</td>
-      <td>Dynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1120H1</td>
-      <td>Current Energy Infrastructure and Resources</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1199H1</td>
-      <td>Special Topics in Thermal Sciences</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1414H1</td>
-      <td>Human Factors in Transportation</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1512H1</td>
-      <td>Data Analytics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1517H1</td>
-      <td>Introduction to Deep Learning</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1517H1</td>
-      <td>Introduction to Deep Learning</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1622H1</td>
-      <td>Computational Finance and Risk Management</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1623H1</td>
-      <td>Introduction to Healthcare Engineering</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1624H1</td>
-      <td>Introduction to Data Science and Analytics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1626H1</td>
-      <td>Data Science Methods and Statistical Learning</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1705H1</td>
-      <td>Polymer Processing</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1708H1</td>
-      <td>Collision Reconstruction</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE1721H1</td>
-      <td>Reliability</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE210H1</td>
-      <td>Thermodynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE210H1</td>
-      <td>Thermodynamics</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE221H1</td>
-      <td>Manufacturing Engineering</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>MIE221H1</td>
-      <td>Manufacturing Engineering</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>13-Oct-2023</td>
-      <td>06-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>APD2210Y Y 0131</td>
-      <td>Introduction to Curriculum 1 Core Areas</td>
-      <td>Department of Applied Psychology and Human Development</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>APD2210Y Y 0132</td>
-      <td>Introduction to Curriculum 1 Core Areas</td>
-      <td>Department of Applied Psychology and Human Development</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>02-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH101H1S</td>
-      <td>Monuments of Art History</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH216H1S</td>
-      <td>Later Medieval Art and Architecture</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH245H1S</td>
-      <td>Modernism and anti-Modernism, c. 1750-1900</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH262H1S</td>
-      <td>Art and Visual Experience in Modern and Contemporary East Asia</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH270H1S</td>
-      <td>Architecture: Rituals and Monuments</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH310H1S</td>
-      <td>Greek Vase Painting</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH350H1S</td>
-      <td>Minimalism</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH371H1S</td>
-      <td>Architecture and Urbanism in Baroque Europe</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>FAH380H1S</td>
-      <td>Special Topics in Art History (Indigenous Art from the Ancient Americas)</td>
-      <td>Art History</td>
-      <td>St. George</td>
-      <td>12-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>CHMB42H3</td>
-      <td>Organic Chemistry II</td>
-      <td>Physical and Environmental Sciences - Undergraduate</td>
-      <td>UTSC</td>
-      <td>11-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>CHMB55H3</td>
-      <td>Environmental Chemistry</td>
-      <td>Physical and Environmental Sciences - Undergraduate</td>
-      <td>UTSC</td>
-      <td>11-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>EESA06H3</td>
-      <td>Introduction to Planet Earth</td>
-      <td>Physical and Environmental Sciences - Undergraduate</td>
-      <td>UTSC</td>
-      <td>11-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>ESTC40H3</td>
-      <td>Technical Methods for Climate Change Mitigation</td>
-      <td>Physical and Environmental Sciences - Undergraduate</td>
-      <td>UTSC</td>
-      <td>11-Oct-2023</td>
-      <td>03-Nov-2023</td>
-    </tr>
-    <tr>
-      <td>PCJ261H1</td>
-      <td>Introduction to Peace, Conflict and Justice II</td>
-      <td>Trudeau Centre for Peace, Conflict and Justice - Munk School of Global Affairs &amp;amp; Public Policy</td>
-      <td>St. George</td>
-      <td>22-Aug-2023</td>
-      <td>04-Nov-2023</td>
     </tr>
     <tr>
       <td>ESC301H1Y</td>
@@ -9126,32 +7769,71 @@
     </tr>
   </tbody>
 </table>
-    <script>
 
+<script>
+$(document).ready(function () {
+    // Setup - add a text input to each footer cell
+    $('#example tfoot th').each(function () {
+        var title = $('#example thead th').eq($(this).index()).text();
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+    });
 
-new DataTable('#example', {
-    initComplete: function () {
-        this.api()
-            .columns()
-            .every(function () {
-                let column = this;
-                let title = column.footer().textContent;
- 
-                // Create input element
-                let input = document.createElement('input');
-                input.placeholder = title;
-                column.footer().replaceChildren(input);
- 
-                // Event listener for user input
-                input.addEventListener('keyup', () => {
-                    if (column.search() !== this.value) {
-                        column.search(input.value).draw();
-                    }
+    // DataTable
+    var table = $('#example').DataTable({
+        initComplete: function () {
+            // Separate logic for the first two columns
+            this.api()
+                .columns([0, 1])
+                .every(function () {
+                    let column = this;
+
+                    // Create input element
+                    let input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    column.footer().replaceChildren(input);
+
+                    // Apply listener for user change in value
+                    input.addEventListener('keyup', function () {
+                        column
+                            .search(this.value)
+                            .draw();
+                    });
                 });
-            });
-    }
-});
-    </script>
 
+            // Separate logic for the remaining four columns
+            this.api()
+                .columns([2, 3, 4, 5])
+                .every(function () {
+                    let column = this;
+
+                    // Create select element
+                    let select = document.createElement('select');
+                    select.add(new Option(''));
+                    column.footer().replaceChildren(select);
+
+                    // Apply listener for user change in value
+                    select.addEventListener('change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(select.value);
+
+                        column
+                            .search(val ? '^' + val + '$' : '', true, false)
+                            .draw();
+                    });
+
+                    // Add list of options
+                    column
+                        .data()
+                        .unique()
+                        .sort()
+                        .each(function (d, j) {
+                            select.add(new Option(d));
+                        });
+                });
+        },
+    });
+
+});
+</script>
 </body>
 </html>
+
