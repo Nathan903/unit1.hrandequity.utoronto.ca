@@ -72,13 +72,16 @@ $(document).ready(function () {
         initComplete: function () {
             // Separate logic for the first two columns
             this.api()
-                .columns([0, 1])
+                .columns([0, 1, 2])
                 .every(function () {
                     let column = this;
+                    var title = $(column.header()).text();
 
                     // Create input element
                     let input = document.createElement('input');
                     input.setAttribute('type', 'text');
+                    input.setAttribute('placeholder', 'Search ' + title); // Set the placeholder attribute
+
                     column.footer().replaceChildren(input);
 
                     // Apply listener for user change in value
@@ -91,7 +94,7 @@ $(document).ready(function () {
 
             // Separate logic for the remaining four columns
             this.api()
-                .columns([2, 3, 4, 5])
+                .columns([ 3, 4, 5])
                 .every(function () {
                     let column = this;
 

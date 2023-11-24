@@ -30,6 +30,11 @@ htmlstr = r"""
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <style type="text/css">
+        tfoot {
+            display: table-header-group;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,14 +53,16 @@ $(document).ready(function () {
         initComplete: function () {
             // Separate logic for the first two columns
             this.api()
-                .columns([0, 1])
+                .columns([0, 1,2])
                 .every(function () {
                     let column = this;
+                    var title = $(column.header()).text();
 
                     // Create input element
                     let input = document.createElement('input');
                     input.setAttribute('type', 'text');
                     column.footer().replaceChildren(input);
+                    input.setAttribute('placeholder', 'Search ' + title); // Set the placeholder attribute
 
                     // Apply listener for user change in value
                     input.addEventListener('keyup', function () {
@@ -67,7 +74,7 @@ $(document).ready(function () {
 
             // Separate logic for the remaining four columns
             this.api()
-                .columns([2, 3, 4, 5])
+                .columns([3, 4, 5])
                 .every(function () {
                     let column = this;
 
@@ -103,5 +110,5 @@ $(document).ready(function () {
 </html>
 
 """.replace("$$table$$",html_table)
-with open("result.html", mode='w') as f:
+with open("index.html", mode='w') as f:
     f.write(htmlstr)
