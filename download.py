@@ -47,4 +47,5 @@ with open("result.csv", mode='w', newline='') as csv_file:
     # Write the header
     csv_writer.writeheader()
     # Write the data
-    csv_writer.writerows(data)
+    for row in jobs:
+        csv_writer.writerow(row)

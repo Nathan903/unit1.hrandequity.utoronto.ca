@@ -50,6 +50,11 @@ $(document).ready(function () {
 
     // DataTable
     var table = $('#example').DataTable({
+        lengthMenu: [
+            [-1, 10, 25, 50],
+            ['All', 10, 25, 50]
+        ],
+
         initComplete: function () {
             // Separate logic for the first two columns
             this.api()
