@@ -1,4 +1,19 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+32819,8,TA,True,ANT208H1S,Medical Anthropology: An Evolutionary Perspective on Human Health,"January 1, 2024 to April 30, 2024",4,Anthropology,1,St. George,18-Jan-2024,21-Jan-2024,06-Feb-2024,93,Josie Alaimo,35 hours,,2024-04-30T00:00:00.000000Z,2024-01-01T00:00:00.000000Z,Please submit application through online system: https://www.anthropology.utoronto.ca/about-us/employment-opportunities/cupe-positions,390,"Lectures will be delivered online synchronously and tutorials will be delivered online and in person.
+Specific activities are: Meetings with course supervisor; Attend supervisor's lectures; Read texts and source materials; Prepare for and lead tutorials; Be available to advise students on tutorial content and marks outside of set tutorial times; Attend, administer, invigilate, mark tests/ examinations; Assistance with test question development and test generation; grade book management; consult with Supervisor/ TAs/ student.
+",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Completed undergraduate courses in Anthropology or Human Biology, preferably Evolutionary and/or Medical Anthropology (demonstrated excellence in course performance. ",,$47.64 per hour plus vacation pay,,"Wednesday 3-4, 
+Wednesday 4-5, 
+Thursday 10-11,
+Thursday 11-12,
+Thursday 12-1,
+Thursday 1-2,
+Thursday 2-3,
+Thursday 3-4,
+Thursday 4-5,
+Wednesday 5-6, 
+Wednesday 6-7,
+Thursday 5-6, Thursday 6-7
+"
 32816,8,TA,True,JLP315H5 S,Language Development,"January 08, 2024 to April 30, 2024",171,Psychology,2,UTM,17-Jan-2024,19-Jan-2024,04-Feb-2024,418,Gabriella Bohoczki,29,,2024-05-01T00:00:00.000000Z,2024-01-09T00:00:00.000000Z,"For detailed information on the application procedure go to:
 https://www.utm.utoronto.ca/psychology/teaching-assistant-positions",44,Marking/grading; contact hours with students; preparation; test invigilating; Quercus uploading of files and grades; leading tutorials if indicated.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,At least a 4-year degree in Psychology with appropriate background for the course to be demonstrated.,Previous experience in teaching a similar course is highly desirable.,47.64,,"(Please see ttb.utoronto.ca) [NOTE: The mode of instruction is expected to be in-person. However, if this changes for any reason, you will be provided with as much advance notice as practicable.]"
 32817,8,TA,True,PSY402H5 S,Roots of Psychology: A history of the field from the 19th century to the present day,"January 08, 2024 to April 30, 2024",171,Psychology,2,UTM,17-Jan-2024,19-Jan-2024,04-Feb-2024,418,Gabriella Bohoczki,14,,2024-05-01T00:00:00.000000Z,2024-01-09T00:00:00.000000Z,"For detailed information on the application procedure go to:
