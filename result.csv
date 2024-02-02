@@ -1,4 +1,20 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+32880,8,TA,True,STA465H1S L0101,Theory and Methods for Complex Spatial Data,"February 8, 2024 to April 30, 2024",185,Statistical Sciences,1,St. George,02-Feb-2024,07-Feb-2024,23-Feb-2024,395,Angela Niazmand,30,,2024-04-30T00:00:00.000000Z,2024-02-08T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is Feb 7, 2024. For more information, you may contact: Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",100,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"o	Academic background in Statistical Sciences
+o	PhD student (or graduate) in actuarial science, statistics or biostatistics
+o	Experience conducting Bayesian inference in R, specifically in the use of BUGS (openbugs or jags)","o	Academic background in Statistical Sciences
+o	PhD student (or graduate) in actuarial science, statistics or biostatistics
+o	Experience conducting Bayesian inference in R, specifically in the use of BUGS (openbugs or jags)",UG/SGS I/II - $47.64/hour (+4% vacation pay),,"Meeting Schedule: Lecture: Tuesday: 4 PM – 6 PM; Thursday: 4 PM – 5 PM (tentative)
+Tutorials: N/A"
 32874,9,CI,False,CIN105Y1,Introduction to Film Study,"May 01, 2024 to August 31, 2024",212,Cinema Studies,1,St. George,01-Feb-2024,16-Feb-2024,03-Mar-2024,351,Denise Ing,,,2024-09-01T00:00:00.000000Z,2024-05-02T00:00:00.000000Z,"Those interested should email a cover letter, curriculum vitae, and teaching evaluations (if applicable) to hr.csi@utoronto.ca.",60,"The Course Instructor will devise the syllabus for this particular course, conferring with the Director of CSI in the process. He or she will lecture/conduct classes, grade assignments, hold office hours each week, and answer questions by email or appointment.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"MA in Cinema/Film
 At least 3 years of experience teaching cinema and media at the university level, specifically film and media analysis
 At least 3 years of experience marking undergraduate essay in cinema",Scholarly concentation in film and popular culture beyond a Master's level.,"$16,285.02",340 hours,"Tuesday 10:00 - 14:00, Thursday 10:00 - 14:00"
