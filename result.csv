@@ -1,4 +1,159 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+33011,9,CI,False,CSC108H1Y,Introduction to Computer Programming,"May 1, 2024 - September 8, 2024",31,Computer Science,1,St. George,20-Feb-2024,12-Mar-2024,28-Mar-2024,293,Patrina Seepersaud,,,2024-09-08T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Apply online at: https://forms.office.com/r/SZLZAJcDPS  For general inquiries, feel free to contact course_instructor@cs.toronto.edu",196,"""The instructor is responsible for all aspects of delivering the course, including:
+
+- planning the lectures, tutorials, assignments and tests, and marking schemes;
+
+- maintaining a course website;
+
+- delivering the lectures;
+
+- providing appropriate contact time outside of class to students, through office hours, email, the course website and/or the course bulletin board;
+
+- Preparing the breakdown of hours for TA duties in the course and supervising the TA(s).
+
+
+- ensuring that tutorials and/or labs are delivered appropriately by the TAs;
+
+- managing the grading for the course, which is largely done by TAs, and carrying out any grading not completed by the TAs;
+
+- invigilating the final exam;
+
+- managing the grades and submitting final course grades, including the timely completion and release of grades and feedback throughout the term;
+
+- if there is another section of the same course that term, coordinating with the other instructor(s) to maintain consistency (this includes using common assignments and a common final exam);
+
+- where relevant, instructors must work together to coordinate automarking of assignments.
+
+While there is a lot of room for creativity in course delivery, instructors will be expected to follow the basic content and style used by the faculty members who normally teach the course, and must get approval from these faculty members or the Associate Chair, Undergraduate on any substantial changes to the course content or assessment methods. Instructors will also be expected to consult with the department's Teaching Support group when creating the course syllabus, final exam, and test(s). The Summer 2024 offering of CSC108 will be participating in a pilot run by Professors Jacqueline Smith and David Liu. In participating this pilot, the course instructor will not be responsible for creating or grading new assessments for the pilot, but will coordinate with the faculty leads occasionally throughout the semester.""",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"""- BSc in computer science or related field
+- completed or working towards a graduate degree in computer science or a related field preferred
+- demonstrated expertise in topic area of the course
+- strong organizational, interpersonal, and communication skills
+- previous experience as a course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset
+- demonstrated evidence of excellence in Teaching an asset",see 'Minimum Qualifications',"$8,142.51  plus vacation pay",,WE: 18:00-21:00
+33012,9,CI,False,CSC207H1Y,Software Design,"May 1, 2024 - September 8, 2024",31,Computer Science,1,St. George,20-Feb-2024,12-Mar-2024,28-Mar-2024,293,Patrina Seepersaud,,,2024-09-08T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Apply online at: https://forms.office.com/r/SZLZAJcDPS  For general inquiries, feel free to contact course_instructor@cs.toronto.edu",150,"""The instructor is responsible for all aspects of delivering the course, including:
+
+- planning the lectures, tutorials, assignments and tests, and marking schemes;
+
+- maintaining a course website;
+
+- delivering the lectures;
+
+- providing appropriate contact time outside of class to students, through office hours, email, the course website and/or the course bulletin board;
+
+- Preparing the breakdown of hours for TA duties in the course and supervising the TA(s).
+
+
+- ensuring that tutorials and/or labs are delivered appropriately by the TAs;
+
+- managing the grading for the course, which is largely done by TAs, and carrying out any grading not completed by the TAs;
+
+- invigilating the final exam;
+
+- managing the grades and submitting final course grades, including the timely completion and release of grades and feedback throughout the term;
+
+- if there is another section of the same course that term, coordinating with the other instructor(s) to maintain consistency (this includes using common assignments and a common final exam);
+
+- where relevant, instructors must work together to coordinate automarking of assignments.
+
+While there is a lot of room for creativity in course delivery, instructors will be expected to follow the basic content and style used by the faculty members who normally teach the course, and must get approval from these faculty members or the Associate Chair, Undergraduate on any substantial changes to the course content or assessment methods. Instructors will also be expected to consult with the department's Teaching Support group when creating the course syllabus, final exam, and test(s). ",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"""- BSc in computer science or related field
+- completed or working towards a graduate degree in computer science or a related field preferred
+- demonstrated expertise in topic area of the course
+- strong organizational, interpersonal, and communication skills
+- previous experience as a course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset
+- demonstrated evidence of excellence in Teaching an asset",see 'Minimum Qualifications',"$8,142.51  plus vacation pay",,TU: 18:00-20:00
+33013,9,CI,False,CSC236H1Y,Introduction to the Theory of Computation,"May 1, 2024 - September 8, 2024",31,Computer Science,1,St. George,20-Feb-2024,12-Mar-2024,28-Mar-2024,293,Patrina Seepersaud,,,2024-09-08T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Apply online at: https://forms.office.com/r/SZLZAJcDPS  For general inquiries, feel free to contact course_instructor@cs.toronto.edu",150,"""The instructor is responsible for all aspects of delivering the course, including:
+
+- planning the lectures, tutorials, assignments and tests, and marking schemes;
+
+- maintaining a course website;
+
+- delivering the lectures;
+
+- providing appropriate contact time outside of class to students, through office hours, email, the course website and/or the course bulletin board;
+
+- Preparing the breakdown of hours for TA duties in the course and supervising the TA(s).
+
+
+- ensuring that tutorials and/or labs are delivered appropriately by the TAs;
+
+- managing the grading for the course, which is largely done by TAs, and carrying out any grading not completed by the TAs;
+
+- invigilating the final exam;
+
+- managing the grades and submitting final course grades, including the timely completion and release of grades and feedback throughout the term;
+
+- if there is another section of the same course that term, coordinating with the other instructor(s) to maintain consistency (this includes using common assignments and a common final exam);
+
+- where relevant, instructors must work together to coordinate automarking of assignments.
+
+While there is a lot of room for creativity in course delivery, instructors will be expected to follow the basic content and style used by the faculty members who normally teach the course, and must get approval from these faculty members or the Associate Chair, Undergraduate on any substantial changes to the course content or assessment methods. Instructors will also be expected to consult with the department's Teaching Support group when creating the course syllabus, final exam, and test(s). ",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"""- BSc in computer science or related field
+- completed or working towards a graduate degree in computer science or a related field preferred
+- demonstrated expertise in topic area of the course
+- strong organizational, interpersonal, and communication skills
+- previous experience as a course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset
+- demonstrated evidence of excellence in Teaching an asset",see 'Minimum Qualifications',"$8,142.51  plus vacation pay",,WE: 18:00-20:00
+33014,9,CI,False,CSC311H1Y,Introduction to Machine Learning,"May 1, 2024 - September 8, 2024",31,Computer Science,1,St. George,20-Feb-2024,12-Mar-2024,28-Mar-2024,293,Patrina Seepersaud,,,2024-09-08T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Apply online at: https://forms.office.com/r/SZLZAJcDPS  For general inquiries, feel free to contact course_instructor@cs.toronto.edu",125,"""The instructor is responsible for all aspects of delivering the course, including:
+
+- planning the lectures, tutorials, assignments and tests, and marking schemes;
+
+- maintaining a course website;
+
+- delivering the lectures;
+
+- providing appropriate contact time outside of class to students, through office hours, email, the course website and/or the course bulletin board;
+
+- Preparing the breakdown of hours for TA duties in the course and supervising the TA(s).
+
+
+- ensuring that tutorials and/or labs are delivered appropriately by the TAs;
+
+- managing the grading for the course, which is largely done by TAs, and carrying out any grading not completed by the TAs;
+
+- invigilating the final exam;
+
+- managing the grades and submitting final course grades, including the timely completion and release of grades and feedback throughout the term;
+
+- if there is another section of the same course that term, coordinating with the other instructor(s) to maintain consistency (this includes using common assignments and a common final exam);
+
+- where relevant, instructors must work together to coordinate automarking of assignments.
+
+While there is a lot of room for creativity in course delivery, instructors will be expected to follow the basic content and style used by the faculty members who normally teach the course, and must get approval from these faculty members or the Associate Chair, Undergraduate on any substantial changes to the course content or assessment methods. Instructors will also be expected to consult with the department's Teaching Support group when creating the course syllabus, final exam, and test(s). ",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"""- BSc in computer science or related field
+- completed or working towards a graduate degree in computer science or a related field preferred
+- demonstrated expertise in topic area of the course
+- strong organizational, interpersonal, and communication skills
+- previous experience as a course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset
+- demonstrated evidence of excellence in Teaching an asset",see 'Minimum Qualifications',"$8,142.51  plus vacation pay",,TH: 18:00-21:00
+33015,9,CI,False,CSC384H1Y,Introduction to Artificial Intelligence,"May 1, 2024 - September 8, 2024",31,Computer Science,1,St. George,20-Feb-2024,12-Mar-2024,28-Mar-2024,293,Patrina Seepersaud,,,2024-09-08T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Apply online at: https://forms.office.com/r/SZLZAJcDPS  For general inquiries, feel free to contact course_instructor@cs.toronto.edu",125,"""The instructor is responsible for all aspects of delivering the course, including:
+
+- planning the lectures, tutorials, assignments and tests, and marking schemes;
+
+- maintaining a course website;
+
+- delivering the lectures;
+
+- providing appropriate contact time outside of class to students, through office hours, email, the course website and/or the course bulletin board;
+
+- Preparing the breakdown of hours for TA duties in the course and supervising the TA(s).
+
+
+- ensuring that tutorials and/or labs are delivered appropriately by the TAs;
+
+- managing the grading for the course, which is largely done by TAs, and carrying out any grading not completed by the TAs;
+
+- invigilating the final exam;
+
+- managing the grades and submitting final course grades, including the timely completion and release of grades and feedback throughout the term;
+
+- if there is another section of the same course that term, coordinating with the other instructor(s) to maintain consistency (this includes using common assignments and a common final exam);
+
+- where relevant, instructors must work together to coordinate automarking of assignments.
+
+While there is a lot of room for creativity in course delivery, instructors will be expected to follow the basic content and style used by the faculty members who normally teach the course, and must get approval from these faculty members or the Associate Chair, Undergraduate on any substantial changes to the course content or assessment methods. Instructors will also be expected to consult with the department's Teaching Support group when creating the course syllabus, final exam, and test(s). ",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"""- BSc in computer science or related field
+- completed or working towards a graduate degree in computer science or a related field preferred
+- demonstrated expertise in topic area of the course
+- strong organizational, interpersonal, and communication skills
+- previous experience as a course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset
+- demonstrated evidence of excellence in Teaching an asset",see 'Minimum Qualifications',"$8,142.51  plus vacation pay",,TU: 18:00-21:00
 32988,9,CI,False,CJS392H1-F,Special Topics in Jewish Studies,"September 3, 2024 to December 23, 2024",287,Centre for Jewish Studies,1,St. George,16-Feb-2024,08-Mar-2024,24-Mar-2024,267,Natasha Richichi-Fried,,,2024-12-23T00:00:00.000000Z,2024-09-03T00:00:00.000000Z,One-page prospectus of the course you would like to teach; sample syllabus for the course you propose; up-to-date curriculum vitae; name(s) of two referees who can comment on their work and teaching potential. Applications should be submitted electronically to cjs.events@utoronto.ca with the subject: Student Initiated Proposals. Questions about the program can be addressed to Professor Anna Shternshis at cjs.director@utoronto.ca.,20,creating a syllabus; preparing and presenting two hours of lectures per week; uploading course materials onto online platform; keeping online course platform up to date at all times; grading papers and final assessments (including make-up examinations if required); and other pedagogical and administrative tasks associated with an undergraduate course.,The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,,Must be completing a PhD at the University of Toronto with a collaborative program in Jewish Studies through the Anne Tanenbaum Centre for Jewish Studies.,"$8,142.51 + vacation pay; First time CUPE instructors: $9,123.38 + vacation pay",None,Tuesdays 5:00 PM - 7:00 PM
 32989,9,CI,False,CJS392H1-S,Special Topics in Jewish Studies,"January 6, 2025 to April 30, 2025",287,Centre for Jewish Studies,1,St. George,16-Feb-2024,08-Mar-2024,24-Mar-2024,267,Natasha Richichi-Fried,,,2025-04-30T00:00:00.000000Z,2025-01-06T00:00:00.000000Z,One-page prospectus of the course you would like to teach; sample syllabus for the course you propose; up-to-date curriculum vitae; name(s) of two referees who can comment on their work and teaching potential. Applications should be submitted electronically to cjs.events@utoronto.ca with the subject: Student Initiated Proposals. Questions about the program can be addressed to Professor Anna Shternshis at cjs.director@utoronto.ca.,20,creating a syllabus; preparing and presenting two hours of lectures per week; uploading course materials onto online platform; keeping online course platform up to date at all times; grading papers and final assessments (including make-up examinations if required); and other pedagogical and administrative tasks associated with an undergraduate course.,The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,,Must be completing a PhD at the University of Toronto with a collaborative program in Jewish Studies through the Anne Tanenbaum Centre for Jewish Studies.,"$8,142.51 + vacation pay; First time CUPE instructors: $9,123.38 + vacation pay",None,Tuesdays 5:00 PM - 7:00 PM
 32976,9,CI,False,CHM101H5,The Science of Human Health,01/May/2024 - 30/Jun/2024,25,Chemical and Physical Sciences,2,UTM,15-Feb-2024,07-Mar-2024,23-Mar-2024,378,Eliza Escandar,,,2024-06-30T00:00:00.000000Z,2024-05-01T00:00:00.000000Z,"Send a cover letter and CV addressed to: Professor Lindsay Schoenbohm, Chair, Department of Chemical and Physical Sciences, University of Toronto Mississauga, 3359 Mississauga Road, Mississauga, ON L5L 1C6; by e-mail in a PDF format to: cpssljobs.utm@utoronto.ca.",80,"All normal duties related to the design and teaching of a university credit course, including but not limited to preparation and delivery of course content, development, administration and marking of assignments, tests and examinations, calculations and submission of grades, provide direction and supervision of TA's, and holding regular office hours.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,In progress Ph.D. in relevant area of Chemistry.,Completed Ph.D. in relevant area of Chemistry.,"In accordance with the current CUPE3902 Unit 1 Collective Agreement, the Course Instructor rate of pay will be $8,142.51 (excludes vacation pay) for a half course (0.5 FCE). For first Course Instructor appointment, salary will be $9,123.38 (excludes vacation pay).",,"For the most up-to-date course timetable and delivery methods, please visit UTM timetable planner: https://ttb.utoronto.ca/.  "
