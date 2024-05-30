@@ -1,10 +1,12 @@
 cols = ["ptype","course_id","job_title","department","campus","posting_date","closing_date"]
 dropdown_not_search = [1,0,0,0,1,1,1]
 
+
 import pandas as pd
 # Read the CSV file into a pandas DataFrame
 df = pd.read_csv("result.csv")
 print(sorted(df.columns))
+
 
 def strip_whitespace(x):
     if isinstance(x, str):
@@ -13,15 +15,20 @@ def strip_whitespace(x):
         return x
 df = df.applymap(strip_whitespace)
 
-course_id_to_id = dict(zip(df['course_id'], df['id']))
 
+#course_id_to_id = dict(zip(df['course_id'], df['id']))
+df["course_id"]+="|"+df["id"].astype(str)
 df = df[cols]
+
+
 # Convert the DataFrame to an HTML table
 html_table = df.to_html(index=False,header=True)
 footer = "<tfoot>\n" + " ".join(["<th>"+ i +"</th>\n" for i in df.columns])+"</tr>\n  </tfoot>"
 
+
 indices_of_search = [index for index, value in enumerate(dropdown_not_search) if value == 0]
 indices_of_dropdown = [index for index, value in enumerate(dropdown_not_search) if value == 1]
+
 
 html_table = html_table.replace(
     """<table border="1" class="dataframe">""",
@@ -31,6 +38,7 @@ html_table = html_table.replace(
     "<thead>",
     footer+"<thead>"
 )
+
 
 htmlstr = r"""
 <!DOCTYPE html>
@@ -50,10 +58,11 @@ htmlstr = r"""
 </head>
 <body>
 
+
     $$html_table$$
 
+
 <script>
-const course_id_to_id = $$course_id_to_id$$;
 $(document).ready(function () {
     // Setup - add a text input to each footer cell
     $('#example tfoot th').each(function () {
@@ -61,18 +70,21 @@ $(document).ready(function () {
         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
     });
 
+
     // DataTable
     var table = $('#example').DataTable({
+
 
         columnDefs: [
           {
             targets: 1,
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        //course_id_to_id[data] APS112
-                        if(data in course_id_to_id){
-                        return "<a href=\"https://unit1.hrandequity.utoronto.ca/posting/"+course_id_to_id[data]+"\">"+data+"</a>"; //'<a href="https://unit1.hrandequity.utoronto.ca/posting/</a>';
-                        }
+                        let lastIndex = data.lastIndexOf("|");  
+                        let num_id = data.substring(lastIndex + 1);
+                        let course_id = data.substring(0, lastIndex);
+                        return "<a href=\"https://unit1.hrandequity.utoronto.ca/posting/"+num_id+"\">"+course_id+"</a>"; //'<a href="https://unit1.hrandequity.utoronto.ca/posting/</a>';
+                       
                     }
                     return data;
                 }
@@ -80,24 +92,27 @@ $(document).ready(function () {
         ],
         autoWidth: false,
 
+
         lengthMenu: [
             [-1, 10, 25, 50],
             ['All', 10, 25, 50]
         ],
         initComplete: function () {
-            // Separate logic for the first two 
-            
+            // Separate logic for the first two
+           
             this.api()
                 .columns($$indices_of_search$$)
                 .every(function () {
                     let column = this;
                     var title = $(column.header()).text();
 
+
                     // Create input element
                     let input = document.createElement('input');
                     input.setAttribute('type', 'text');
                     column.footer().replaceChildren(input);
                     input.setAttribute('placeholder', 'Search ' + title); // Set the placeholder attribute
+
 
                     // Apply listener for user change in value
                     input.addEventListener('keyup', function () {
@@ -107,25 +122,30 @@ $(document).ready(function () {
                     });
                 });
 
+
             // Separate logic for the remaining four columns
             this.api()
                 .columns($$indices_of_dropdown$$)
                 .every(function () {
                     let column = this;
 
+
                     // Create select element
                     let select = document.createElement('select');
                     select.add(new Option(''));
                     column.footer().replaceChildren(select);
 
+
                     // Apply listener for user change in value
                     select.addEventListener('change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(select.value);
+
 
                         column
                             .search(val ? '^' + val + '$' : '', true, false)
                             .draw();
                     });
+
 
                     // Add list of options
                     column
@@ -139,18 +159,20 @@ $(document).ready(function () {
         },
     });
 
+
 });
 </script>
 </body>
 </html>
 
+
 """
+
 
 replacements ="""
 html_table
 indices_of_search
 indices_of_dropdown
-course_id_to_id
 """.strip().split()
 string_of_variable = []
 for varStr in replacements:
@@ -158,5 +180,10 @@ for varStr in replacements:
     var = eval(varStr)
     htmlstr = htmlstr.replace(varName,str(var))
 
+
 with open("index.html", mode='w') as f:
     f.write(htmlstr)
+
+
+
+
