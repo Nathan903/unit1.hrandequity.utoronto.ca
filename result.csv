@@ -1,4 +1,25 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+37375,8,TA,True,STA314H1S L0101 ,Statistical Methods for Machine Learning I,"July 1, 2024 to August 31, 2024",185,Statistical Sciences,1,St. George,05-Jul-2024,09-Jul-2024,25-Jul-2024,395,Angela Niazmand,100 hrs (per position),,2024-08-31T00:00:00.000000Z,2024-07-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is July 9, 2024. For more information, you may contact:
+
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",150 Students,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Required: 
+o	Foundations and experience in performing regression and classification methods, such as linear regression and logistic regression
+o	Must demonstrate to have successfully completed courses in linear algebra and multivariate calculus
+o	Experienced in performing statistical analyses in R and/or Python","Preferred:
+o	Previous teaching experience in STA314 or similar
+o	Experienced in providing constructive written feedback
+o	Experienced in using R Markdown and/or LaTeX
+o	Good oral communication skills",UG/SGS I/II - $51.93/hour (+4% vacation pay),,"Meeting Schedule:			Lectures: Monday 10AM – 1PM Friday 2PM – 5PM (tentative)
+					Tutorials: Friday: 1PM – 2PM (2 Tutorials x 50 Cap) (tentative)"
 37365,9,CI,False,MGT260H5F,Managing Human Potential,"September 1, 2024 - December 31, 2024",69,Department of Management,2,UTM,04-Jul-2024,25-Jul-2024,10-Aug-2024,331,Jesica Kuruvilla,,,2024-12-31T00:00:00.000000Z,2024-09-01T00:00:00.000000Z,"Only formal applications will be entertained. A SEPARATE application package is required for each course applied to. The application package for EACH course must include a single file in PDF format, containing the following in order:
 1) Completed application form available online here: https://www.utm.utoronto.ca/management/media/377/download?inline
 2) Current Curriculum Vitae (including valid e-mail address).
