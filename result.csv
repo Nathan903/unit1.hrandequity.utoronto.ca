@@ -1,4 +1,30 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+37940,8,TA,True,APS1305/APS1308,PsychEng Seminar Series  ,"September 1, 2024 - December 30, 2024",267,Faculty of Applied Science and Engineering,1,St. George,06-Aug-2024,19-Aug-2024,04-Sep-2024,242,David Duong,30,,2024-12-30T00:00:00.000000Z,2024-09-01T00:00:00.000000Z,"Submit CV and coverletter to David Duong, d.duong@utoronto.ca",20,"•	Supporting the instructor/PsychEng Director in scheduling, administering and advertising the PsychEng seminar series
+•	Identifying specific U of T and external faculty members with high potential interest in PsychEng
+•	Preparing draft correspondence to these faculty members
+•	Scheduling, procuring rooms (if required), and advertising PsychEng seminars by these faculty members
+•	Assisting in the arrangement of visits from external PsychEng seminar speakers
+•	Supporting and/or performing course/module development for the PsychEng seminar series
+•	Can teach Arduino workshop to those with no prior electronics experience",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"•	Can teach Arduino workshop to those with no prior electronics experience
+•	Have background in both engineering and psychology.
+•	Have conducted research at the intersection of psychology and engineering.
+•	Have excellent communication and organizational skills.","•	Can teach Arduino workshop to those with no prior electronics experience
+•	Have background in both engineering and psychology.
+•	Have conducted research at the intersection of psychology and engineering.
+•	Have excellent communication and organizational skills.",$51.93/hr,,Tuesdays 12-2pm
+37941,8,TA,True,APS1305/APS1308,PsychEng Seminar Series  ,"January 2, 2025 - April 30, 2025",267,Faculty of Applied Science and Engineering,1,St. George,06-Aug-2024,19-Aug-2024,04-Sep-2024,242,David Duong,30,,2025-04-30T00:00:00.000000Z,2025-01-02T00:00:00.000000Z,"Submit CV and coverletter to David Duong, d.duong@utoronto.ca",20,"•	Supporting the instructor/PsychEng Director in scheduling, administering and advertising the PsychEng seminar series
+•	Identifying specific U of T and external faculty members with high potential interest in PsychEng
+•	Preparing draft correspondence to these faculty members
+•	Scheduling, procuring rooms (if required), and advertising PsychEng seminars by these faculty members
+•	Assisting in the arrangement of visits from external PsychEng seminar speakers
+•	Supporting and/or performing course/module development for the PsychEng seminar series
+•	Can teach Arduino workshop to those with no prior electronics experience",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"•	Can teach Arduino workshop to those with no prior electronics experience
+•	Have background in both engineering and psychology.
+•	Have conducted research at the intersection of psychology and engineering.
+•	Have excellent communication and organizational skills.","•	Can teach Arduino workshop to those with no prior electronics experience
+•	Have background in both engineering and psychology.
+•	Have conducted research at the intersection of psychology and engineering.
+•	Have excellent communication and organizational skills.",$52.97/hr,,Tuesdays 12-2pm
 37888,8,TA,True,PSY368H5S , Neuroimaging Laboratory,"01/Jan/2025-30/Apr/2025
 ",171,Psychology,2,UTM,02-Aug-2024,09-Aug-2024,25-Aug-2024,483,Ammar,45,,2025-04-30T00:00:00.000000Z,2025-01-01T00:00:00.000000Z,"For detailed information on the application procedure go to:
 https://www.utm.utoronto.ca/psychology/teaching-assistant-positions
