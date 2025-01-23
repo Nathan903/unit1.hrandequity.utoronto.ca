@@ -1,4 +1,49 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+40309,3,O,True,0,"Invigilator, Services to Persons with a Disability","February 1, 2025 - August 31, 2025",310,Office of the Registrar,3,UTSC,23-Jan-2025,29-Jan-2025,14-Feb-2025,224,Jenny Hon,"Hours of work are determined by the tests and examinations scheduled, therefore minimum/maximum hours cannot be guaranteed",,2025-08-31T00:00:00.000000Z,2025-02-01T00:00:00.000000Z,"•  Complete application form before closing date (January 29th at 11:59 PM). Applicants must be signed in to their UofT webmail account to access the form. 
+• Application form link: https://forms.office.com/r/3EE17L1Xfv. If you are experiencing technical difficulties with the form, email accessexams.utsc@utoronto.ca to report the issues you are having
+Applicants submit:
+•  Resume is required; cover letter is optional
+•  Responses to two supplementary questions (posted on application form).
+•  University of Toronto student number and confirmation of registration status on ACORN
+•  Confirmation of availability for the period outlined above
+•  NOTE: Incomplete applications will not be considered",0,"Incumbents will supervise the writing of tests and examinations written by students with documented disabilities who are registered with AccessAbility Services at the University of Toronto, Scarborough (UTSC). 
+Responsibilities include, but are not limited to, the following: 
+•Supervising in-person tests and examinations written by persons wwith disability-related accommodations; some remote shifts may be required
+• Through active invigilation, maintain the integrity of tests and exams by adhering to departmental, academic faculty, and university policies and procedures
+• Maintaining confidentiality and security of student and test/exam information
+• Ensuring the provision of disability-related accommodations to students as authorized by AccessAbility Services
+• Monitoring test/exam time allotments
+• Handling student concerns/problems and referring to Test and Exam Coordinator where appropriate
+• Documenting and responding to anomalous situations
+• Preparing completed in-person tests/exams for return delivery 
+• Verifying student identification
+• Maintaining required administrative records
+• Ensuring the physical exam space, including supply cabinet, Invigilator work station, and students' writing areas, are kept clean and organized",,5,"• Applicants must be currently registered as students pursuing a degree at the University of Toronto  
+• Applicants must demonstrate a commitment to the principles of equity and inclusion 
+• Applicants must be available for in-person invigilation shifts
+• Preference will be given to candidates who have experience working with persons with disabilities
+• Experience invigilating tests/exams is an asset
+• First Aid and CPR certification is an asset
+• Applicants are required to provide availability between the hours of 7:30 AM - 10:30 PM, Monday through Saturday
+• A minimum of 10 hours of availability must be provided each week between Mondays - Fridays from 7:30 AM to 6 PM AND
+• A minimum of 45 hours of availability must be provided during all final exam periods. N.B. Occasional Sunday shifts may also be required
+Successful candidates must participate in mandatory training, which will consist of:
+• September training sessions: more details to follow
+• New Invigilators are required to participate in a minimum of 3 in-person shadow shifts prior to the examination period
+• New Invigilators are required to participate in preliminary in-person independent shifts after completion of their shadow shifts
+Please note that all aspects of training will be scheduled between 7:30 AM - 5:00 PM Monday through Saturday.
+Successful candidates must attend three final exam meetings to be held the week before deferred and final exam period begins. The meetings will be scheduled between 8:30 AM – 5:00 PM, Mondays to Fridays.
+• Ability to respond effectively to emergency, difficult or sensitive situations while maintaining appropriate boundaries
+• Ability to demonstrate integrity and professionalism, while remaining calm under pressure
+• Problem solving and resourcefulness
+• Attention to details
+• Situational awareness and the ability to manage changing priorities
+• Understanding and ability to apply relevant University and government policies, procedures and legislation 
+• Initiative
+• Ability to collaborate with others and work in a team setting
+• Organizational
+• Communication (both oral and written)
+• Strong computer skills, including MS Office; Experience with assistive technology and Zoom an asset",,,$48.88/hr + $1/hr worked on Saturday and Sunday shifts + 4% vacation pay,,
 40307,8,TA,True,ESC204H1S,Engineering Science - Praxis III,"January 27, 2025 to April 30, 2025",87,Division of Engineering Science,1,St. George,22-Jan-2025,27-Jan-2025,12-Feb-2025,303,Diane Giang,~44,,2025-05-01T00:00:00.000000Z,2025-01-28T00:00:00.000000Z,"Submit your application by sending an email to director.engsci@utoronto.ca in a single PDF with ""ESC204 Assessment TA"" as the subject line.
 
 Your application must include (1) a brief statement of interest detailing how your background meets the requirements for the role, as well as (2) a resume or CV in PDF format, that describes your qualifications for the position. If you have any questions about the position, please email both Philip Asare (philip.asare@utoronto.ca) and Morgan Hooper (morgan.hooper@utoronto.ca). If during the application and/or selection process you require accommodation due to a disability, please contact Diane Giang at director.engsci@utoronto.ca.",~250 - total enrollment - each tutorial is approx. 24 students,"Assessment and Feedback TAs provide written assessment and feedback to students to help them improve their skills both within and beyond the course. Assessement and Feedback TAs also provide support to students in lecture(s) during the first three weeks of the course which focus on hands-on prototyping skill building. 
