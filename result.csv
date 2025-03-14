@@ -1,4 +1,7 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+41304,9,CI,False,AST101H1F,The Sun and Its Neighbours,"May 01, 2025 to June 30, 2025",298,David A. Dunlap  Department of Astronomy and Astrophysics,1,St. George,14-Mar-2025,28-Mar-2025,13-Apr-2025,539,Malaly Bakhtbolland,,,2025-07-01T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Submit CV and the completed form (link below) to astro.grad@utoronto.ca.
+Form: http://www.astro.utoronto.ca/wp-content/uploads/2025/03/ci_fillable__AST.pdf",196,"All duties associated with teaching an undergraduate course, including preparing the course outline, syllabus and lectures, developing, marking and administering course assignments, tests & exams, holding regular office hours.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"University of Toronto graduate students, in progress of a PhD in a relevant discipline or other relevant qualifications or professional experience. We are seeking recent experience in teaching, teaching excellence, and mastery of subject area.","Experience as a Course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset.","9276.01 (excludes vacation pay) or 10,366.55 (excludes vacation pay, first Course Instructor Appointment)",4,MO:17:00-19:00 ; WE:17:00-19:00
+41305,9,CI,False,AST201H1S,Stars and Galaxies,02/07/2025 - 16/08/2025 ,298,David A. Dunlap  Department of Astronomy and Astrophysics,1,St. George,14-Mar-2025,15-Mar-2025,31-Mar-2025,539,Malaly Bakhtbolland,,,2025-08-16T00:00:00.000000Z,2025-07-02T00:00:00.000000Z,Submit CV to astro.grad@utoronto.ca; Form is available on the departmental website.,196,"All duties associated with teaching an undergraduate course, including preparing the course outline, syllabus and lectures, developing, marking and administering course assignments, tests & exams, holding regular office hours.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"University of Toronto graduate students, in progress of a PhD in a relevant discipline or other relevant qualifications or professional experience. We are seeking recent experience in teaching, teaching excellence, and mastery of subject area.","Experience as a Course Instructor or Teaching Assistant, in the course (or its equivalent) is an asset.","9276.01 (excludes vacation pay) or 10,366.55 (excludes vacation pay, first Course Instructor Appointment)",4,MO:17:00-19:00 (WB 116); WE:17:00-19:00 (WB 116)
 41277,8,TA,False,ENV100H1F,Introduction to Environmental Studies,"May 1, 2025 - June 30, 2025",176,School of the Environment,1,St. George,13-Mar-2025,03-Apr-2025,19-Apr-2025,225,Phoebe To,117,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,"Please submit an application on https://taships.iit.artsci.utoronto.ca/env/login.
 
 Applications should include: i) a letter of application, explaining why you are qualified for the course(s) to which you are applying, and ii) a CV (including academic and applied environmental experience). 
@@ -61,6 +64,414 @@ Please note: The letter of application should be combined with your CV, and uplo
 41300,8,TA,False,MSE1068H,Additive Manufacturing of Advanced Engineering Materials,"August 21, 2025 - August 29, 2025",70,Department of Materials Science and Engineering,1,St. George,13-Mar-2025,01-Apr-2025,17-Apr-2025,263,Fanny Strumas,~35,,2025-08-29T00:00:00.000000Z,2025-08-21T00:00:00.000000Z,https://tams.fase.utoronto.ca/TamsPortal/posting/67,30,Preparing and conducting labs; grading; invigilating. Review assignments and project reports.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"MASc,  PhD or MEng candidate","MASc,  PhD or MEng candidate,  preferably in Materials Science and Engineering. Previous experience with the course materials and lab equipment.",$51.93 per hour + 4% vacation pay,,https://mse.utoronto.ca/current/graduate/graduate-courses/
 41301,8,TA,False,APS164H1 ,Introduction Chemistry from a Materials Perspective,"July 1, 2025 - August 31, 2025",70,Department of Materials Science and Engineering,1,St. George,13-Mar-2025,01-Apr-2025,17-Apr-2025,263,Fanny Strumas,~40,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,https://tams.fase.utoronto.ca/TamsPortal/posting/63,50,Preparing and conducting tutorials; grading; invigilating,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"MASc,  PhD or MEng candidate","MASc,  PhD or MEng candidate,  preferably in Materials Science and Engineering.",$51.93 per hour + 4% vacation pay,,https://undergrad.engineering.utoronto.ca/academics-registration/course-timetables/
 41302,9,CI,False,ENG203H5S,British Literature in the World II: Romantic to Contemporary (Online),"July 2, 2025 - August 31, 2025",95,English and Drama,2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,234,Sabrin Mohamed,,,2025-08-31T00:00:00.000000Z,2025-07-02T00:00:00.000000Z,"To apply submit an  up-to-date CV and a completed Department of English and Drama CI Application Form found at  : http://www.utm.utoronto.ca/english-drama/about-us/employment  to Professor Gallagher-Ross, Chair  by email to edapps.utm@utoronto.ca",50,"All normal duties related to the design and teaching of a university credit course, including preparation and delivery of course content; development, admin. and marking of assignments, tests and exams; calculation and submission of grades; holding regular office hours and supervising any TA(s) assigned to the course, if applicable.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,ABD in English Literature. Preference will be given to applicants who demonstrate good prior knowledge of the subject-matter of the course and who have previous TA or CI experience teaching British literature post-1800.,,CUPE 3902 (Unit 1) salaries,~165,TR 11-1
+41303,8,TA,False,TEP343H1 F,Engineering Leadership,"May 1, 2025 -  July 31, 2025",121,Institute for Studies in Transdisciplinary Engineering Education and Practice,1,St. George,13-Mar-2025,03-Apr-2025,19-Apr-2025,354,Chanelle Small-Reid,50 hrs,,2025-07-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,"Please visit https://tams.fase.utoronto.ca/TamsPortal/posting/69
+
+If during the application and/or selection process you require accommodation due to a disability, please contact Chanelle Small-Reid at istep.academic@utoronto.ca.",50 students,"Providing feedback and grading assignments, designing and facilitating in-class learning activities, supporting student learning by answering questions outside of class time, and modelling good leadership behaviour in all interactions with students. Ability to convert to online duties if required. The position may involve supporting the instructor in their leadership of some tutorials.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Experience studying and/or practicing leadership in an engineering setting. , Preferred experience with Troost ILead leadership courses or programming.,"$52.97 per hour + vacation pay (as of Jan 1, 2025). Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Tuesday 9-12 and Thursday 9-12
+41306,8,TA,False,ENV100Y5Y,The Environment,"May 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,825,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,500,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required.
+The mode of instruction for this
+course is online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,10-12,,"Applicants must have an
+academic background in
+human geography, physical
+geography, environmental
+science or environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.","Applicants must have an
+academic background in
+human geography, physical
+geography, environmental
+science or environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.",$52.97 per hour + 4% vacation pay,,
+41307,8,TA,False,ENV201H5F,Environmental Management,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,120,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,85,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2-3,,"Applicants must have an
+academic background in
+human geography, physical
+geography, environmental
+science or environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.","Applicants must have an
+academic background in
+human geography, physical
+geography, environmental
+science or environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.",$52.97 per hour + 4% vacation pay,,"TUT101 Monday 1 – 2 pm
+TUT101 Monday 2 – 3 pm
+TUT101 Wednesday 1 – 2
+pm"
+41308,8,TA,False,GGR111H5S,Human Geography,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,370,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,200,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required.
+The mode of instruction for this
+course is online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,5,,"Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.","Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.",$52.97 per hour + 4% vacation pay,,"PRA0101 Friday 9 –10 am
+PRA0102 Friday 10am –
+11am
+PRA0103 Friday 11am -12
+pm
+PRA0104 Friday 12 -1 pm
+PRA0105 Friday 1-2 pm"
+41309,8,TA,False,GGR202H5F,Geography of Canada,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,185,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,150,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required.
+The mode of instruction for this
+course is online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,3,,"Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position","Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position",$52.97 per hour + 4% vacation pay,,
+41310,8,TA,False,GGR210H5S,Social Geographies,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,185,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,150,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if
+required.The mode of
+instruction for this course is
+online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,3,,"Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position","Applicants must have an
+academic background in
+human geography. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position",$52.97 per hour + 4% vacation pay,,
+41311,8,TA,False,GGR276H5F,Spatial Data Science I,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,130,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,60,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have a
+background in Geographic
+Information Science and
+Spatial Statistics, and the
+ability to teach labs using
+ArcGIS Pro, R, and Excel.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.","Applicants must have a
+background in Geographic
+Information Science and
+Spatial Statistics, and the
+ability to teach labs using
+ArcGIS Pro, R, and Excel.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.",$52.97 per hour + 4% vacation pay,,"PRA0101 Fri 9 – 11 am
+PRA0102 Fri 11 am – 1 pm
+PRA0103 Fri 1 – 3 pm"
+41312,8,TA,False,GGR276H5S,Spatial Data Science I,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,130,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,60,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have a
+background in Geographic
+Information Science and
+Spatial Statistics, and the
+ability to teach labs using
+ArcGIS Pro, R, and excel.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.","Applicants must have a
+background in Geographic
+Information Science and
+Spatial Statistics, and the
+ability to teach labs using
+ArcGIS Pro, R, and excel.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.",$52.97 per hour + 4% vacation pay,,"PRA0101 Fri 9 – 11 am
+PRA0102 Fri 11 am – 1 pm
+PRA0103 Fri 1 – 3 pm"
+41313,8,TA,False,GGR278H5S,Geographical Information Systems,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,125,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,60,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have a
+background in
+Geographic Information Science
+and the ability to teach labs
+using ArcGIS Pro. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position","Applicants must have a
+background in
+Geographic Information Science
+and the ability to teach labs
+using ArcGIS Pro. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position",$52.97 per hour + 4% vacation pay,,"PRA0101 Thurs 9 – 11 am
+PRA0102 Thurs 11 am – 1
+pm
+PRA0103 Thurs 1 – 3 pm"
+41314,8,TA,False,GGR305H5S,Biogeography,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,115,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,85,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required.
+The mode of instruction for this
+course is online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have an
+academic background in
+physical geography or
+environmental science.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.","Applicants must have an
+academic background in
+physical geography or
+environmental science.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.",$52.97 per hour + 4% vacation pay,,
+41315,8,TA,False,GGR316H5F,Landforms,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,125,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,50,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have an
+academic background in
+physical geography or
+environmental science.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position","Applicants must have an
+academic background in
+physical geography or
+environmental science.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position",$52.97 per hour + 4% vacation pay,,"PRA0101 Mon and Wed 3 –
+5 pm
+PRA0102 Mon and Wed 3 –
+5 pm
+(Lec Mon and Wed 1-3)"
+41316,8,TA,False,GGR440H5S,Drone Remote Sensing,"July 1, 2025 - August 31, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,65,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,30,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if required",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Applicants must have an
+academic background in
+Geographic Information
+Science. Proficiency in ArcGIS
+Pro for drone image
+processing is required,
+including but not limited to
+mosaicking, georeferencing,
+and calibration. Additionally, it
+is essential that the TA has
+professional-level drone
+operation experience and
+holds a valid pilot
+licence. Previous experience is
+the more relevant criterion
+than the need to acquire
+experience in respect of this
+posted position.","Applicants must have an
+academic background in
+Geographic Information
+Science. Proficiency in ArcGIS
+Pro for drone image
+processing is required,
+including but not limited to
+mosaicking, georeferencing,
+and calibration. Additionally, it
+is essential that the TA has
+professional-level drone
+operation experience and
+holds a valid pilot
+licence. Previous experience is
+the more relevant criterion
+than the need to acquire
+experience in respect of this
+posted position.",$52.97 per hour + 4% vacation pay,,"PRA0101 Mon & Wed 2-3
+pm"
+41317,8,TA,False,JGE378H5F,Natural Hazards,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,300,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,150,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if
+required.The mode of
+instruction for this course is
+online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,5-6,,"Applicants must have an
+academic background in
+physical geography,
+environmental science, or
+environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.","Applicants must have an
+academic background in
+physical geography,
+environmental science, or
+environmental
+management. Previous
+experience is the more
+relevant criterion than the
+need to acquire experience in
+respect of this posted position.",$52.97 per hour + 4% vacation pay,,"TUT9999 Online
+Asynchronous"
+41318,8,TA,False,GGR337H5F,Environmental Remote Sensing,"May 1, 2025 - June 30, 2025",252,"Department of Geography, Geomatics and Environment",2,UTM,13-Mar-2025,03-Apr-2025,19-Apr-2025,164,Rachel Alt,115,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to http://www.utm.utoronto.ca/geography/jobs/cupe-3902-unit-1-teaching-assistants,60,"Duties may include but are not
+limited to the preparation of
+tests, tutorials/labs and exams,
+meeting with the supervisor.
+Demonstration in tutorials/labs
+and consulting with students.
+Marking quizzes, assignments,
+tests, oral presentations, and
+exams. Invigilation if
+required.The mode of
+instruction for this course is
+online.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Applicants must have a
+background in Remote Sensing
+and the ability to teach labs
+using Erdas and ArcGIS Pro.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.","Applicants must have a
+background in Remote Sensing
+and the ability to teach labs
+using Erdas and ArcGIS Pro.
+Previous experience is the
+more relevant criterion than
+the need to acquire experience
+in respect of this posted
+position.",$52.97 per hour + 4% vacation pay,,"PRA0101 Tues 5 – 7 pm
+PRA0102 Wed 3-5 pm"
+41319,8,TA,False,RSM2603H,Advanced Negotiations & Conflict Management,"May 1, 2025 - May 30, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-05-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in OBHRM and with extensive research experience in the negotiation literature. Priority will be given to students with previous TA experience in this course (RSM2603). Previous experience is the more relevant ,None,52.97,,N/A
+41320,8,TA,False,RSM2604H,Managerial Negotiations,"May 1, 2025 - May 30, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-05-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in OBHRM and/or Negotiations. Familiarity with negotiation educational concepts and previous TA experience preferred. Priority will be given to students with previous TA experience in this course (RSM2604). Pr,None,52.97,,N/A
+41321,8,TA,False,RSM2604H,Managerial Negotiations,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in OBHRM and/or Negotiations. Familiarity with negotiation educational concepts and previous TA experience preferred. Priority will be given to students with previous TA experience in this course (RSM2604). Pr,None,52.97,,N/A
+41322,8,TA,False,RSM2618H,The Socially Intelligent Manager,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Graduate student with a strong academic background in Organizational Behaviour required. Previous TA experience in this course (RSM2618) required. Previous experience is the more relevant criterion than the need to acquire experience in respect of this po,None,52.97,,N/A
+41323,8,TA,False,RSM2619H,Power and Influence in Organizations,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in organizational behaviour and excellent writing skills. Familiarity with the course materials and previous TA experience with RSM2619 is preferred. Previous experience is the more relevant criterion than the,None,52.97,,N/A
+41324,8,TA,False,RSM2619H,Power and Influence in Organizations,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in organizational behaviour and excellent writing skills. Familiarity with the course materials and previous TA experience with the EMBA course RSM2619 is preferred. Previous experience is the more relevant cr,None,52.97,,N/A
+41325,8,TA,False,RSM5602H,Negotiations,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong academic background in OBHRM and/or Negotiations. Familiarity with negotiation educational concepts and previous TA experience preferred. Priority will be given to students with previous TA experience in RSM5602 or  RSM2604. Prev,None,52.97,,N/A
+41326,8,TA,False,RSM2621H,Effective Leadership,"May 1, 2025 - August 31, 2025",175,Rotman School of Management,1,St. George,13-Mar-2025,02-Apr-2025,18-Apr-2025,457,Danielle Waxer,up to 1 hr per student ,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,For detailed information on the application procedure go to  http://www-2.rotman.utoronto.ca/employment/tapositions/,30,,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,PhD student with a strong background in organizational behaviour and human resources management. Priority will be given to student with research and work experience in human resources. Preference for student with previous TA experience in human resources ,None,52.97,,N/A
+41327,8,TA,False,CLAA05H3 Y,Ancient Mythology I: Mesopotamia and Egypt,"May 2, 2025 to August 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,90,,2025-08-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",100,"Grading assistants will provide detailed comments on and promptly mark assignments, tests, and final exam. They will submit grades in a timely manner. They may be required to invigilate midterm and final exams and/or perform other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Successful applicants will be in an MA or PhD program in Classical Studies or related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. Note, the availability of this grading assistant position is entirely dependent on course enrollments. The final decision regarding the offer will be based on the number of students enrolled.",Previous teaching and/or marking experience with this course or a course on a related topic.,$52.97,,https://ttb.utoronto.ca/cp/CLAA05H3
+41328,8,TA,False,CLAB06H3 Y,History and Culture of the Roman World,"May 2, 2025 to August 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,75,,2025-08-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta"">https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",50,"Grading assistants will provide detailed comments on and promptly mark assignments, tests, and final exam. They will submit grades in a timely manner. They may be required to invigilate midterm and final exams and/or perform other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Successful applicants will be in an MA or PhD program in Classical Studies, Ancient History or a related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. Note, the availability of this grading assistant position is entirely dependent on course enrollments. The final decision regarding the offer will be based on the number of students enrolled.",Previous teaching and/or marking experience with this course or a course on a related topic.,$52.97 ,,https://ttb.utoronto.ca/cp/CLAB06H3
+41329,8,TA,False,HISA02H3 Y,Rise of the Machines: How Technology Remakes the World,"May 2, 2025 to August 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,90,,2025-08-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",100,"TAs hold weekly tutorials remotely; hold regular office hours virtually and respond to students’ inquiries via email/Quercus; promptly grade and offer students detailed feedback on assignments, tests and exams; invigilate exams; engage with students with diverse needs and experiences in a professional and supportive manner that improves the learning experience for all students, and foster an interactive and collaborative classroom dynamic. Additional duties may involve course support services, such as updating course content and information on Quercus and other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Successful candidate is in MA or PhD program in History or a related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. This is an online synchronous course, the lecture/tutorials will be delivered between May 2 to August 7, 2025. The final exam can be scheduled anytime between August 11 to August 23, 2025. Note, the availability of this teaching assistant position is entirely dependent on course enrollments. The final decision regarding the offer will be based on the number of students enrolled.","Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.  Strong understanding of the relationship between technology and culture, with an interest in historical and cultural analysis of technological change.",$52.97 ,,https://ttb.utoronto.ca/cp/HISA02H3
+41330,8,TA,False,HISB41H3 F,Making of Modern Canada,"May 2, 2025 to June 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,70,,2025-06-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",50,"The Teaching assistant will be required to hold weekly tutorials online, virtually meet with students during regular office hours and respond to students’ inquiries in writing. They will be required to grade and offer students detailed feedback on assignments, tests and exams as well as invigilate exams. May involve course support services (such as updating course content and information on Quercus). They will be expected to engage with students with diverse needs and experiences in a professional and supportive manner that improves the teaching and learning experience for all students, and to foster an interactive and collaborative classroom dynamic. Other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Successful applicants will be in an MA or PhD program in History or a related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. Note, the availability of this teaching assistant position is entirely dependent on course enrollments. The final decision regarding the offer will be based on the number of students enrolled. The lectures/tutorials will be taking place between May 2 to June 16. The final exam can be scheduled anytime between June 17 - 21, 2025.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97,,"https://ttb.utoronto.ca/cp/HISB41H3, This is an online course with both synchronous and asynchronous components. The tutorials will meet online synchronously once a week."
+41331,8,TA,False,HISB61H3 F,Europe in the High and Late Middle Ages (1053-1492),"May 2, 2025 to June 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,65,,2025-06-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",45,"The Teaching assistant will be required to hold in-person tutorials in the course twice a week, meet with students during regular office hours and respond to students’ inquiries in person and in writing. They will be required to grade and offer students detailed feedback on assignments, tests and exams as well as invigilate exams. May involve course support services (such as updating course content and information on Quercus). They will be expected to engage with students with diverse needs and experiences in a professional and supportive manner that improves the teaching and learning experience for all students, and to foster an interactive and collaborative classroom dynamic. Other duties as determined by supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Successful applicants will be in an MA or PhD program in the Centre for Medieval Studies, History or a related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. Please note that both the availability of the teaching assistant position and the frequency of tutorial meetings are entirely dependent on course enrollments. The final decision regarding the offer and how often tutorials will meet will be based on the number of students enrolled.
+
+In-person lectures/tutorials will be taking place between May 2 to June 16. The final exam can be scheduled anytime between June 17 - 21, 2025.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97,,https://ttb.utoronto.ca/cp/HISB61H3
+41332,8,TA,False,HISC26H3 F,The French Revolution and the Napoleonic Empire,"May 2, 2025 to June 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,60,,2025-06-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",45,"TA will hold tutorials virtually twice weekly; hold regular office hours virtually and respond to students’ inquiries via email/Quercus; promptly grade and offer students detailed feedback on assignments, tests and exams; invigilate exams; engage with students with diverse needs and experiences in a professional and supportive manner that improves the learning experience for all students, and to foster an interactive and collaborative classroom dynamic. Additional duties may involve course support services, such as updating course content and information on Quercus and other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Successful candidate is in MA or PhD program in History or a related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. This is an online synchronous Summer Sub-session F Course (May - June). Lecture and tutorials will be taking place between May 2 to June 16 virtually. The final exam can be scheduled anytime between June 17 - June 21, 2025. Please note that both the availability of the teaching assistant position and the frequency of tutorial meetings are entirely dependent on course enrollments. The final decision regarding the offer and how often tutorials will meet will be based on the number of students enrolled.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97,,https://ttb.utoronto.ca/cp/HISC26H3
+41333,8,TA,False,WSTA03H3,Introduction to Feminist Theories and Thought,"May 2, 2025 to June 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,90,,2025-06-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta",80,"hold in-person tutorials twice in a week in the course; hold regular office hours and respond to students’ inquiries in person and in writing; promptly grade and offer students detailed feedback on assignments, tests and exams; invigilate exams; engage with students with diverse needs and experiences in a professional and supportive manner that improves the learning experience for all students; and foster an interactive and collaborative classroom dynamic. Additional duties may involve course support services, such as updating course content and information on Quercus and other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"In a MA or PhD program in Women and Gender Studies or a related discipline, with an intersectional orientation to the study of Feminist Theories and Thought. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. Please note that both the availability of the teaching assistant position and the frequency of tutorial meetings are entirely dependent on course enrollments. The final decision regarding the offer and how often tutorials will meet will be based on the number of students enrolled.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97 ,,"https://ttb.utoronto.ca/cp/WSTA03H3, This is a Summer Sub-session F Course (May - June). In-person lecture and tutorials will be taking place between May 2 to June 16. The final exam can be scheduled anytime between June 17 - June 21, 2025."
+41334,8,TA,False,WSTB06H3 F,Women in Diaspora ,"May 2, 2025 to June 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,70,,2025-06-30T00:00:00.000000Z,2025-05-02T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta. Please note that both the availability of the teaching assistant position and the frequency of tutorial meetings are entirely dependent on course enrollments. The final decision regarding the offer and how often tutorials will meet will be based on the number of students enrolled.",50,"Holds in-person tutorials twice a week in the course; hold regular office hours and respond to students’ inquiries in person and in writing; promptly grade and offer students detailed feedback on assignments, tests and exams; invigilate exams; engage with students with diverse needs and experiences in a professional and supportive manner that improves the learning experience for all students, and to foster an interactive and collaborative classroom dynamic. Additional duties may involve course support services, such as updating course content and information on Quercus and other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"In a MA or PhD program in Women and Gender Studies or a related discipline, with solid prior knowledge and understanding of gender, migration, and diaspora studies as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. This is a Summer Sub-session F Course (May - June). In-person lecture and tutorials will be taking place between May 2 to June 16. The final exam can be scheduled anytime between June 17 - June 21, 2025.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97 ,,https://ttb.utoronto.ca/cp/WSTB06H3
+41335,8,TA,False,WSTB12H3 S,"Women, Violence and Resistance","June 23, 2025 to August 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,70,,2025-08-30T00:00:00.000000Z,2025-06-23T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta. Please note that both the availability of the teaching assistant position and the frequency of tutorial meetings are entirely dependent on course enrollments. The final decision regarding the offer and how often tutorials will meet will be based on the number of students enrolled.",45,"TA holds in-person tutorials twice a week in the course; hold regular office hours and respond to students’ inquiries in person and in writing; promptly grade and offer students detailed feedback on assignments, tests and exams; invigilate exams; engage with students with diverse needs and experiences in a professional and supportive manner that improves the learning experience for all students, and to foster an interactive and collaborative classroom dynamic. Additional duties may involve course support services, such as updating course content and information on Quercus and other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"In a MA or PhD program in Women and Gender Studies or a related discipline, with an intersectional feminist orientation to the study of violence. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. This is a Summer Sub-session S Course (June - August). In-person lecture and tutorials will be taking place between June 23 to August 7. The final exam can be scheduled anytime between August 11 - August 23, 2025.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97 ,,https://ttb.utoronto.ca/cp/WSTB12H3
+41336,8,TA,False,WSTC25H3 S,Transnational Queer Sexualities,"June 23, 2025 to August 30, 2025",210,Historical and Cultural Studies,3,UTSC,13-Mar-2025,02-Apr-2025,18-Apr-2025,509,Umme Thanha,60,,2025-08-30T00:00:00.000000Z,2025-06-23T00:00:00.000000Z,"Applications should be submitted electronically, with a current curriculum vitae via https://www.utsc.utoronto.ca/webapps/cupehiring/dept/hcs/app/ta. Please note the availability of the grading assistant position is entirely dependent on course enrollments. The final decision regarding the offer will be based on the number of students enrolled.",45,"Grading assistants will provide detailed comments on and promptly mark assignments, tests, and final exam. They will submit grades in a timely manner. They may be required to invigilate midterm and final exams and/or perform other duties as determined by the supervisor.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Successful applicants will be in an MA or PhD program in Women’s and Gender Studies or related discipline. Have solid prior knowledge and understanding of the subject matter as demonstrated through current research, previous coursework, or previous TA/GA placements in similar or related courses. This is a Summer Sub-session S Course (June - August). In-person lectures be taking place between June 23 to August 7. The final exam can be scheduled anytime between August 11 - August 23, 2025.",Prior experience in leading tutorials and/or marking assignments and exams as well as strong organizational skills.,$52.97,,https://ttb.utoronto.ca/cp/WSTC25H3
 41256,8,TA,False,EAS241H1S,Introduction to Chinese Philosophy,"July 1, 2025-August 31, 2025",54,Department of East Asian Studies,1,St. George,12-Mar-2025,01-Apr-2025,17-Apr-2025,401,Norma Escobar,62 hours,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,80,"Duties will include: marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,$52.97,,"In-person lectures on Tuesdays, Thursdays 14:00pm- 16:00pm"
 41257,8,TA,False,EAS340H1F,Chinese Society and Culture (on-line),"May 1, 2025-June 30, 2025",54,Department of East Asian Studies,1,St. George,12-Mar-2025,01-Apr-2025,17-Apr-2025,401,Norma Escobar,80 hours,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,100,"Duties will include: marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,$52.97,,"In-person lectures on Tuesdays, Thursdays 18:00pm- 20:00pm"
 41255,8,TA,False,EAS219H1F,Cultural History of Food and Drink in East Asia,"May 1, 2025-June 30, 2025",54,Department of East Asian Studies,1,St. George,12-Mar-2025,01-Apr-2025,17-Apr-2025,401,Norma Escobar,62 hours,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,80,"Duties will include: marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,$52.97,,"Synchronous lectures on Tuesdays, Thursdays  11:00 am-13:00 pm"
@@ -1356,7 +1767,6 @@ LEC0102 Tuesdays and Thursdays 6:00PM - 9:00PM (In-person)"
 40684,8,TA,False,INF2171H,"Usability Assessment: Concepts, Methods and Tools","July 1, 2025 - August 31, 2025",99,Faculty of Information,1,St. George,25-Feb-2025,18-Mar-2025,03-Apr-2025,309,Devangi Vaghela,75 (dependent on enrolment),,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,"Please email your CV and a brief cover letter indicating the course(s) to which you are applying, as one attachment (PDF preferred) to the attention of Devangi Vaghela, Payroll Administrator: ta.ischool@utoronto.ca",50,"Assistance with course administration (labs, grading assignments, tests, exams), and other duties as assigned. Duties may include class attendance  and 1 hour office hour after each major assignment given in class, typically 3 assignments x 1 hour each.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Current doctoral student, with teaching experience preferred.",Demonstrated expertise in topic area of the course; prior teaching experience,$52.97 per hour + 4% Vacation Pay,,LEC Mondays and Wednesdays 6:00PM - 9:00PM (In-person)
 40685,8,TA,False,INF2186H,Metadata Schemas and Applications,"May 1, 2025 - August 31, 2025",99,Faculty of Information,1,St. George,25-Feb-2025,18-Mar-2025,03-Apr-2025,309,Devangi Vaghela,75 - 140 (dependent on enrollment),,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,"Please email your CV and a brief cover letter indicating the course(s) to which you are applying, as one attachment (PDF preferred) to the attention of Devangi Vaghela, Payroll Administrator: ta.ischool@utoronto.ca",70,"Assistance with course administration (labs, grading assignments, tests, exams), and other duties as assigned. Duties may include class attendance  and 1 hour office hour after each major assignment given in class, typically 3 assignments x 1 hour each.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Current doctoral student, with teaching experience preferred.",Demonstrated expertise in topic area of the course; prior teaching experience,$52.97 per hour + 4% Vacation Pay,,LEC Wednesdays 12:00PM - 3:00PM (In-person)
 40686,8,TA,False,INF2224H,Service Design,"May 5, 2025 - May 16, 2025",99,Faculty of Information,1,St. George,25-Feb-2025,18-Mar-2025,03-Apr-2025,309,Devangi Vaghela,75 (dependent on enrolment),,2025-05-16T00:00:00.000000Z,2025-05-05T00:00:00.000000Z,"Please email your CV and a brief cover letter indicating the course(s) to which you are applying, as one attachment (PDF preferred) to the attention of Devangi Vaghela, Payroll Administrator: ta.ischool@utoronto.ca",50,"Assistance with course administration (labs, grading assignments, tests, exams), and other duties as assigned. Duties may include class attendance  and 1 hour office hour after each major assignment given in class, typically 3 assignments x 1 hour each.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Current doctoral student, with teaching experience preferred.",Demonstrated expertise in topic area of the course; prior teaching experience,$52.97 per hour + 4% Vacation Pay,,"Two weeks: LEC Tuesdays, Wednesdays and Thursdays 9:00AM - 3:00PM"
-40687,8,TA,True,BIOB51H3,Evolutionary Biology,"March 3, 2025 - March 31, 2025",8,Biological Sciences,3,UTSC,25-Feb-2025,26-Feb-2025,14-Mar-2025,534,Vania,90,,2025-03-31T00:00:00.000000Z,2025-03-03T00:00:00.000000Z,https://www.utsc.utoronto.ca/webapps/cupehiring/session/1259/postings,500,"Duties for the position may vary and include: preparation for classes, conducting tutorials with breakout groups, office hours, invigilating and marking.  Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course.  Please note duties are performed in person at the UTSC campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Includes: ability, academic qualifications, suitability for the position and appropriate background in the subject/specialty.  Strong background in ecology or organismal biology required.",,52.97,,https://www.utsc.utoronto.ca/registrar/timetable
 40700,8,TA,False,SOC100H1S-L0101,Introduction to Sociology I: Sociological Perspectives,1/May/2025 to 30/Jun/2025,183,Sociology,1,St. George,25-Feb-2025,18-Mar-2025,03-Apr-2025,226,Jeremy Nichols,200,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,TAships Applications (utoronto.ca),200,"Preparation for classes; preparation of written or audio-visual materials; possibly attending lectures, teaching, and/or leading discussions; rating students' work; holding office hours; consulting with students (including electronic consultation); writing, grading and/or invigilation of tests/examinations; grading term papers and essays; communicating with course instructor and other TAs; other ad hoc tasks.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Previous knowledge and coursework in subject of course; good knowledge of subject matter; TA experience or need to acquire TA experience in subject of this or related course; minimum MA in Sociology or related discipline, or currently accepted or enrolled in the graduate Sociology program; ability to instruct in writing; strong desire to advise students and help them learn; establish(ed) record of teaching excellence. 
 
 ",,52.97,,
