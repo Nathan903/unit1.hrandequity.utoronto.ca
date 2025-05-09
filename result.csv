@@ -1,6 +1,82 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
 41792,8,TA,False,APS106HIF,Introduction to Computer Programming,"September 01, 2025 to December 31, 2025",102,First Year Office - Engineering,1,St. George,09-May-2025,30-May-2025,15-Jun-2025,240,Mojgan Cossaro,70,,2026-01-01T00:00:00.000000Z,2025-09-02T00:00:00.000000Z,"For detailed posting information and application procedure, go to: http://uoft.me/fyojobs",950,"The successful candidate will work directly with the course instructor or designate and will use existing lab material as a starting point to potentially redesign new labs, and/or improve existing labs, in addition to setting up the existing autograding system (Gradescope) for the winter semster.  They will also work to support the development of materials and exercises in support of the use of an active-learning centered approach for the lectures.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,,"Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position. Good understanding of Python3 software language; strong, demonstrated interest in high-quality teaching/mentoring.","$52.97 per hour, plus 4% vacation pay",,TBD
 41793,9,CI,False,INF2540H,"Special Topics in HCDS: Deep Learning: Foundations, Architectures, and Ethics","September 1, 2025 - December 31, 2025",99,Faculty of Information,1,St. George,09-May-2025,04-Jun-2025,20-Jun-2025,495,Melissa Szopa,,,2025-12-31T00:00:00.000000Z,2025-09-01T00:00:00.000000Z,"Please email, in a single attachment (PDF preferred), your C.V. and a cover letter indicating the course(s) of interest, to the attention of  Melissa Szopa, Administrative Coordinator, Academic at sessional.ischool@utoronto.ca. For detailed information on the application process please go to:  http://ischool.utoronto.ca/cupe-3902-unit-1-unit-3-positions/",35,"Preparing course materials; delivering course content (e.g. seminars, lectures and labs); developing and administering course assignments, tests and exams; grading; holding regular office hours.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,,"Preferably candidates will have a completed, or nearly completed, PhD degree in an area related to the course or a Master’s degree plus extensive professional experience in an area related to the course. Teaching experience is preferred.","$9,276.01 + 4% vacation pay","Estimate of 75 hours with enrollment of 36 or greater. Allocation of TA hours, if any, will be based on enrolment numbers. ",TBD - You are required to be located in geographical proximity to the applicable University premises in order to attend and perform your duties on University premises as of the Starting Date.
+41794,3,O,False,NA,Invigilator - New,"August 15, 2025 - August 31, 2026",232,Accommodated Testing Services,1,St. George,09-May-2025,08-Jun-2025,24-Jun-2025,438,Heather Huckfield,0-40 hours/week,,2026-08-31T00:00:00.000000Z,2025-08-15T00:00:00.000000Z,"Current UofT Students Submit Application here:   https://forms.office.com/r/nftDZcrSLf 
+
+New incoming UofT students can apply here: https://forms.office.com/r/6TXGdq9C4Y
+
+
+All completed application forms must accompany a cover letter & resume",NA,"Those in this role will oversee the administration of written tests and examinations for students with documented disabilities who are registered with Accessibility Services at the University of Toronto, St. George Campus.
+
+Responsibilities include, but are not limited to, the following:
+--Maintaining the integrity of tests and exams by adhering to departmental, academic faculty, and university policies and procedures
+--Maintaining confidentiality of student and test/exam information
+--Ensuring the provision of accommodations to students as specified by Accessibility Services
+--Monitoring test/exam time allotments
+--Handling student concerns/problems and escalating to the Coordinator, Accommodated Testing Services, as needed.
+--Documenting and responding to anomalous situations
+--Preparing completed tests/exams for return delivery
+--Maintaining required administrative records
+
+Hours of work are determined by the tests and examinations scheduled, therefore minimum/maximum hours cannot be guaranteed. The test centre is open from 7:00 AM to 11:00 PM and applicants are required to provide availability between the hours of 7:00 AM and 11:00 PM, Monday to Friday with a minimum of 10 hours of availability each week. Applicants are expected to provide a high level of availability during final exam periods in December and April. Please outline your availability in your cover letter.",,25,"Successful applicants must be eligible for CUPE 3902 Unit 1 work, must be registered with the School of Graduate studies, and are expected to maintain their eligibility through the duration of the appointment. Any status change must be communicated to the Department, to determine eligibility to continue in the appointment.
+
+Applicants must be available for the following mandatory in-person training sessions: 
+1. Thursday, August 21, 9am-1pm.
+2. Friday, August 22, 9am-1pm
+3. Friday, September 5, 9am-1pm.
+
+This is an on-campus, in-person position. Applicants must be available for in-person invigilation shifts.
+
+Applicants must demonstrate a commitment to the principles of equity and inclusion.
+
+Skills (listed alphabetically):
+--Ability to manage and resolve emergency, difficult or sensitive situations effectively while maintaining boundaries
+--Ability to remain calm under pressure 
+--Communication (both oral and written)
+--Initiative
+--Interpersonal  
+--Organizational
+--Problem solving
+--Situational awareness and the ability to manage changing priorities
+--Strong computer skills including MS Office (Word, Excel, and Teams) and Zoom
+--Understanding and ability to apply relevant University and government policies, procedures and legislation
+
+Candidates who are members of Indigenous, Black, racialized and LGBTQ2S+ communities, persons with disabilities, and other equity seeking groups are encouraged to apply",,,$48.88/hour,,NA
+41795,3,O,False,NA,Invigilator - Returning,"September 1, 2025 - August 31, 2026",232,Accommodated Testing Services,1,St. George,09-May-2025,08-Jun-2025,24-Jun-2025,438,Heather Huckfield,0-40 hours/week,,2026-08-31T00:00:00.000000Z,2025-09-01T00:00:00.000000Z,"Submit Application here: https://forms.office.com/r/xXDEB6F4pq   
+All completed application forms must accompany a cover letter & resume",NA,"Those in this role will oversee the administration of written tests and examinations for students with documented disabilities who are registered with Accessibility Services at the University of Toronto, St. George Campus.
+
+Responsibilities include, but are not limited to, the following:
+--Maintaining the integrity of tests and exams by adhering to departmental, academic faculty, and university policies and procedures
+--Maintaining confidentiality of student and test/exam information
+--Ensuring the provision of accommodations to students as specified by Accessibility Services
+--Monitoring test/exam time allotments
+--Handling student concerns/problems and escalating to the Coordinator, Accommodated Testing Services, as needed.
+--Documenting and responding to anomalous situations
+--Preparing completed tests/exams for return delivery
+--Maintaining required administrative records
+
+Hours of work are determined by the tests and examinations scheduled, therefore minimum/maximum hours cannot be guaranteed. The test centre is open from 7:00 AM to 11:00 PM and applicants are required to provide availability between the hours of 7:00 AM and 11:00 PM, Monday to Friday with a minimum of 10 hours of availability each week. Applicants are expected to provide a high level of availability during final exam periods in December and April. Please outline your availability in your cover letter.",,50,"To be considered for this appointment, applicants must have demonstrated prior experience working as an Invigilator at Accommodated Testing Services, University of Toronto, St. George Campus in the 2024-2025 academic year.
+
+Successful applicants must be eligible for CUPE 3902 Unit 1 work, must be registered with the School of Graduate Studies, and are expected to maintain their eligibility through the duration of the appointment. Any status change must be communicated to the Department, to determine eligibility to continue in the appointment.
+
+Applicants must be available for the following mandatory in-person training session: Friday, September 5, 9am-1pm.
+
+This is an on-campus, in-person position. Applicants must be available for in-person invigilation shifts.
+
+Applicants must demonstrate a commitment to the principles of equity and inclusion.
+
+Skills (listed alphabetically):
+•	Ability to manage and resolve emergency, difficult or sensitive situations effectively while maintaining boundaries
+•	Ability to remain calm under pressure 
+•	Communication (both oral and written)
+•	Initiative
+•	Interpersonal  
+•	Organizational
+•	Problem solving
+•	Situational awareness and the ability to manage changing priorities
+•	Strong computer skills including MS Office (Word, Excel, and Teams) and Zoom
+•	Understanding and ability to apply relevant University and government policies, procedures and legislation
+Candidates who are members of Indigenous, Black, racialized and LGBTQ2S+ communities, persons with disabilities, and other equity seeking groups are encouraged to apply",,,$48.88/hour,,NA
 41786,9,CI,False,RLG260H1F,Introduction to Sanskrit I,"September 1, 2025 - December 31, 2025",269,Departmen for the Study of Religion,1,St. George,08-May-2025,06-Jun-2025,22-Jun-2025,532,Amy Huynh,,,2025-12-31T00:00:00.000000Z,2025-09-01T00:00:00.000000Z,"Applicants should submit (1) a current curriculum vitae, (2) an outline of the course, method of evaluation, and required textbook(s), and (3) evidence of teaching ability (e.g., summarized course evaluations, letters of reference, etc.).  A description of courses is available at https://fas.calendar.utoronto.ca/ 
 
 Applications should be addressed to Professor Srilata Raman. Please send your application as a single PDF file to religion.undergrad@utoronto.ca. Course evaluations should be sent as a separate PDF file. The subject line of the email should read Unit 1 Application: [course code].",60,"Presenting weekly lectures and classes as appropriate, grading papers and exams, meeting with students individually as they request, and handling the other pedagogical and administrative tasks ordinarily associated with an undergraduate course.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Advanced linguistic proficiency in Sanskrit. PhD candidacy in the Department for the Study of Religion or a completed PhD in religion or a related field. Ability to addres the themes of the course to which the application is being made.,"Demonstrated teaching experience as a teaching assistant, teaching fellow, or course instructor; extensive knowledge of the subject area is highly desirable.","$9,276.01 + vacation pay",102,TU: 11:00-13:00; TH: 11:00-13:00 (online)
