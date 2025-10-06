@@ -1,4 +1,132 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+46232,8,TA,False,STA130H1S (Morning Tutorials) ,An Introduction to Statistical Reasoning and Data Science,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,5 @ 125 hours ,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",240,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,5,,"Required: 
+o	Strong communication skills and ability to communicate statistical concepts to beginner statistics students
+o	Experienced in using R, R-studio to produce plots, data summaries, and perform basic statistical tests
+o	Experience in interpreting statistical results in plain English 
+o	Available to lead weekly in-person tutorials on Fridays at the scheduled time
+o	Available to attend six 2-hour in-person teaching team meetings during the term (tentatively to be held on Wednesdays, time TBD)","Preferred: 
+o	Experience developing tutorial materials, evaluation rubrics, and materials to support the development of student writing and speaking skills is or a demonstrated interest to develop such skills",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	https://ttb.utoronto.ca/ (tentative)
+			Tutorials:	FR: 09:00 – 11:00"
+46233,8,TA,False,STA130H1S (Afternoon Tutorials) ,An Introduction to Statistical Reasoning and Data Science,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,4 @ 125 hours ,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",240,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,4,,"Required: 
+o	Strong communication skills and ability to communicate statistical concepts to beginner statistics students
+o	Experienced in using R, R-studio to produce plots, data summaries, and perform basic statistical tests
+o	Experience in interpreting statistical results in plain English 
+o	Available to lead weekly in-person tutorials on Fridays at the scheduled time
+o	Available to attend six 2-hour in-person teaching team meetings during the term (tentatively to be held on Wednesdays, time TBD)","Preferred: 
+o	Experience developing tutorial materials, evaluation rubrics, and materials to support the development of student writing and speaking skills is or a demonstrated interest to develop such skills",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	https://ttb.utoronto.ca/ (tentative)
+			Tutorials:	FR: 13:00 – 15:00"
+46234,8,TA,False,STA302H1S L5101 ,Methods of Data Analysis I,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,2 @ 88.5 hours,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",300,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Required:
+o	Must demonstrate to have successfully completed a senior undergraduate course in regression analysis covering course topics or equivalent
+o	Experience in conducting linear regression analysis, including assessment and correction of assumptions and appropriate model diagnostics
+o	Experience performing statistical analyses and data manipulation in R and R-Studio
+o	Strong organizational skills and ability to maintain tactful communication with students","Preferred: 
+o	Experience in report writing and statistical communication
+o	Experience providing written and formative feedback to others or a demonstrated interest to develop such skills
+o	Familiarity with scientific report structure and best practices
+o	Experience answering a variety of student questions (e.g., debugging code, writing advice, writing proofs and problem solving, data analysis techniques)",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	WE:18:00-21:00 (tentative)
+			Tutorials:	N/A"
+46235,8,TA,False,STA313H1S L0101 ,Data Visualization,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,3 @ 80 hours ,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",120,"Duties are in person unless otherwise indicated and will include any or all of the following:
+
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,3,,"Required: 
+o	Strong programming skills in R with experience using advanced visualization libraries (e.g., ggplot2, Shiny, Plotly) 
+o	Strong skills and experience with data visualization  
+o	Familiarity with course topics such as perception, graphic design, visualization principles, and data-driven communication 
+o	Previous teaching experience in interactive, problem-solving tutorials and labs 
+o	Confident in assessing written reports, verbal presentations, and group projects 
+o	Available to participate in training sessions throughout the term with the course instructor ","Preferred: 
+o	Experience with a range of visualization software/libraries such as Tableau, VegaLite, D3.js, etc... 
+o	Previous teaching experience in related course(s) (e.g., STA313, JSC270/JSC370, STA2555, CSC2537, CSC318), and/or professional experience in the relevant subject matter.  
+o	Successful completion in advanced related course(s) (e.g., STA313, STA2555, CSC2537, HAD5014, INF451) 
+o	Familiarity with research methods in Human-Computer Interaction (HCI) ",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	TU:09:00-11:00; TH:09:00-10:00 (tentative)
+			Tutorials:	N/A"
+46236,8,TA,False,STA313H1S L0201 ,Data Visualization,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,3 @ 80 hours ,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",120,"Duties are in person unless otherwise indicated and will include any or all of the following:
+
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,3,,"Required: 
+o	Strong programming skills in R with experience using advanced visualization libraries (e.g., ggplot2, Shiny, Plotly) 
+o	Strong skills and experience with data visualization  
+o	Familiarity with course topics such as perception, graphic design, visualization principles, and data-driven communication 
+o	Previous teaching experience in interactive, problem-solving tutorials and labs 
+o	Confident in assessing written reports, verbal presentations, and group projects 
+o	Available to participate in training sessions throughout the term with the course instructor ","Preferred: 
+o	Experience with a range of visualization software/libraries such as Tableau, VegaLite, D3.js, etc... 
+o	Previous teaching experience in related course(s) (e.g., STA313, JSC270/JSC370, STA2555, CSC2537, CSC318), and/or professional experience in the relevant subject matter.  
+o	Successful completion in advanced related course(s) (e.g., STA313, STA2555, CSC2537, HAD5014, INF451) 
+o	Familiarity with research methods in Human-Computer Interaction (HCI) ",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	TU:15:00-17:00; TH:17:00-18:00 (tentative)
+			Tutorials:	N/A"
+46237,8,TA,False,STA414H1S L5101 ,Statistical Methods for Machine Learning II,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,06-Oct-2025,21-Oct-2025,06-Nov-2025,395,Angela Niazmand,2 @ 60 hours ,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is October 21, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",225,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Required:
+o	Foundations and experience in working with graphical models, kernel methods, Gaussian processes and other related machine learning methods
+o	Must demonstrate to have successfully completed courses in linear algebra and multivariate calculus
+o	Experienced in performing statistical analyses in Python","Preferred:
+o	Previous teaching experience in STA414 or similar
+o	Experienced in providing constructive written feedback
+o	Experienced in using R Markdown and/or LaTeX
+o	Good oral communication skills",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	Tuesday: 6 PM – 9 PM (tentative)
+			Tutorials:	N/A"
+46238,8,TA,True,CME525H1,Tunneling and Urban Excavation,"September 1, 2025 - December 31, 2025",28,Civil and Mineral Engineering,1,St. George,06-Oct-2025,08-Oct-2025,24-Oct-2025,489,Shawn,10,,2025-12-31T00:00:00.000000Z,2025-09-01T00:00:00.000000Z,"To apply, submit the application form by the deadline: https://tams.fase.utoronto.ca/TamsPortal/postings/civil",,"Fostering student learning and assisting the course instructors as necessary. Duties may include field supervision and assistance, marking, preparation for lectures or tutorials, maintaining office hours for student inquiries, student and course support, meetings. ",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,"Technical ability and related experience in course subject material, an undergraduate degree in engineering, academic excellence, satisfactory previous employment under the provisions of the CUPE3902 collective agreement. ",,"$52.97 per hour + vacation pay. Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Undergraduate courses: https://ttb.utoronto.ca/; Graduate courses: https://civmin.utoronto.ca/home/programs/courses/graduate-courses/ 
 41234,8,TA,False,EAS110Y1Y L0101 (Online synchronous),Modern Standard Korean I,"May 1, 2025-August 31, 2025",88,East Asian Studies,1,St. George,03-Oct-2025,04-Oct-2025,20-Oct-2025,538,Chris De Barros,125 hours,,2025-08-31T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,75,"Duties will include:  marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,3,,Fluency in Korean and an ability to communicate information clearly required: previous teaching and marking experience preferred.,Fluency in Korean and an ability to communicate information clearly required: previous teaching and marking experience preferred.,$52.97,,"Synchronous tutorials on Mondays, Tuesdays, Thursdays and Fridays 9:00 am-10:30 am, 10:30 am-12:00 pm and 7:00 pm-8:30 pm."
 41235,8,TA,False,EAS219H1F,Cultural History of Food and Drink in East Asia,"May 1, 2025-June 30, 2025",88,East Asian Studies,1,St. George,03-Oct-2025,04-Oct-2025,20-Oct-2025,538,Chris De Barros,62 hours,,2025-06-30T00:00:00.000000Z,2025-05-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,80,"Duties will include: marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred.,$52.97,,"Synchronous lectures on Tuesdays, Thursdays  11:00 am-13:00 pm"
 41236,8,TA,False,EAS241H1S,Introduction to Chinese Philosophy,"July 1, 2025-August 31, 2025",88,East Asian Studies,1,St. George,03-Oct-2025,04-Oct-2025,20-Oct-2025,538,Chris De Barros,62 hours ,,2025-08-31T00:00:00.000000Z,2025-07-01T00:00:00.000000Z,Follow application procedures outlined here: https://www.eas.utoronto.ca/about-us/employment-opportunities/cupe-unit-1-positions,80,"Duties will include: marking assignments and exams, other duties may be assigned by the supervisor",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred. ,Successful applicants will be in an MA or PhD program: knowledge of the subject area and an ability to communicate information clearly required: previous marking experience preferred. ,$52.97 ,,"In-person lectures on Tuesdays, Thursdays 14:00pm- 16:00pm"
