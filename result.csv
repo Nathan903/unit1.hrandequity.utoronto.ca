@@ -1,6 +1,31 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
 46442,8,TA,False,ESS205H1S,Confronting Global Change,"January 1, 2026 - April 30, 2026",295,Earth Sciences,1,St. George,14-Oct-2025,22-Oct-2025,07-Nov-2025,186,Scott Moore,60-90,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,For detailed information on the application procedure to to: https://www.es.utoronto.ca/graduate/current-students/teaching-assistantships,400,"Grading of assignments, tests, and final exam.",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,4,,Broad knowledge in Earth Sciences,Broad knowledge in Earth Sciences,$53.92/hour + vacation pay,,https://ttb.utoronto.ca/
 46443,8,TA,False,ESS362H1S,Oceanography,"January 1, 2026 - April 30, 2027",295,Earth Sciences,1,St. George,14-Oct-2025,22-Oct-2025,07-Nov-2025,186,Scott Moore,60-90,,2027-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,For detailed information on the application procedure to to: https://www.es.utoronto.ca/graduate/current-students/teaching-assistantships,50,"Assisting and preparation of labs, running of labs, grading of assignments, quizzes, and exam.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,2,,Knowledge in the subject area.,Knowledge in the subject area.,$53.92/hour + vacation pay,,https://ttb.utoronto.ca/
+46444,8,TA,False,STA288H1S L0101 ,Statistics and Scientific Inquiry in the Life Sciences,"January 1, 2026 to April 30, 2026",185,Statistical Sciences,1,St. George,14-Oct-2025,03-Nov-2025,19-Nov-2025,395,Angela Niazmand,150 hrs,,2026-04-30T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is November 3, 2025. For more information, you may contact:
+Angela Niazmand
+Undergraduate and TA Administrator
+Department of Statistical Sciences
+University of Toronto
+700 University Avenue
+Ontario Power Building - 9160-6
+Toronto, ON M5G 1Z5
+www.statistics.utoronto.ca
+E-mail: jobapps.statistics@utoronto.ca",200,"Duties are in person unless otherwise indicated and will include any or all of the following:
+Preparation for classes, preparation of written or audio-visual materials, designing and maintaining course websites, attending lectures, running tutorial sessions, facilitating and evaluating student engagement on online discussion boards, participating in training sessions, meeting with the instructors, teaching, leading discussions, and supervising laboratories, rating students' work, holding office hours, consulting with students (including electronic consultation), writing and grading tests, examinations and lab sets, grading essays and term papers, invigilating midterm and final exams, setting up experiments, conducting field trips, and conferring with the supervisor in charge, as required by the employee's teaching duties.
+Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Required:
+o	Undergraduate degree with Statistics Minor or Major and current graduate student in Statistics, Biostatistics, or related discipline
+o	Experience with quantitative life science research and/or analysis and interpretation of resulting data (e.g., coursework and/or research)
+o	Experience performing statistical analyses using R/R Markdown and ability to troubleshoot technical issues
+o	Available to attend class meetings in-person for both LEC sections to support students on weeks with scheduled class activities such as labs","Preferred: 
+o	PhD candidate in Statistics, Biostatistics, or related discipline
+o	Experience answering a variety of student questions (e.g., debugging code, writing advise, data analyses) or a demonstrated interest to develop such skill
+o	Experience providing written and formative feedback to students or a demonstrated interest to develop such skill
+o	Ability to communicate, both verbally and in writing, with a diverse team in a clear and precise manner
+o	Ability to assist students search for and understand relevant literature
+o	Familiarity with scientific report structure, scientific writing, and best practices
+o	Previous TA experience and professional development in teaching (e.g., TATP workshops)
+o	Previous experience with STA288H1: Statistics and Scientific Inquiry in the Life Sciences",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	TH:11:00-13:00 (tentative)
+			Tutorials:	N/A "
 46353,8,TA,False,ENV101H1S,Confronting the Climate Crisis (Lead Administrative TA),"January 2, 2026 - May 7, 2026",176,School of the Environment,1,St. George,10-Oct-2025,31-Oct-2025,16-Nov-2025,225,Phoebe To,120,,2026-05-07T00:00:00.000000Z,2026-01-02T00:00:00.000000Z,"Please submit an application on https://taships.iit.artsci.utoronto.ca/env/login.
 
 Applications should include: i) a letter of application, explaining why you are qualified for the course(s) to which you are applying, and ii) a CV (including academic and applied environmental experience). 
