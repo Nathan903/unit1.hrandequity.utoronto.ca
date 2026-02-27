@@ -9,6 +9,10 @@ jobs:
   run-scripts:
     runs-on: ubuntu-latest
 
+    permissions:
+      issues: write
+      contents: write
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -23,24 +27,37 @@ jobs:
         python -m pip install --upgrade pip
         pip install pandas==3.0.1 requests
 
-
     - name: Run download.py
       run: python download.py
 
     - name: Run csv_to_html.py
       run: python csv_to_html.py
 
-    - name: Check for changes
-      id: check_changes
-      run: |
-        git diff --exit-code || echo "Changes detected"
-
-    - name: Commit and push changes
-      if: steps.check_changes.outputs.stdout == '0'
+    - name: Configure git
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
-        git add .
-        git commit -m "Auto update"
+
+    - name: Run notify_ta_jobs.py
+      id: notify
+      run: python notify_ta_jobs.py
+      continue-on-error: true  # exit code 1 means "nothing to post" — don't fail the job
+
+    - name: Post alert as GitHub Issue comment
+      if: steps.notify.outcome == 'success'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue comment 1 --body-file issue_body.md
+
+    - name: Commit and push all changes
+      run: |
+        git add result.csv index.html ta_alert_state.json
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+        elif [ "${{ steps.notify.outcome }}" = "success" ]; then
+          git commit -m "Auto update and alert"
+        else
+          git commit -m "Auto update"
+        fi
         git push
-        echo "pushed"
