@@ -4,967 +4,4275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UofT CUPE Local 3902 Unit 1 Job Postings</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <title>CUPE 3902 Unit 1 Job Postings — UofT</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <style type="text/css">
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 12px 20px;
+            background: #fafafa;
+            color: #222;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 2px 0;
+            color: #1a1a2e;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: #666;
+            margin: 0 0 12px 0;
+        }
+
+        /* Toolbar: toggle + dataTables controls on one line */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .toolbar label {
+            font-size: 12px;
+            color: #444;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .toolbar input[type="checkbox"] {
+            accent-color: #1a5276;
+            margin: 0;
+        }
+
+        /* DataTables overrides */
+        table.dataTable {
+            border-collapse: collapse !important;
+            width: 100% !important;
+        }
+        table.dataTable thead th {
+            background: #1a1a2e;
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 7px 8px;
+            border-bottom: none;
+            text-align: left;
+        }
+        table.dataTable thead th.sorting:after,
+        table.dataTable thead th.sorting_asc:after,
+        table.dataTable thead th.sorting_desc:after {
+            opacity: 0.7;
+        }
+        /* Filter row (tfoot shown above tbody) */
         tfoot {
             display: table-header-group;
         }
+        table.dataTable tfoot th {
+            background: #f0f0f0;
+            padding: 4px 4px;
+            border-bottom: 1px solid #ddd;
+            font-weight: normal;
+        }
+        table.dataTable tfoot input,
+        table.dataTable tfoot select {
+            width: 100%;
+            padding: 4px 5px 4px 24px;
+            font-size: 12px;
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") 6px center no-repeat;
+            color: #333;
+        }
+        table.dataTable tfoot select {
+            padding-left: 5px;
+            background-image: none;
+        }
+        table.dataTable tfoot input:focus,
+        table.dataTable tfoot select:focus {
+            outline: none;
+            border-color: #1a5276;
+            box-shadow: 0 0 0 1px #1a527633;
+        }
+
+        /* Body rows */
+        table.dataTable tbody td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #e8e8e8;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        table.dataTable tbody tr:hover td {
+            background: #e8f0fe !important;
+        }
+        table.dataTable.stripe tbody tr.odd td,
+        table.dataTable tbody tr.odd td {
+            background: #fff;
+        }
+        table.dataTable.stripe tbody tr.even td,
+        table.dataTable tbody tr.even td {
+            background: #edf0f5;
+        }
+        /* Expired rows get dimmed */
+        table.dataTable tbody tr.expired td {
+            color: #999;
+        }
+        table.dataTable tbody tr.expired a {
+            color: #8aa;
+        }
+
+        /* Type column: compact badge */
+        .badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .badge-ta { background: #d4edda; color: #155724; }
+        .badge-ci { background: #cce5ff; color: #004085; }
+
+        /* DataTables info/pagination area */
+        .dataTables_wrapper .dataTables_length,
+        .dataTables_wrapper .dataTables_filter,
+        .dataTables_wrapper .dataTables_info,
+        .dataTables_wrapper .dataTables_paginate {
+            font-size: 12px;
+            color: #555;
+        }
+        .dataTables_wrapper .dataTables_filter {
+            display: none; /* we have per-column filters, the global search box is redundant */
+        }
+        .dataTables_wrapper .dataTables_length select {
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+            background: #1a1a2e !important;
+            color: #fff !important;
+            border: 1px solid #1a1a2e;
+            border-radius: 3px;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            background: #e8f0fe !important;
+            border-color: #ccc;
+            border-radius: 3px;
+            color: #222 !important;
+        }
+
+        /* Column widths */
+        table.dataTable th:nth-child(1),
+        table.dataTable td:nth-child(1) { width: 44px; }
+        table.dataTable th:nth-child(6),
+        table.dataTable td:nth-child(6),
+        table.dataTable th:nth-child(7),
+        table.dataTable td:nth-child(7) { width: 80px; white-space: nowrap; }
     </style>
 </head>
 <body>
 
+    <h1>CUPE 3902 Unit 1 — Job Postings</h1>
+    <p class="subtitle">University of Toronto · TA &amp; CI positions</p>
 
-    <table id="example" border=0 style="width:100%" class="display">
+    <div class="toolbar">
+        <label for="showExpiredToggle">
+            <input type="checkbox" id="showExpiredToggle">
+            <span id="showExpiredLabel">Show expired postings</span>
+        </label>
+    </div>
+
+    <table id="jobs" border=0 style="width:100%" class="display compact">
   <tfoot>
-<th>ptype</th>
- <th>course_id</th>
- <th>job_title</th>
- <th>department</th>
- <th>campus</th>
- <th>posting_date</th>
- <th>closing_date</th>
+<tr><th>Type</th>
+ <th>Course</th>
+ <th>Title</th>
+ <th>Department</th>
+ <th>Campus</th>
+ <th>Posted</th>
+ <th>Closes</th>
 </tr>
   </tfoot><thead>
     <tr style="text-align: right;">
-      <th>ptype</th>
-      <th>course_id</th>
-      <th>job_title</th>
-      <th>department</th>
-      <th>campus</th>
-      <th>posting_date</th>
-      <th>closing_date</th>
+      <th>Type</th>
+      <th>Course</th>
+      <th>Title</th>
+      <th>Department</th>
+      <th>Campus</th>
+      <th>Posted</th>
+      <th>Closes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>TA</td>
-      <td>INF2176H|47949</td>
-      <td>Information Management in Organizations - Models and Platforms</td>
-      <td>Faculty of Information</td>
+      <td>SOC150H1S-LEC0101|48384</td>
+      <td>Intro. to Soc II: Sociological Inquiries</td>
+      <td>Sociology</td>
       <td>St. George</td>
-      <td>20-Jan-2026</td>
-      <td>22-Jan-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>INF2165H|47950</td>
-      <td>Accessibility and Inclusive Design</td>
-      <td>Faculty of Information</td>
+      <td>SOC201H1F-LEC5101|48385</td>
+      <td>Classical Sociological Theory</td>
+      <td>Sociology</td>
       <td>St. George</td>
-      <td>20-Jan-2026</td>
-      <td>22-Jan-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>INS250H1|32794</td>
-      <td>INS250H1: Introduction to Indigenous Environmental Studies</td>
-      <td>Centre for Indigenous Studes</td>
+      <td>SOC202H1F-LEC0101|48386</td>
+      <td>Intro. To Quantitative Methods in Sociology</td>
+      <td>Sociology</td>
       <td>St. George</td>
-      <td>20-Jan-2026</td>
-      <td>23-Jan-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>CMU210Y1|47948</td>
-      <td>Composition-New Music Festival</td>
-      <td>MUSIC</td>
+      <td>SOC204H1F-LEC0101|48387</td>
+      <td>Intro. To Qualitative Methods in Sociology</td>
+      <td>Sociology</td>
       <td>St. George</td>
-      <td>20-Jan-2026</td>
-      <td>22-Jan-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>WGS373H5S|47944</td>
-      <td>Gender, Violence and Resistance</td>
-      <td>Historical Studies</td>
+      <td>SOC208H1S-LEC5101|48388</td>
+      <td>Intro. To Social Policy</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC212H1S-LEC0101|48389</td>
+      <td>Crime and Deviance</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC240H1F-LEC0101|48390</td>
+      <td>Sociology of Law</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC251H1S-LEC5101|48391</td>
+      <td>Contemporary Sociological Theory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC254H1S-LEC0101|48392</td>
+      <td>Intermediate Qualitative Methods</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC293H1F-LEC0101|48393</td>
+      <td>Sociology of Sports</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC311H1F-LEC5101|48394</td>
+      <td>Immigration and Race Relations in Canada</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC313H1S-LEC0101|48395</td>
+      <td>Social Control</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC335H1F-LEC0101|48396</td>
+      <td>Urban Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC350H1S-LEC0101|48397</td>
+      <td>New Topics in Sociology: The Sociology of Collective Memory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC363H1S-LEC0101|48398</td>
+      <td>Sociology of Mental Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC367H1F-LEC0101|48399</td>
+      <td>Race, Class, and Gender</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>APS112H1|48400</td>
+      <td>Engineering Strategies &amp; Practice II</td>
+      <td>Engineering First Year Office</td>
+      <td>UTSC</td>
+      <td>2026.02.26</td>
+      <td>2026.03.26</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC100H5F|48401</td>
+      <td>Introduction to Sociology</td>
+      <td>Sociology</td>
       <td>UTM</td>
-      <td>19-Jan-2026</td>
-      <td>21-Jan-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>RLG350H5S|47943</td>
-      <td>Topics in Islam:The Life of Muhammad</td>
-      <td>Historical Studies</td>
+      <td>SOC109H5F|48402</td>
+      <td>Introduction to Criminology, Law and Society</td>
+      <td>Sociology</td>
       <td>UTM</td>
-      <td>19-Jan-2026</td>
-      <td>21-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1F LEC0101|47929</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1F LEC0201|47930</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1F LEC5101|47931</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1S LEC0101|47932</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1S LEC0201|47933</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG100H1S LEC5101|47934</td>
-      <td>Effective Writing</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG102H1F LEC0101|47935</td>
-      <td>Literature and the Sciences</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG340H1F LEC0101|47936</td>
-      <td>Modern Drama</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG372H1S LEC0101|47937</td>
-      <td>Topics in Indigenous, Postcolonial, Transnational Literatures: Open Topic</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG373H1F LEC0101|47938</td>
-      <td>Topics in Pre-1800 British Literature: Open Topic</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG378H1F LEC0101|47939</td>
-      <td>Special Topics: Open Topic</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG480H1F LEC0101|47940</td>
-      <td>Advanced Studies Seminar: Open Topic</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>CI</td>
-      <td>ENG481H1F LEC5101|47941</td>
-      <td>Advanced Studies Seminar: Open Topic</td>
-      <td>Department of English</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>06-Feb-2026</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>STAD80H3|47942</td>
-      <td>Analysis of Big Data</td>
+      <td>SOC206H5F|48403</td>
+      <td>Introduction to Sociology of Genocide</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC228H5F|48404</td>
+      <td>Introduction to Indigenous Studies</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC301H5F|48405</td>
+      <td>Canadian Prisons</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC318H5F|48406</td>
+      <td>Sociology of Mental Health and Mental Disorders</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC326H5F|48407</td>
+      <td>Policing</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC330H5S|48408</td>
+      <td>Criminology and Immigration</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC336H5F|48409</td>
+      <td>Special Topics in Sociology</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC336H5S|48410</td>
+      <td>Special Topics in Sociology</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC344H5F|48411</td>
+      <td>Sociological Approaches to Social Psychology</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC366H5F|48412</td>
+      <td>Special Topics in Criminology, Law and Society</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC369H5S|48413</td>
+      <td>Digital Culture and Society</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC423H5F|48414</td>
+      <td>Identity Crime</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC429H5S|48415</td>
+      <td>Disability, Politics and Society</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC457H5F|48416</td>
+      <td>Sociology of Race and Ethnicity</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ACT240H1F L0101|48422</td>
+      <td>Mathematics of Investment &amp; Credit</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>STA237H1F L0101|48423</td>
+      <td>Probability, Statistics and Data Analysis I</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>STA238H1S L0101|48424</td>
+      <td>Probability, Statistics and Data Analysis II</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>STA302H1S L5101|48425</td>
+      <td>Methods of Data Analysis I</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>STA303H1S L0101|48426</td>
+      <td>Methods of Data Analysis II</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>STA314H1S L0101|48427</td>
+      <td>Statistical Methods for Machine Learning I</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO220Y1Y LEC0101|48428</td>
+      <td>Introduction to Data Analysis and Applied Econometrics (F-session only)</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO220Y1Y LEC0101|48429</td>
+      <td>Introduction to Data Analysis and Applied Econometrics (S-session only)</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO220Y1Y LEC0201|48430</td>
+      <td>Introduction to Data Analysis and Applied Econometrics (F-session only)</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO220Y1Y LEC0201|48431</td>
+      <td>Introduction to Data Analysis and Applied Econometrics (S-session only)</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO220Y1Y DACM|48432</td>
+      <td>Introduction to Data Analysis and Applied Econometrics (DACM only)</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO333H1F LEC0101|48433</td>
+      <td>Urban Economics</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO372H1F LEC0101|48434</td>
+      <td>Data Analysis and Applied Econometrics in Practice</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ECO372H1S LE50101|48435</td>
+      <td>Data Analysis and Applied Econometrics in Practice</td>
+      <td>Department of Economics</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>SOC100H1F-LEC0101|48383</td>
+      <td>Intro. to Soc I: Sociological Perspectives</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.26</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY210H5 F|48436</td>
+      <td>Introduction to Dev. Psychology</td>
+      <td>Department of Psychology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY270H5 F|48437</td>
+      <td>Cognition: The Machinery of the Mind</td>
+      <td>Department of Psychology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY280H5 S|48438</td>
+      <td>Sensation and Perception: Where the World Meets the Brain</td>
+      <td>Department of Psychology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY341H5 S|48439</td>
+      <td>Abnormal Psychology: Disorders of Children and Adolescents</td>
+      <td>Department of Psychology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY372H5 S|48440</td>
+      <td>Human Memory: The World within your Mind</td>
+      <td>Department of Psychology</td>
+      <td>UTM</td>
+      <td>2026.02.26</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>COPC03H3|48339</td>
+      <td>Co-op work term - Computer Science</td>
       <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>19-Jan-2026</td>
-      <td>21-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ECE1776H|47945</td>
-      <td>Computer Security, Cryptography and Privacy</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>22-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PCJ360H1 S|47946</td>
-      <td>Topics in Peace, Conflict and Justice: Surveillance, Technology, and Society</td>
-      <td>Munk School of Global Affairs and Public Policy</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>24-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>NUR 1095H|47947</td>
-      <td>Introduction to Qualitative Research: Methodologies, Appraisal and Knowledge Translation: Nurse Practitioner</td>
-      <td>Nursing</td>
-      <td>St. George</td>
-      <td>19-Jan-2026</td>
-      <td>23-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>EDS291H5S|47928</td>
-      <td>Black Education</td>
-      <td>Department of Language Studies</td>
-      <td>UTM</td>
-      <td>16-Jan-2026</td>
-      <td>20-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>O</td>
-      <td>NaN</td>
-      <td>Chief Presiding Officer (CPO)</td>
-      <td>Office of the Faculty Registrar, Faculty of Arts &amp; Science</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>20-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>O</td>
-      <td>NaN</td>
-      <td>Chief Presiding Officer (CPO)</td>
-      <td>Office of the Faculty Registrar, Faculty of Arts &amp; Science</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>04-Feb-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>APS112H1|47923</td>
-      <td>Engineering Strategies &amp; Practice II</td>
-      <td>Institute for Studies in Transdisciplinary Engineering Education and Practice</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>19-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PHM360H|47924</td>
-      <td>Personalized Medicine</td>
-      <td>PHM</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>20-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CHMB21H3|47925</td>
-      <td>Chemical Structure and Spectroscopy</td>
-      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>CSCA48H3|48340</td>
+      <td>Introduction to Computer Science II</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>15-Jan-2026</td>
-      <td>19-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ANT342H1S|47926</td>
-      <td>Anthropology of Race and Racism</td>
-      <td>Anthropology</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>19-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>DHU236H1S|47927</td>
-      <td>Virtual Worlds - Introduction to Digital Humanities</td>
-      <td>Medieval Studies</td>
-      <td>St. George</td>
-      <td>15-Jan-2026</td>
-      <td>19-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PHL113H5S|47919</td>
-      <td>Introduction to Philosophy: Persons and Value</td>
-      <td>Philosophy</td>
-      <td>UTM</td>
-      <td>14-Jan-2026</td>
-      <td>16-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ARC352H1S|47920</td>
-      <td>History of Architectural Knowledge</td>
-      <td>Daniels Faculty of Architecture, Landscape, and Design</td>
-      <td>St. George</td>
-      <td>14-Jan-2026</td>
-      <td>16-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>STA437H1S L0101|47921</td>
-      <td>Methods for Multivariate Data</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>14-Jan-2026</td>
-      <td>19-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ECO101H5 S|47922</td>
-      <td>Principles of Microeconomics</td>
-      <td>Department of Economics</td>
-      <td>UTM</td>
-      <td>14-Jan-2026</td>
-      <td>16-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CJS301H1-S|47917</td>
-      <td>Community: Jewish Principles and Policies</td>
-      <td>Centre for Jewish Studies</td>
-      <td>St. George</td>
-      <td>13-Jan-2026</td>
-      <td>16-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CRI225H1S|47907</td>
-      <td>Criminal Law</td>
-      <td>Centre for Criminology &amp; Sociolegal Studies</td>
-      <td>St. George</td>
-      <td>12-Jan-2026</td>
-      <td>14-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENG140Y1Y|47910</td>
-      <td>Literature for our Time (F1-3)</td>
-      <td>English</td>
-      <td>St. George</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENG100H5S - LEC104|47911</td>
-      <td>Effective Writing (W6-9 online sync)</td>
-      <td>English</td>
-      <td>UTM</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENG100H5S - LEC105|47912</td>
-      <td>Effective Writing (W6-9 online sync)</td>
-      <td>English</td>
-      <td>UTM</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENG325H5S|47913</td>
-      <td>The Victorian Novel (T3-5, R3)</td>
-      <td>English</td>
-      <td>UTM</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENGA11H3S|47914</td>
-      <td>Literature &amp; Film for our Time: Dawn of the Digital (W12-2)</td>
-      <td>English</td>
+      <td>CSCB07H3|48341</td>
+      <td>Software Design</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ECE1475H|47915</td>
-      <td>Bio Photonics</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>12-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>DHU236H1S|47916</td>
-      <td>Virtual Worlds - Introduction to Digital Humanities</td>
-      <td>Medieval Studies</td>
-      <td>St. George</td>
-      <td>12-Jan-2026</td>
-      <td>14-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CHE305H1S|47905</td>
-      <td>Chem Eng &amp; Applied Chem IV</td>
-      <td>Department of Chemical Engineering and Applied Chemistry</td>
-      <td>St. George</td>
-      <td>09-Jan-2026</td>
-      <td>13-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>RLGA02H3|47904</td>
-      <td>World Religions II</td>
-      <td>Historical and Cultural Studies</td>
+      <td>CSCB09H3|48342</td>
+      <td>Software Tools and Systems Programming</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>09-Jan-2026</td>
-      <td>16-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ECE1513H|47903</td>
-      <td>Introduction to Machine Learning</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>09-Jan-2026</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ENV496H5S|47902</td>
-      <td>Restoration Ecology II</td>
-      <td>Department of Geography, Geomatics and Environment</td>
-      <td>UTM</td>
-      <td>09-Jan-2026</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ECE1770H|47901</td>
-      <td>Trends in Middleware Systems: Selected Topics and Concepts: Graph Processing</td>
-      <td>Department of Electrical and Computer Engineering</td>
-      <td>St. George</td>
-      <td>09-Jan-2026</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>SLA247H1S|47899</td>
-      <td>Cinema of the Balkans</td>
-      <td>Department of Slavic Languages &amp; Literatures</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>14-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>NMC265H1S|47898</td>
-      <td>Archaeology in War Zones: Syria, Iraq, Afghanistan</td>
-      <td>Department of Near &amp; Middle Eastern Civilizations</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>13-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>GGR101H1S|47894</td>
-      <td>Histories of Environmental Change</td>
-      <td>Geography &amp; Planning</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>11-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>GGR252H1S|47895</td>
-      <td>Marketing Geography</td>
-      <td>Geography &amp; Planning</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>11-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>GGR274H1S|47896</td>
-      <td>Introductory Computation and Data Science for the Social Sciences</td>
-      <td>Geography &amp; Planning</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>11-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>LTL487H5S|47900</td>
-      <td>Second Language Pedagogy</td>
-      <td>Department of Language Studies</td>
-      <td>UTM</td>
-      <td>08-Jan-2026</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PPG2011H-S|45215</td>
-      <td>Ethics and the Public Interest</td>
-      <td>Munk School of Global Affairs &amp;amp; Public Policy (MPP program)</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>10-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>HPS302H1S|47897</td>
-      <td>Topics in PST: On Intuitive Thinking and Know How in Science</td>
-      <td>Institute for the History and Philosophy of Science and Technology</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>11-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>HPS201H1S|47906</td>
-      <td>Science, Technology, and Society</td>
-      <td>Institute for the History and Philosophy of Science and Technology</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>11-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>HPS250H1S|47918</td>
-      <td>Introductory Philosophy of Science</td>
-      <td>Institute for the History and Philosophy of Science and Technology</td>
-      <td>St. George</td>
-      <td>08-Jan-2026</td>
-      <td>15-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ITA378H1S|47890</td>
-      <td>Topics in Italian Studies: Italian Fashion: Culture and Tradition</td>
-      <td>Department of Italian, Spanish, Portuguese &amp; Latin American Studies</td>
-      <td>St. George</td>
-      <td>07-Jan-2026</td>
-      <td>09-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CRI385H1F|47892</td>
-      <td>Representing Crime and Authority</td>
-      <td>Centre for Criminology &amp; Sociolegal Studies</td>
-      <td>St. George</td>
-      <td>07-Jan-2026</td>
-      <td>09-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ANT101H5S|47884</td>
-      <td>Introduction to Biological Anthropology and Archaeology</td>
-      <td>Anthropology</td>
-      <td>UTM</td>
-      <td>07-Jan-2026</td>
-      <td>10-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ANT223H5S|47885</td>
-      <td>Anthropology of Global Challenges</td>
-      <td>Anthropology</td>
-      <td>UTM</td>
-      <td>07-Jan-2026</td>
-      <td>10-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ANT352H5S|47886</td>
-      <td>Power, Authority and Legitimacy: Topics in Political Anthropology</td>
-      <td>Anthropology</td>
-      <td>UTM</td>
-      <td>07-Jan-2026</td>
-      <td>10-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ANT355H5S|47887</td>
-      <td>Disabled Cyborgs and Racist Robots: Bodies, Technologies, and Social Justice</td>
-      <td>Anthropology</td>
-      <td>UTM</td>
-      <td>07-Jan-2026</td>
-      <td>10-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>ARC280H1S|47888</td>
-      <td>Modeling and Fabrication in Design</td>
-      <td>Daniels Faculty of Architecture, Landscape, and Design</td>
-      <td>St. George</td>
-      <td>07-Jan-2026</td>
-      <td>09-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CTL7009H|47889</td>
-      <td>Anti-Discriminatory Education</td>
-      <td>Curriculum Teaching and Learning</td>
-      <td>St. George</td>
-      <td>07-Jan-2026</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>SOCC34H3S|47891</td>
-      <td>Migrations &amp; Transnationalisms</td>
-      <td>Sociology</td>
+      <td>CSCB36H3|48343</td>
+      <td>Introduction to the Theory of Computation</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>07-Jan-2026</td>
-      <td>09-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>MIE443H1|47893</td>
-      <td>* Mechatronics Systems: Design and Integration</td>
-      <td>Department of Mechanical and Industrial Engineering</td>
-      <td>St. George</td>
-      <td>07-Jan-2026</td>
-      <td>09-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>STA272H1S L0101|47873</td>
-      <td>Statistical Models for Data Science</td>
-      <td>Statistical Sciences</td>
-      <td>St. George</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>SOCB40H3S|47874</td>
-      <td>Thinking Like a Sociologist</td>
-      <td>Sociology</td>
+      <td>CSCB58H3|48344</td>
+      <td>Computer Organization</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>SOCC59H3S|47875</td>
-      <td>Special Topics in Social Inequality</td>
-      <td>Sociology</td>
+      <td>CSCB63H3|48345</td>
+      <td>Design and Analysis of Data Structures</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ANTA02H3S|47876</td>
-      <td>Introduction to Anthropology: Society, Culture and Language</td>
-      <td>Anthropology</td>
+      <td>CSCC01H3|48346</td>
+      <td>Introduction to Software Engineering</td>
+      <td>Computer and Mathematical Sciences</td>
       <td>UTSC</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>CHE460/JNC2503|47879</td>
-      <td>Environmental Pathways and Impact Assessment</td>
-      <td>Department of Chemical Engineering and Applied Chemistry</td>
+      <td>CSCC09H3|48347</td>
+      <td>Programming on the Web</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCC10H3|48348</td>
+      <td>Human-Computer Interaction</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCC24H3|48349</td>
+      <td>Principles of Programming Languages</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCC43H3|48350</td>
+      <td>Introduction to Databases</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCC63H3|48351</td>
+      <td>Computability and Computational Complexity</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCC69H3|48352</td>
+      <td>Operating Systems</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSCD03H3|48353</td>
+      <td>Social Impact of Information Technology</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA22H3|48354</td>
+      <td>Linear Algebra I for Mathematical Sciences</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA23H3|48355</td>
+      <td>Linear Algebra I</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA34H3|48356</td>
+      <td>Calculus for Management</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA35H3|48357</td>
+      <td>Calculus II for Biological Sciences</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA36H3|48358</td>
+      <td>Calculus II for Physical Sciences</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATA37H3|48359</td>
+      <td>Calculus II for Mathematical Sciences</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATB24H3|48360</td>
+      <td>Linear Algebra II</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATB41H3|48361</td>
+      <td>Techniques of the Calculus of Several Variables I</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATB42H3|48362</td>
+      <td>Techniques of the Calculus of Several Variables II</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MATC01H3|48363</td>
+      <td>Groups and Symmetry</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>STAB22H3|48364</td>
+      <td>Statistics I</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>STAB23H3|48365</td>
+      <td>Introduction to Statistics for the Social Sciences</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>STAB52H3|48366</td>
+      <td>Introduction to Probability</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>STAC67H3|48367</td>
+      <td>Regression Analysis</td>
+      <td>Computer and Mathematical Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.25</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RSM260H1|48373</td>
+      <td>Organizational Behaviour</td>
+      <td>Rotman School of Management</td>
       <td>St. George</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>GGR277H5S|47880</td>
-      <td>Social Research Methods in Geography</td>
-      <td>Department of Geography, Geomatics and Environment</td>
-      <td>UTM</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>GGR370H5S|47881</td>
-      <td>The Geography of Transportation</td>
-      <td>Department of Geography, Geomatics and Environment</td>
-      <td>UTM</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>GGR376H5S|47882</td>
-      <td>Spatial Data Science II</td>
-      <td>Department of Geography, Geomatics and Environment</td>
-      <td>UTM</td>
-      <td>06-Jan-2026</td>
-      <td>08-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>HIS375H1S|47851</td>
-      <td>Crime and Punishment in the Early Modern World</td>
-      <td>History</td>
+      <td>WGS273H1F|48375</td>
+      <td>Gender &amp; Environmental (In)Justice</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>PHL239H5S|47872</td>
-      <td>Critical Reasoning</td>
-      <td>Philosophy</td>
-      <td>UTM</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>RLG105H1S|47877</td>
-      <td>Spirituality, Religion, and the Environment</td>
-      <td>Departmen for the Study of Religion</td>
+      <td>WGS373H1S|48376</td>
+      <td>Gender and Violence</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>LIN204H1S|47852</td>
-      <td>English Grammar</td>
+      <td>WGS397H1S|48377</td>
+      <td>The Politics of Girlhood</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>WGS376H1F|48378</td>
+      <td>Studies in Queer and Trans</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>WGS369H1F|48379</td>
+      <td>Studies in Post-Colonialism</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>WGS370H1S|48380</td>
+      <td>Utopian Visions, Activist Realities</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>DRM386H1|48382</td>
+      <td>Popular Culture and Performance</td>
+      <td>Centre for Drama, Theatre and Performance Studies</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>DTS403H1|48374</td>
+      <td>Advanced Topics in DTS (Palestine)</td>
+      <td>Centre for Diaspora and Transnational Studies</td>
+      <td>St. George</td>
+      <td>2026.02.25</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>RSM2618H|48309</td>
+      <td>The Socially Intelligent Manager</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.01</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>JLP374H1F|48312</td>
+      <td>Psychology of Language</td>
       <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>LIN200H1S|47854</td>
+      <td>LIN101H1F|48313</td>
+      <td>Introduction to Linguistics: Sound Structure</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>LIN102H1S|48314</td>
+      <td>Introduction to Linguistics: Sentence Structure and Meaning</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>LIN200H1S|48315</td>
       <td>Introduction to Language</td>
       <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>RLG200H1S|47855</td>
-      <td>The Study of Religion</td>
-      <td>Departmen for the Study of Religion</td>
+      <td>LIN211H1F|48316</td>
+      <td>American Sign Language 1</td>
+      <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>RLG237H1S|47856</td>
-      <td>Religion, Medicine, and the Human Body</td>
-      <td>Departmen for the Study of Religion</td>
+      <td>LIN211H1S|48317</td>
+      <td>American Sign Language 1</td>
+      <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ENG110H5S|47857</td>
-      <td>Narrative (MW12)</td>
-      <td>English</td>
-      <td>UTM</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>FOR424H1|47858</td>
-      <td>Innovation and Manufacturing of Sustainable Materials</td>
-      <td>Cross-Disciplinary Programs, FASE</td>
+      <td>LIN228H1S|48318</td>
+      <td>Phonetics</td>
+      <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>ENV360H1S|47859</td>
-      <td>Is the Internet Green?</td>
-      <td>School of the Environment</td>
+      <td>LIN241H1S|48319</td>
+      <td>Introduction to Semantics</td>
+      <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>CCT204H5S|47860</td>
-      <td>Design Thinking I</td>
-      <td>Institute of Communication, Culture, Information and Technology</td>
-      <td>UTM</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CIV100H1|47861</td>
-      <td>Mechanics</td>
-      <td>Civil and Mineral Engineering</td>
+      <td>LIN251H1F|48320</td>
+      <td>Introduction to Sociolinguistics</td>
+      <td>Linguistics</td>
       <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>MIN351H1|47862</td>
-      <td>Underground Mining</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CIV544H1|47863</td>
-      <td>Design of Timber Structures</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>MIN302H1|47864</td>
-      <td>Mineral Processing</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CIV1330H|47865</td>
-      <td>Water, Sanitation, Hygiene and Global Health</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CIV214H1|47866</td>
-      <td>Structural Analysis I</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CME263H1|47867</td>
-      <td>Probability Theory for Civil and Mineral Engineers</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CEM1002H|47868</td>
-      <td>Empirical Study of Cities</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>CIV185H1|47869</td>
-      <td>Earth Systems Science</td>
-      <td>Civil and Mineral Engineering</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PHLB07H3S|47870</td>
-      <td>Ethics</td>
-      <td>Philosophy</td>
-      <td>UTSC</td>
-      <td>05-Jan-2026</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>MBP1412H|47871</td>
-      <td>Ultrasound Overview</td>
-      <td>Department of Medical Biophysics</td>
-      <td>St. George</td>
-      <td>05-Jan-2026</td>
-      <td>08-Jan-2026</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
     </tr>
     <tr>
       <td>CI</td>
-      <td>HIS201H5S|47850</td>
-      <td>Introduction to Middle Eastern History</td>
+      <td>JLP374H1F|48321</td>
+      <td>Psychology of Language</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN101H1F|48322</td>
+      <td>Introduction to Linguistics: Sound Structure</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN102H1S|48323</td>
+      <td>Introduction to Linguistics: Sentence Structure and Meaning</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN200H1S|48324</td>
+      <td>Introduction to Language</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN211H1F|48325</td>
+      <td>American Sign Language 1</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN211H1S|48326</td>
+      <td>American Sign Language 1</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN228H1S|48327</td>
+      <td>Phonetics</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN241H1S|48328</td>
+      <td>Introduction to Semantics</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>LIN251H1F|48329</td>
+      <td>Introduction to Sociolinguistics</td>
+      <td>Linguistics</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ARC3300H-series|48330</td>
+      <td>Selected Topics in Architectural History and Theory</td>
+      <td>John H. Daniels Faculty of Architecture, Landscape, and Design</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE200H|48331</td>
+      <td>Physical Cultural Studies:&nbsp;&nbsp;Society, Bodies and Politics</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE260H|48332</td>
+      <td>Human Physiology I</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE321H|48333</td>
+      <td>Population Health</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE324H|48334</td>
+      <td>Advanced Sport Psychology</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE369H|48335</td>
+      <td>Human Physiology II</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE400H|48336</td>
+      <td>Ethics &amp; Power in Kinesiology, Physical Education and Health Fields</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE407H|48337</td>
+      <td>Maltreatment in Youth Sport</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE363H|48338</td>
+      <td>Sports Medicine</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>GER100Y1 L0101 Online|48368</td>
+      <td>Introduction to German (online)</td>
+      <td>Germanic Languages &amp; Literatures</td>
+      <td>St. George</td>
+      <td>2026.02.24</td>
+      <td>2026.03.05</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>NROC64H3|48417</td>
+      <td>Sensorimotor Systems</td>
+      <td>Department of Psychology</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSYB32H3|48418</td>
+      <td>Introduction to Clinical Psychology</td>
+      <td>Department of Psychology</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSYB70H3|48419</td>
+      <td>Methods in Psychological Science</td>
+      <td>Department of Psychology</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSYC01H3|48420</td>
+      <td>History of Psychology</td>
+      <td>Department of Psychology</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSYD50H3|48421</td>
+      <td>Current Topics in Memory and Cognition</td>
+      <td>Department of Psychology</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGFB10H3|48255</td>
+      <td>Principles of Finance</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHA12H3|48256</td>
+      <td>Human Resource Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHB02H3|48257</td>
+      <td>Managing People and Groups in Organizations</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHC02H3|48258</td>
+      <td>Management Skills</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHC55H3|48259</td>
+      <td>Field Course in International Organizational Behavior</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMC12H3|48260</td>
+      <td>Advertising: From Theory to Practice</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMD10H3|48261</td>
+      <td>Seminar in Consumer Psychology I</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGOC10H3|48262</td>
+      <td>Analytics for Decision Making</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGOC15H3|48263</td>
+      <td>Introductory Business Data Analytics</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGSC01H3|48264</td>
+      <td>Corporate Strategy</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGSC14H3|48265</td>
+      <td>Management Ethics</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGTA38H3|48266</td>
+      <td>Management Communications</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAB02H3|48267</td>
+      <td>Introductory Financial Accounting II</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAB03H3|48268</td>
+      <td>Introductory Management Accounting</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAC01H3|48269</td>
+      <td>Intermediate Financial Accounting I</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAC02H3|48270</td>
+      <td>Intermediate Financial Accounting II</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAC03H3|48271</td>
+      <td>Intermediate Management Accounting</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAC70H3|48272</td>
+      <td>Management Information Systems</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAD40H3|48273</td>
+      <td>Management Control Systems</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGAD45H3|48274</td>
+      <td>Corporate Governance and Strategy - CPA Perspective</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEA02H3|48275</td>
+      <td>Introduction to Microeconomics: A Mathematical Approach</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEA06H3|48276</td>
+      <td>Introduction to Macroeconomics: A Mathematical Approach</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEB02H3|48277</td>
+      <td>Price Theory: A Mathematical Approach</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEB06H3|48278</td>
+      <td>Macroeconomic Theory and Policy: A Mathematical Approach</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEB11H3|48279</td>
+      <td>Quantitative Methods in Economics I</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEB12H3|48280</td>
+      <td>Quantitative Methods in Economics II</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC02H3|48281</td>
+      <td>Topics in Price Theory</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC06H3|48282</td>
+      <td>Topics in Macroeconomic Theory</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC11H3|48283</td>
+      <td>Introduction to Regression Analysis</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC40H3|48284</td>
+      <td>Economics of Organization and Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC61H3|48285</td>
+      <td>International Economics: Finance</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC71H3|48286</td>
+      <td>Money and Banking</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGEC93H3|48287</td>
+      <td>International Economics</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMB01H3|48288</td>
+      <td>Marketing Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMC11H3|48289</td>
+      <td>Product Management and Branding</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMD21H3|48290</td>
+      <td>Special Topics in Marketing II</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGSC30H3|48291</td>
+      <td>The Legal Environment of Business I</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGSC30H3|48292</td>
+      <td>The Legal Environment of Business I</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGTA01H3|48293</td>
+      <td>Introduction to Business</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGTA01H3|48294</td>
+      <td>Introduction to Business</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGTA02H3|48295</td>
+      <td>Managing the Business Organization</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGFC10H3|48296</td>
+      <td>Intermediate Finance</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGFC20H3|48297</td>
+      <td>Personal Financial Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGFD15H3|48298</td>
+      <td>Special Topics in Finance: Private Equity</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHB02H3|48299</td>
+      <td>Managing People and Groups in Organizations</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGHC02H3|48300</td>
+      <td>Management Skills</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGIB01H3|48301</td>
+      <td>Global Marketing</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGMC02H3|48302</td>
+      <td>Consumer Behaviour</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGOC20H3|48303</td>
+      <td>Operations Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MGOC20H3|48304</td>
+      <td>Operations Management</td>
+      <td>Department of Management</td>
+      <td>UTSC</td>
+      <td>2026.02.23</td>
+      <td>2026.03.20</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>FSC271H5F|48305</td>
+      <td>Ethics and Professionalism in Forensic Science</td>
+      <td>Forensic Science Program</td>
+      <td>UTM</td>
+      <td>2026.02.23</td>
+      <td>2026.03.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>NUR1179Y|48306</td>
+      <td>Advanced Nursing Practice Scholarship: Clinical</td>
+      <td>Nursing</td>
+      <td>St. George</td>
+      <td>2026.02.23</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>NUR1152H|48308</td>
+      <td>Leading and Managing Effective Health Care Teams</td>
+      <td>Nursing</td>
+      <td>St. George</td>
+      <td>2026.02.23</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSC358H5S|48307</td>
+      <td>Principles of Computer Networks</td>
+      <td>Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.23</td>
+      <td>2026.02.26</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CITA01H3|48310</td>
+      <td>Foundations of City Studies</td>
+      <td>Department of Geography &amp; Planning</td>
+      <td>UTSC</td>
+      <td>2026.02.20</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>GGRB05H3|48311</td>
+      <td>Urban Geography</td>
+      <td>Department of Geography &amp; Planning</td>
+      <td>UTSC</td>
+      <td>2026.02.20</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS273H1F|48238</td>
+      <td>Gender &amp; Environmental (In)Justice</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS369H1F|48239</td>
+      <td>Studies in Post-Colonialism</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS376H1F|48240</td>
+      <td>Studies in Queer and Trans</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS370H1S|48241</td>
+      <td>Utopian Visions, Activist Realities</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS373H1S|48242</td>
+      <td>Gender and Violence</td>
+      <td>Women &amp;amp; Gender Studies Institute (WGSI)</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>PHYB52H3|48236</td>
+      <td>Thermal Physics</td>
+      <td>Physical and Environmental Sciences - Undergraduate</td>
+      <td>UTSC</td>
+      <td>2026.02.20</td>
+      <td>2026.02.24</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>FASEUSRP|48243</td>
+      <td>Undergraduate Summer Research Program</td>
+      <td>Office of the Vice-Dean, Undergraduate</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>IFA1907H|48244</td>
+      <td>Legal &amp; Legal Process</td>
+      <td>Institute for Management and Innovation</td>
+      <td>UTM</td>
+      <td>2026.02.20</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT203H5S|48245</td>
+      <td>Biological Anthropology: Primatology and Palaeoanthropology</td>
+      <td>Department of Anthropology</td>
+      <td>UTM</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT370H5F|48246</td>
+      <td>Environment, Culture and Film</td>
+      <td>Department of Anthropology</td>
+      <td>UTM</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT402H5S|48247</td>
+      <td>Wild Nights: Sleep, evolution, and performance in the 21st century</td>
+      <td>Department of Anthropology</td>
+      <td>UTM</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>APS106H1|48248</td>
+      <td>Fundamentals of Computer Programming</td>
+      <td>Engineering First Year Office</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>APS162H1|48249</td>
+      <td>Calculus for Engineers I</td>
+      <td>Engineering First Year Office</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MAT187H1|48250</td>
+      <td>Calculus II</td>
+      <td>Engineering First Year Office</td>
+      <td>St. George</td>
+      <td>2026.02.20</td>
+      <td>2026.03.16</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT 100Y1Y (0.5 FCE) Social Cultural/Linguistic Section (course is co-taught)|48221</td>
+      <td>Introduction to Anthropology – Social-Cultural/Linguistic Section</td>
+      <td>Anthropology</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT 253H1S|48222</td>
+      <td>Language and Society</td>
+      <td>Anthropology</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT 343H1S|48223</td>
+      <td>Social Anthropology of Gender</td>
+      <td>Anthropology</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANT 390H1F|48224</td>
+      <td>Special Topics in Anthropology: Anthropology of Indigeneity</td>
+      <td>Anthropology</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ARH 306Y1F (1 FCE); 1 position, each at 0.5 FCE\n***Course is co-taught.***|48225</td>
+      <td>Archaeological Field Methods</td>
+      <td>Anthropology</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.03.13</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>PHM204H|48237</td>
+      <td>Pharmacotherapy 5: Cardiovascular Disease</td>
+      <td>PHM</td>
+      <td>St. George</td>
+      <td>2026.02.19</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>DUM101|48253</td>
+      <td>Dummy Course 1</td>
+      <td>ACT</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.02.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>DUM102|48254</td>
+      <td>Dummy Course 2</td>
+      <td>ACT</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.02.18</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>APS100H1|48182</td>
+      <td>Orientation to Engineering</td>
+      <td>Engineering First Year Office</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.04.14</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>APM346H1Y|48183</td>
+      <td>Partial Differential Equations</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>APM462H1Y|48184</td>
+      <td>Nonlinear Optimization</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT135H1F|48185</td>
+      <td>Calculus I (A)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT135H1S|48186</td>
+      <td>Calculus I (A)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT135H1Y|48187</td>
+      <td>Calculus I (A)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT136H1F|48188</td>
+      <td>Calculus I (B)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT136H1S|48189</td>
+      <td>Calculus I (B)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT136H1Y|48190</td>
+      <td>Calculus I (B)</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT223H1F|48191</td>
+      <td>Linear Algebra I</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT223H1S|48192</td>
+      <td>Linear Algebra I</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT223H1Y|48193</td>
+      <td>Linear Algebra I</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT224H1F|48194</td>
+      <td>Linear Algebra II</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT224H1S|48195</td>
+      <td>Linear Algebra II</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT224H1Y|48196</td>
+      <td>Linear Algebra II</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT244H1Y|48197</td>
+      <td>Introduction to Ordinary Differential Equations</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT244H1Y|48198</td>
+      <td>Introduction to Ordinary Differential Equations</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT246H1Y|48199</td>
+      <td>Concepts in Abstract Mathematics</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT246H1Y|48200</td>
+      <td>Concepts in Abstract Mathematics</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT301H1Y|48201</td>
+      <td>Groups and Symmetries</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT315H1Y|48202</td>
+      <td>Introduction to Number Theory</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT327H1Y|48203</td>
+      <td>Introduction to Topology</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT334H1Y|48204</td>
+      <td>Complex Variables</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT337H1Y|48205</td>
+      <td>Introduction to Real Analysis</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT344H1Y|48206</td>
+      <td>Introduction to Combinatorics</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT401H1Y|48207</td>
+      <td>Polynomial Equations and Fields</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT402H1Y|48208</td>
+      <td>Classical Geometries</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT133Y1Y|48209</td>
+      <td>Calculus and Linear Algebra for Commerce</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT137Y1Y|48210</td>
+      <td>Calculus with Proofs</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT137Y1Y|48211</td>
+      <td>Calculus with Proofs</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT235Y1Y|48212</td>
+      <td>Multivariable Calculus</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT235Y1Y|48213</td>
+      <td>Multivariable Calculus</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT237Y1Y|48214</td>
+      <td>Multivariable Calculus with Proofs</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>MAT237Y1Y|48215</td>
+      <td>Multivariable Calculus with Proofs</td>
+      <td>Department of Mathematics</td>
+      <td>St. George</td>
+      <td>2026.02.18</td>
+      <td>2026.03.04</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3/BIOA02H3|48128</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA02H3|48129</td>
+      <td>Life on Earth: Form, Function and Interaction</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA12H3|48130</td>
+      <td>General Biology: Concepts and Processes of Biological Systems</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB10H3|48131</td>
+      <td>Cell Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB11H3|48132</td>
+      <td>Molecular Aspects of Cellular and Genetic Processes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB12H3|48133</td>
+      <td>Cell and Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB32H3|48134</td>
+      <td>Animal Physiology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB33H3|48135</td>
+      <td>Human Development and Anatomy</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB34H3|48136</td>
+      <td>Animal Physiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB50H3|48137</td>
+      <td>Ecology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB51H3|48138</td>
+      <td>Evolutionary Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB52H3|48139</td>
+      <td>Ecology and Evolutionary Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB98H3|48140</td>
+      <td>Supervised Introductory Research in Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC12H3|48141</td>
+      <td>Biochemistry I: Proteins and Enzymes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC13H3|48142</td>
+      <td>Biochemistry II: Bioenergetics and Metabolism</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC15H3|48143</td>
+      <td>Genetics</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC17H3|48144</td>
+      <td>Microbiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC20H3|48145</td>
+      <td>Principles of Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC23H3|48146</td>
+      <td>Practical Approaches to Biochemistry</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC32H3|48147</td>
+      <td>Human Physiology I</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC34H3|48148</td>
+      <td>Human Physiology II: Lecture</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC39H3|48149</td>
+      <td>Immunology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD20H3|48150</td>
+      <td>Special Topics in Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD21H3|48151</td>
+      <td>Advanced Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD32H3|48152</td>
+      <td>Human Respiratory Pathophysiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD65H3|48153</td>
+      <td>Pathologies of the Nervous System</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3|48154</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3/BIOA02H3|48155</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA02H3|48156</td>
+      <td>Life on Earth: Form, Function and Interaction</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA12H3|48157</td>
+      <td>General Biology: Concepts and Processes of Biological Systems</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB10H3|48158</td>
+      <td>Cell Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB11H3|48159</td>
+      <td>Molecular Aspects of Cellular and Genetic Processes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB12H3|48160</td>
+      <td>Cell and Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB32H3|48161</td>
+      <td>Animal Physiology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB33H3|48162</td>
+      <td>Human Development and Anatomy</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB34H3|48163</td>
+      <td>Animal Physiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB50H3|48164</td>
+      <td>Ecology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB51H3|48165</td>
+      <td>Evolutionary Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB52H3|48166</td>
+      <td>Ecology and Evolutionary Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB98H3|48167</td>
+      <td>Supervised Introductory Research in Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC12H3|48168</td>
+      <td>Biochemistry I: Proteins and Enzymes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC13H3|48169</td>
+      <td>Biochemistry II: Bioenergetics and Metabolism</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC15H3|48170</td>
+      <td>Genetics</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC17H3|48171</td>
+      <td>Microbiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC20H3|48172</td>
+      <td>Principles of Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC23H3|48173</td>
+      <td>Practical Approaches to Biochemistry</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC32H3|48174</td>
+      <td>Human Physiology I</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC34H3|48175</td>
+      <td>Human Physiology II: Lecture</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC39H3|48176</td>
+      <td>Immunology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD20H3|48177</td>
+      <td>Special Topics in Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD21H3|48178</td>
+      <td>Advanced Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD32H3|48179</td>
+      <td>Human Respiratory Pathophysiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD65H3|48180</td>
+      <td>Pathologies of the Nervous System</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>RSM260H1|48181</td>
+      <td>Communicating for Impact</td>
+      <td>Rotman School of Management</td>
+      <td>St. George</td>
+      <td>2026.02.17</td>
+      <td>2026.02.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOCC11H3|48058</td>
+      <td>Policing and Security</td>
+      <td>Sociology</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>ANTA02H3|48059</td>
+      <td>Introduction to Anthropology: Society, Culture and Language</td>
+      <td>Anthropology</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3|48100</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3/BIOA02H3|48101</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA02H3|48102</td>
+      <td>Life on Earth: Form, Function and Interaction</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA12H3|48103</td>
+      <td>General Biology: Concepts and Processes of Biological Systems</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB10H3|48104</td>
+      <td>Cell Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB11H3|48105</td>
+      <td>Molecular Aspects of Cellular and Genetic Processes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB12H3|48106</td>
+      <td>Cell and Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB32H3|48107</td>
+      <td>Animal Physiology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB33H3|48108</td>
+      <td>Human Development and Anatomy</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB34H3|48109</td>
+      <td>Animal Physiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB50H3|48110</td>
+      <td>Ecology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB51H3|48111</td>
+      <td>Evolutionary Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB52H3|48112</td>
+      <td>Ecology and Evolutionary Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOB98H3|48113</td>
+      <td>Supervised Introductory Research in Biology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC12H3|48114</td>
+      <td>Biochemistry I: Proteins and Enzymes</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC13H3|48115</td>
+      <td>Biochemistry II: Bioenergetics and Metabolism</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC15H3|48116</td>
+      <td>Genetics</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC17H3|48117</td>
+      <td>Microbiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC20H3|48118</td>
+      <td>Principles of Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC23H3|48119</td>
+      <td>Practical Approaches to Biochemistry</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC32H3|48120</td>
+      <td>Human Physiology I</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC34H3|48121</td>
+      <td>Human Physiology II: Lecture</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOC39H3|48122</td>
+      <td>Immunology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD20H3|48123</td>
+      <td>Special Topics in Virology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD21H3|48124</td>
+      <td>Advanced Molecular Biology Laboratory</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD32H3|48125</td>
+      <td>Human Respiratory Pathophysiology</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOD65H3|48126</td>
+      <td>Pathologies of the Nervous System</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BIOA01H3|48127</td>
+      <td>Life on Earth: Unifying Principles</td>
+      <td>Department of Biological Sciences</td>
+      <td>UTSC</td>
+      <td>2026.02.17</td>
+      <td>2026.03.09</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>DUM101|48251</td>
+      <td>Dummy Course 1</td>
+      <td>ACT</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.02.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTA02H3|48226</td>
+      <td>Exploring Health and Society: Theories, Perspectives, and Patterns</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTA03H3|48227</td>
+      <td>Navigating Health and Society: Research, Practice, and Policy</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTB15H3|48228</td>
+      <td>Health Research Methodology</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTB16H3|48229</td>
+      <td>Public Health</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTB27H3|48230</td>
+      <td>Applied Statistics for Public Health</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTC02H3|48231</td>
+      <td>Women and Health: Past and Present</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTC22H3|48232</td>
+      <td>Health, Aging, &amp; Life Cycle</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTC27H3|48233</td>
+      <td>Community Health and Epidemiology</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTC52H3|48234</td>
+      <td>Special Topics in Health Humanities</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HLTD50H3|48235</td>
+      <td>Advanced Topics in Health Humanities</td>
+      <td>Department of Health Studies</td>
+      <td>UTSC</td>
+      <td>2026.02.13</td>
+      <td>2026.03.10</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC150H1S|48076</td>
+      <td>Introduction to Sociology II: Sociological Inquiries</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC201H1F|48077</td>
+      <td>Classical Sociological Theory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC204H1F|48078</td>
+      <td>Introduction to Qualitative Methods in Sociology</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC208H1S|48079</td>
+      <td>Introduction to Social Policy</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC212H1S|48080</td>
+      <td>Crime and Deviance</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC251H1S|48081</td>
+      <td>Contemporary Sociological Theory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC313H1S|48082</td>
+      <td>Social Control</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC335H1F|48083</td>
+      <td>Urban Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC350H1S|48084</td>
+      <td>New Topics in Sociology: The Sociology of Collective Memory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC363H1S|48085</td>
+      <td>Sociology of Mental Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC367H1F|48086</td>
+      <td>Race, Class, and Gender</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC495H1S|48087</td>
+      <td>New Topics in Sociology: Political Sociology of Emotions</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC150H1S|48088</td>
+      <td>Introduction to Sociology II: Sociological Inquiries</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC201H1F|48089</td>
+      <td>Classical Sociological Theory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC204H1F|48090</td>
+      <td>Introduction to Qualitative Methods in Sociology</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC208H1S|48091</td>
+      <td>Introduction to Social Policy</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC212H1S|48092</td>
+      <td>Crime and Deviance</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC251H1S|48093</td>
+      <td>Contemporary Sociological Theory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC313H1S|48094</td>
+      <td>Social Control</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC335H1F|48095</td>
+      <td>Urban Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC350H1S|48096</td>
+      <td>New Topics in Sociology: The Sociology of Collective Memory</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC363H1S|48097</td>
+      <td>Sociology of Mental Health</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC367H1F|48098</td>
+      <td>Race, Class, and Gender</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC495H1S|48099</td>
+      <td>New Topics in Sociology: Political Sociology of Emotions</td>
+      <td>Sociology</td>
+      <td>St. George</td>
+      <td>2026.02.13</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Tri-Campus Coordinator</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.14</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Course Instructor Coordinator</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.14</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>EDIA Coordinator</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.14</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Graduate Educational Developer</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.14</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Graduate Educational Developer</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>UTM</td>
+      <td>2026.02.12</td>
+      <td>2026.03.15</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Graduate Educational Developer</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>UTSC</td>
+      <td>2026.02.12</td>
+      <td>2026.03.15</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Graduate Educational Developer</td>
+      <td>Teaching Assistants' Training Program, Centre for Teaching Support &amp;amp; Innovation</td>
+      <td>UTSC</td>
+      <td>2026.02.12</td>
+      <td>2026.03.15</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY 260H1S - LEC5101|48071</td>
+      <td>Intro to Learning and Plasticity</td>
+      <td>Department of Psychology</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.05</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY320H1S - LEC0101|48072</td>
+      <td>Social Psychology: Attitudes</td>
+      <td>Department of Psychology</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.05</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY 336H1S - LEC5101|48073</td>
+      <td>Positive Psychology</td>
+      <td>Department of Psychology</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.05</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PSY494H1S - LEC5101|48074</td>
+      <td>Physiology and Psychology of Emotion</td>
+      <td>Department of Psychology</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.03.05</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>KPE282H1S|48075</td>
+      <td>Physical Activity and Exercise Applications</td>
+      <td>Faculty of Kinesiology &amp; Physical Education</td>
+      <td>St. George</td>
+      <td>2026.02.12</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS434H5F|48057</td>
+      <td>Special Topics in Women and Gender Studies (Online)</td>
       <td>Historical Studies</td>
       <td>UTM</td>
-      <td>02-Jan-2026</td>
-      <td>06-Jan-2026</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS337H5S|48055</td>
+      <td>Special Topics in Women and Gender Studies: Youth Culture (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>WGS351H5F|48056</td>
+      <td>Gender, Race, and Surveillance</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SAH200H5F|48054</td>
+      <td>Being Human in South Asia (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG411H5S|48053</td>
+      <td>Advanced Topics in Religion, Media, and Culture</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG352H5S|48052</td>
+      <td>Jews and Muslims: The Medieval Encounter (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG317H5S|48051</td>
+      <td>Religion and Science</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG210H5S|48049</td>
+      <td>Introduction to Hinduism</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG301H5F|48050</td>
+      <td>Stranger Things</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG203H5F|48048</td>
+      <td>Introduction to Christianity (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS494H5S|48047</td>
+      <td>Advanced Topics in the History of the Americas: Land Grabs: Histories of Law and Justice in North America</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS308H5F|48046</td>
+      <td>Themes in the History of Women Before 1800</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS250H5F|48045</td>
+      <td>Introduction to Russian History (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CLA234H5F|48042</td>
+      <td>Ancient Science and Technology (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS203H5S|48044</td>
+      <td>The Making of the Atlantic World (1000-1800)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS201H5S|48043</td>
+      <td>Introduction to Middle Eastern History (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CLA204H5F|48041</td>
+      <td>Introduction to Classical Mythology (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CLA201H5S|48040</td>
+      <td>Latin and Greek in Scientific Terminology (Online)</td>
+      <td>Historical Studies</td>
+      <td>UTM</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>CSE341H1S|47820</td>
-      <td>Theorizing Settler Colonialism, Capitalism and Race</td>
-      <td>New College - Critical Studies in Equity and Solidarity</td>
+      <td>MIE222H1|48060</td>
+      <td>Mechanics of Solids I</td>
+      <td>Department of Mechanical and Industrial Engineering</td>
       <td>St. George</td>
-      <td>18-Dec-2025</td>
-      <td>09-Jan-2026</td>
+      <td>2026.02.11</td>
+      <td>2026.02.13</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>CSE342H1S|47821</td>
-      <td>Theory and Praxis in Food Security</td>
-      <td>New College - Critical Studies in Equity and Solidarity</td>
+      <td>NUR 371Y|48061</td>
+      <td>Introduction to Acute Care Nursing: Adults; Rotation 3</td>
+      <td>Nursing</td>
       <td>St. George</td>
-      <td>18-Dec-2025</td>
-      <td>09-Jan-2026</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
     </tr>
     <tr>
       <td>TA</td>
-      <td>TEP448H1|47828</td>
-      <td>System Mapping</td>
-      <td>Institute for Studies in Transdisciplinary Engineering Education and Practice</td>
+      <td>NUR 373Y|48062</td>
+      <td>Introduction to Nursing Care of Children and Families; Rotation 3</td>
+      <td>Nursing</td>
       <td>St. George</td>
-      <td>18-Dec-2025</td>
-      <td>09-Jan-2026</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>NUR 374Y|48063</td>
+      <td>Introduction to Nursing Care of Childbearing Families; Rotation 3</td>
+      <td>Nursing</td>
+      <td>St. George</td>
+      <td>2026.02.11</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>ECE421H1|48039</td>
+      <td>Introduction to Machine Learning</td>
+      <td>Department of Electrical and Computer Engineering</td>
+      <td>St. George</td>
+      <td>2026.02.10</td>
+      <td>2026.02.13</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>HIS115H1-S|48021</td>
+      <td>History Now: How the Past Shapes the Present</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>HIS242H1-F|48022</td>
+      <td>Europe in the 20th Century</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>HIS264H1-F|48023</td>
+      <td>Critical Issues in Canadian History</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>HIS280Y1-Y|48024</td>
+      <td>History of China</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CRI205H1F|48026</td>
+      <td>Introduction to Criminology</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CRI210H1S|48027</td>
+      <td>Criminal Justice</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CRI205H1F|48028</td>
+      <td>Introduction to Criminology</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CRI210H1S|48029</td>
+      <td>Criminal Justice</td>
+      <td>Centre for Criminology &amp; Sociolegal Studies</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>Statistics Bootcamp|48034</td>
+      <td>Statistics Bootcamp</td>
+      <td>Statistical Sciences</td>
+      <td>St. George</td>
+      <td>2026.02.09</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CHM243H5Y|48035</td>
+      <td>Introduction to Organic Chemistry II</td>
+      <td>Chemical and Physical Sciences</td>
+      <td>UTM</td>
+      <td>2026.02.09</td>
+      <td>2026.03.03</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSC108H5 F|48036</td>
+      <td>Introduction to Computer Programming</td>
+      <td>Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.09</td>
+      <td>2026.02.12</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSC207H5 F|48037</td>
+      <td>Software Design</td>
+      <td>Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.09</td>
+      <td>2026.02.12</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CSC236H5 F|48038</td>
+      <td>Introduction to the Theory of Computation</td>
+      <td>Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.09</td>
+      <td>2026.02.12</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>DUM102|48252</td>
+      <td>Dummy Course 2</td>
+      <td>ACT</td>
+      <td>St. George</td>
+      <td>2026.02.06</td>
+      <td>2026.02.19</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PHY136H5F|48015</td>
+      <td>Physics for Life and Environmental Sciences I</td>
+      <td>Chemical and Physical Sciences</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>PHY137H5S|48016</td>
+      <td>Physics for Life and Environmental Sciences II</td>
+      <td>Chemical and Physical Sciences</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CHM361H5F|48017</td>
+      <td>Structural Biochemistry</td>
+      <td>Chemical and Physical Sciences</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.02</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC148H5Y LEC0101|48018</td>
+      <td>Intro to Computer Science</td>
+      <td>Department of Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.06</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC148H5Y LEC0102|48019</td>
+      <td>Intro to Computer Science</td>
+      <td>Department of Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.06</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC343H5Y LEC0101|48020</td>
+      <td>Introduction to Databases</td>
+      <td>Department of Mathematical and Computational Science</td>
+      <td>UTM</td>
+      <td>2026.02.06</td>
+      <td>2026.03.06</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MSS-I|47996</td>
+      <td>Math and Stats Support- Calculus</td>
+      <td>Centre for Teaching &amp;amp; Learning</td>
+      <td>UTSC</td>
+      <td>2026.02.04</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MSS-II|47997</td>
+      <td>Math and Stats Support- Statistics</td>
+      <td>Centre for Teaching &amp;amp; Learning</td>
+      <td>UTSC</td>
+      <td>2026.02.04</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MSS-IV|47998</td>
+      <td>Math and Stats Support- Head TA</td>
+      <td>Centre for Teaching &amp;amp; Learning</td>
+      <td>UTSC</td>
+      <td>2026.02.04</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>MSS - OMPC|47999</td>
+      <td>Math &amp; Stats Support - Online Math Preparedness Course</td>
+      <td>Curriculum, Teaching and Learning</td>
+      <td>UTSC</td>
+      <td>2026.02.04</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>CTLA02H3|48003</td>
+      <td>Exploring Inter-Cultural Perspectives in Academic Contexts - Summer 2026</td>
+      <td>Centre for Teaching &amp;amp; Learning</td>
+      <td>UTSC</td>
+      <td>2026.02.04</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BCH210H|48011</td>
+      <td>Biochemistry I: Proteins, Lipids and Metabolism</td>
+      <td>Department of Biochemistry</td>
+      <td>St. George</td>
+      <td>2026.02.04</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>BCH210H|48012</td>
+      <td>Biochemistry I: Proteins, Lipids and Metabolism</td>
+      <td>Department of Biochemistry</td>
+      <td>St. George</td>
+      <td>2026.02.04</td>
+      <td>2026.02.27</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC301H5F|48004</td>
+      <td>Canadian Prisons</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.03</td>
+      <td>2026.02.24</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>SOC336H5S|48005</td>
+      <td>Special Topics in Sociology</td>
+      <td>Sociology</td>
+      <td>UTM</td>
+      <td>2026.02.03</td>
+      <td>2026.02.24</td>
+    </tr>
+    <tr>
+      <td>TA</td>
+      <td>LMP2359H|48009</td>
+      <td>Healthcare Policy and Innovation</td>
+      <td>Laboratory Medicine and Pathobiology</td>
+      <td>St. George</td>
+      <td>2026.02.03</td>
+      <td>2026.02.24</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS115H1-S|47987</td>
+      <td>History Now: How the Past Shapes the Present</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS242H1-F|47988</td>
+      <td>Europe in the 20th Century</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS264H1-F|47989</td>
+      <td>Critical Issues in Canadian History</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS280Y1-Y|47990</td>
+      <td>History of China</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS326H1- S|47991</td>
+      <td>Topics in Asian Histories: East Asian Environmental History</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS350H1-S|47992</td>
+      <td>Topics in European Histories: Digital Approaches to Pre-Modern Europe</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS389H1-F|47993</td>
+      <td>Topics in History: Queers v. The State: Legal and Social Histories of 2SLGBTQ+ Repression and Resistance in Canada and the United States</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS404H1-F|47994</td>
+      <td>Advanced Topics in U.S. History: Black Deviance, Underground Cultures, and Radical Traditions in 20th-Century U.S. \nHistory</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>HIS496H1-S|47995</td>
+      <td>Advanced Topics in History: Towards an Ethical Approach: Transnational History(ies)of Violence</td>
+      <td>Department of History</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CHM210H1F|48000</td>
+      <td>Chemistry of Environmental Change</td>
+      <td>Chemistry</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CHM236H1F|48001</td>
+      <td>Introductory Inorganic Chemistry I</td>
+      <td>Chemistry</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CHM237H1Y|48002</td>
+      <td>Introductory Inorganic Chemistry II (Lab Coordinator)</td>
+      <td>Chemistry</td>
+      <td>St. George</td>
+      <td>2026.02.02</td>
+      <td>2026.02.25</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC108H1Y|47981</td>
+      <td>Introduction to Computer Programming</td>
+      <td>Computer Science</td>
+      <td>St. George</td>
+      <td>2026.01.29</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC207H1Y|47982</td>
+      <td>Software Design</td>
+      <td>Computer Science</td>
+      <td>St. George</td>
+      <td>2026.01.29</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC236H1Y|47983</td>
+      <td>Introduction to the Theory of Computation</td>
+      <td>Computer Science</td>
+      <td>St. George</td>
+      <td>2026.01.29</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>CSC311H1Y|47984</td>
+      <td>Introduction to Machine Learning</td>
+      <td>Computer Science</td>
+      <td>St. George</td>
+      <td>2026.01.29</td>
+      <td>2026.02.23</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG200H1|47973</td>
+      <td>The Study of Religion</td>
+      <td>Departmen for the Study of Religion</td>
+      <td>St. George</td>
+      <td>2026.01.27</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG233H1|47974</td>
+      <td>Religion and Popular Culture</td>
+      <td>Departmen for the Study of Religion</td>
+      <td>St. George</td>
+      <td>2026.01.27</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG313H1|47975</td>
+      <td>Love, Sex and Family</td>
+      <td>Departmen for the Study of Religion</td>
+      <td>St. George</td>
+      <td>2026.01.27</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>RLG336H1|47976</td>
+      <td>RELIGION AND ITS MONSTERS</td>
+      <td>Departmen for the Study of Religion</td>
+      <td>St. George</td>
+      <td>2026.01.27</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF1005H|47964</td>
+      <td>Information Workshop I: Caring for Datasets - Applying Information Lenses in the Age of AI</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF1005H|47965</td>
+      <td>Information Workshop I: Introduction to book science techniques</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF1006H|47966</td>
+      <td>Information Workshop II: Caring for Datasets - Applying Information Lenses in the Age of AI</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF1006H|47967</td>
+      <td>Information Workshop II: Introduction to book science techniques</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF1340H|47968</td>
+      <td>Programming for Data Science</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF2132H|47969</td>
+      <td>Ancient Books and Records in Special Collections</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF2167H|47970</td>
+      <td>R for Data Science</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF2231H|47971</td>
+      <td>Critical Knowledge Translation in Health Research</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>CI</td>
+      <td>INF2584H|47972</td>
+      <td>Special Topics in Information: Indigenous Science and Relational Knowledge Systems</td>
+      <td>Faculty of Information</td>
+      <td>St. George</td>
+      <td>2026.01.26</td>
+      <td>2026.02.17</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>NaN</td>
+      <td>Chief Presiding Officer (CPO)</td>
+      <td>Office of the Faculty Registrar, Faculty of Arts &amp; Science</td>
+      <td>St. George</td>
+      <td>2026.01.15</td>
+      <td>2026.02.20</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -972,44 +4280,8 @@
       <td>Multilingual German Lab</td>
       <td>Germanic Languages &amp; Lituratures</td>
       <td>St. George</td>
-      <td>12-Dec-2025</td>
-      <td>18-Dec-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>LMP1210|47748</td>
-      <td>Basic principles of machine learning in biomedical research</td>
-      <td>Laboratory Medicine and Pathobiology</td>
-      <td>St. George</td>
-      <td>09-Dec-2025</td>
-      <td>12-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>PLA1653HS|47731</td>
-      <td>Urban Design and Planning Advanced Studio</td>
-      <td>Geography &amp; Planning</td>
-      <td>St. George</td>
-      <td>08-Dec-2025</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>O</td>
-      <td>NaN</td>
-      <td>Political Science Writing Support TAs</td>
-      <td>Political Science</td>
-      <td>St. George</td>
-      <td>08-Dec-2025</td>
-      <td>07-Jan-2026</td>
-    </tr>
-    <tr>
-      <td>TA</td>
-      <td>FOR1585HF|47707</td>
-      <td>Urban Forest Conservation Camp</td>
-      <td>Daniels Faculty of Architecture, Landscape, and Design</td>
-      <td>St. George</td>
-      <td>03-Dec-2025</td>
-      <td>07-Jan-2026</td>
+      <td>2025.12.12</td>
+      <td>2026.12.18</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1017,8 +4289,8 @@
       <td>Intro to Classical Studies</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1026,8 +4298,8 @@
       <td>Scientific Terminology</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1035,8 +4307,8 @@
       <td>Intro To Classical Mythology</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1044,8 +4316,8 @@
       <td>Intro To Classical Mythology</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1053,8 +4325,8 @@
       <td>Women in Antiquity</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1062,8 +4334,8 @@
       <td>Classical Warfare</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>16-Oct-2025</td>
-      <td>22-Oct-2205</td>
+      <td>2025.10.16</td>
+      <td>2205.10.22</td>
     </tr>
     <tr>
       <td>CI</td>
@@ -1071,8 +4343,8 @@
       <td>Calculus II</td>
       <td>Department of Mathematics</td>
       <td>St. George</td>
-      <td>25-Sep-2025</td>
-      <td>29-Sep-2026</td>
+      <td>2025.09.25</td>
+      <td>2026.09.29</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1080,8 +4352,8 @@
       <td>Ancient Texts, Modern Worlds</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>26-Jun-2025</td>
-      <td>21-Jul-2205</td>
+      <td>2025.06.26</td>
+      <td>2205.07.21</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1089,8 +4361,8 @@
       <td>Introduction to Classical Mythology</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>26-Jun-2025</td>
-      <td>21-Jul-2205</td>
+      <td>2025.06.26</td>
+      <td>2205.07.21</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1098,8 +4370,8 @@
       <td>Sex, Death, and Poetry</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>26-Jun-2025</td>
-      <td>21-Jul-2205</td>
+      <td>2025.06.26</td>
+      <td>2205.07.21</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1107,8 +4379,8 @@
       <td>Greek and Roman Epic</td>
       <td>Department of Classics</td>
       <td>St. George</td>
-      <td>26-Jun-2025</td>
-      <td>21-Jul-2205</td>
+      <td>2025.06.26</td>
+      <td>2205.07.21</td>
     </tr>
     <tr>
       <td>TA</td>
@@ -1116,8 +4388,8 @@
       <td>An Introduction to Statistical Reasoning and Data Science</td>
       <td>Statistical Sciences</td>
       <td>St. George</td>
-      <td>22-Sep-2022</td>
-      <td>26-Sep-2022</td>
+      <td>2022.09.22</td>
+      <td>2022.09.26</td>
     </tr>
   </tbody>
 </table>
@@ -1125,105 +4397,160 @@
 
 <script>
 $(document).ready(function () {
-    // Setup - add a text input to each footer cell
-    $('#example tfoot th').each(function () {
-        var title = $('#example thead th').eq($(this).index()).text();
-        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+    var STORE_KEY = 'cupe3902_filters';
+    var CLOSES_COL = 6;
+
+    // --- localStorage helpers ---
+    function loadState() {
+        try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch(e) { return {}; }
+    }
+    function saveState(patch) {
+        var s = loadState();
+        for (var k in patch) s[k] = patch[k];
+        localStorage.setItem(STORE_KEY, JSON.stringify(s));
+    }
+
+    var saved = loadState();
+    var showExpiredJobs = !!saved.expired;
+    $('#showExpiredToggle').prop('checked', showExpiredJobs);
+
+    function parseDateString(dateStr) {
+        if (!dateStr || dateStr.length !== 10) return null;
+        var parts = dateStr.split('.');
+        if (parts.length !== 3) return null;
+        var y = parseInt(parts[0], 10), m = parseInt(parts[1], 10) - 1, d = parseInt(parts[2], 10);
+        if (isNaN(y) || isNaN(m) || isNaN(d)) return null;
+        return new Date(y, m, d);
+    }
+
+    function isExpired(dateStr) {
+        var cd = parseDateString(dateStr);
+        if (!cd) return false;
+        var today = new Date(); today.setHours(0,0,0,0);
+        return cd < today;
+    }
+
+    // Custom filter: hide expired unless toggled
+    $.fn.dataTable.ext.search.push(function (settings, data) {
+        if (settings.nTable.id !== 'jobs') return true;
+        if (showExpiredJobs) return true;
+        var cd = parseDateString(data[CLOSES_COL]);
+        if (!cd) return true;
+        var today = new Date(); today.setHours(0,0,0,0);
+        return cd >= today;
     });
 
-
-    // DataTable
-    var table = $('#example').DataTable({
-
-
+    var table = $('#jobs').DataTable({
         columnDefs: [
-          {
-            targets: 1,
-                render: function (data, type, row, meta) {
+            // Course column: render as link
+            {
+                targets: 1,
+                render: function (data, type) {
                     if (type === 'display') {
-                        let lastIndex = data.lastIndexOf("|");  
-                        let num_id = data.substring(lastIndex + 1);
-                        let course_id = data.substring(0, lastIndex);
-                        return "<a href=\"https://unit1.hrandequity.utoronto.ca/posting/"+num_id+"\">"+course_id+"</a>"; //'<a href="https://unit1.hrandequity.utoronto.ca/posting/</a>';
-                       
+                        var i = data.lastIndexOf('|');
+                        var num_id = data.substring(i + 1);
+                        var course = data.substring(0, i);
+                        return '<a href="https://unit1.hrandequity.utoronto.ca/posting/' + num_id + '">' + course + '</a>';
+                    }
+                    return data;
+                }
+            },
+            // Type column: render as badge
+            {
+                targets: 0,
+                render: function (data, type) {
+                    if (type === 'display') {
+                        var cls = data === 'TA' ? 'badge-ta' : data === 'CI' ? 'badge-ci' : '';
+                        return '<span class="badge ' + cls + '">' + data + '</span>';
                     }
                     return data;
                 }
             }
         ],
         autoWidth: false,
-
-
-        lengthMenu: [
-            [-1, 10, 25, 50],
-            ['All', 10, 25, 50]
-        ],
+        order: [[6, 'asc']], // default sort by closing date
+        lengthMenu: [[-1, 25, 50], ['All', 25, 50]],
+        pageLength: -1,
+        dom: 'lrtip', // length, processing, table, info, pagination (no global filter)
+        language: {
+            lengthMenu: 'Show _MENU_ entries',
+            info: '_TOTAL_ postings',
+            infoFiltered: '(filtered from _MAX_)',
+            infoEmpty: 'No postings',
+            emptyTable: 'No matching postings found'
+        },
+        createdRow: function (row, data) {
+            if (isExpired(data[CLOSES_COL])) {
+                $(row).addClass('expired');
+            }
+        },
         initComplete: function () {
-            // Separate logic for the first two
-           
-            this.api()
-                .columns([1, 2, 3])
+            var api = this.api();
+            var savedCols = saved.cols || {};
+
+            // Search inputs for text-search columns
+            api.columns([1, 2, 3])
                 .every(function () {
-                    let column = this;
+                    var column = this;
+                    var idx = column.index();
                     var title = $(column.header()).text();
-
-
-                    // Create input element
-                    let input = document.createElement('input');
+                    var input = document.createElement('input');
                     input.setAttribute('type', 'text');
+                    input.setAttribute('placeholder', title + '...');
                     column.footer().replaceChildren(input);
-                    input.setAttribute('placeholder', 'Search ' + title); // Set the placeholder attribute
 
+                    // Restore saved value
+                    if (savedCols[idx]) {
+                        input.value = savedCols[idx];
+                        column.search(savedCols[idx]);
+                    }
 
-                    // Apply listener for user change in value
                     input.addEventListener('keyup', function () {
-                        column
-                            .search(this.value)
-                            .draw();
+                        column.search(this.value).draw();
+                        var patch = {}; patch[idx] = this.value;
+                        saveState({ cols: Object.assign(savedCols, patch) });
                     });
                 });
 
-
-            // Separate logic for the remaining four columns
-            this.api()
-                .columns([0, 4, 5, 6])
+            // Dropdowns for categorical columns
+            api.columns([0, 4, 5, 6])
                 .every(function () {
-                    let column = this;
-
-
-                    // Create select element
-                    let select = document.createElement('select');
-                    select.add(new Option(''));
+                    var column = this;
+                    var idx = column.index();
+                    var title = $(column.header()).text();
+                    var select = document.createElement('select');
+                    select.add(new Option('All ' + title, ''));
                     column.footer().replaceChildren(select);
+                    column.data().unique().sort().each(function (d) {
+                        select.add(new Option(d));
+                    });
 
+                    // Restore saved value
+                    if (savedCols[idx]) {
+                        select.value = savedCols[idx];
+                        var val = $.fn.dataTable.util.escapeRegex(savedCols[idx]);
+                        column.search(val ? '^' + val + '$' : '', true, false);
+                    }
 
-                    // Apply listener for user change in value
                     select.addEventListener('change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(select.value);
-
-
-                        column
-                            .search(val ? '^' + val + '$' : '', true, false)
-                            .draw();
+                        column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        var patch = {}; patch[idx] = select.value;
+                        saveState({ cols: Object.assign(savedCols, patch) });
                     });
-
-
-                    // Add list of options
-                    column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-                            select.add(new Option(d));
-                        });
                 });
+
+            // Draw once after restoring all filters
+            api.draw();
         },
     });
 
-
+    $('#showExpiredToggle').on('change', function () {
+        showExpiredJobs = this.checked;
+        saveState({ expired: showExpiredJobs });
+        table.draw();
+    });
 });
 </script>
 </body>
 </html>
-
-
