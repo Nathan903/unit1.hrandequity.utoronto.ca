@@ -17,7 +17,7 @@ STATE_FILE      = "ta_alert_state.json" # single file: sent IDs + last sent date
 OUTPUT_MD       = "issue_body.md"
 CAMPUS_FILTER      = "St. George"         # exact match (case-insensitive)
 PTYPE_FILTER       = "TA"                 # exact match
-DEPT_KEYWORDS      = ["engineering", "computer", "math"]
+DEPT_KEYWORDS      = ["engineering", "computer", "math", "fase"]
 MIN_INTERVAL_DAYS  = 7                    # never send more than once per week
 URGENT_DAYS        = 5                    # send immediately if a job closes within this many days
 # ─────────────────────────────────────────────────────────────────────────────
