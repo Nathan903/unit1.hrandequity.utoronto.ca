@@ -18,9 +18,26 @@ df = df.map(strip_whitespace)
 
 
 def format_date_column(frame, column_name):
-    parsed = pd.to_datetime(frame[column_name], errors='coerce')
+    # Attempt flexible parsing: try default, then day-first, then common explicit formats
+    series = frame[column_name]
+    parsed = pd.to_datetime(series, errors='coerce', dayfirst=False)
+
+    # If many values remain unparsed, try day-first parsing and fill missing
+    if parsed.isna().any():
+        parsed_dayfirst = pd.to_datetime(series, errors='coerce', dayfirst=True)
+        parsed = parsed.fillna(parsed_dayfirst)
+
+    # Fallback: try a few explicit common formats
+    if parsed.isna().any():
+        for fmt in ('%d-%b-%Y', '%d-%B-%Y', '%d.%m.%Y', '%Y-%m-%d', '%Y.%m.%d'):
+            parsed_fmt = pd.to_datetime(series, format=fmt, errors='coerce')
+            parsed = parsed.fillna(parsed_fmt)
+            if not parsed.isna().any():
+                break
+
+    # Format successfully parsed dates; leave unparsed values unchanged
     formatted = parsed.dt.strftime('%Y.%m.%d')
-    frame[column_name] = formatted.where(parsed.notna(), frame[column_name])
+    frame[column_name] = formatted.where(parsed.notna(), series)
 
 
 format_date_column(df, "posting_date")
