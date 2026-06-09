@@ -1,4 +1,23 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+50147,3,O,False,MED100H,"Assistant Invigilator Positions (CUPE 3902, Unit 1)",17/08/2026-30/06/2027,339,Undergraduate Medical Education (Temerty Faculty of Medicine) ,1,St. George,09-Jun-2026,10-Jul-2026,26-Jul-2026,600,Robert,100,,2027-06-30T14:56:23.000000Z,2026-08-17T14:56:23.000000Z,,300,"Responsibilities include, but are not limited to, the following:  
+
+Supervising in-person assessments (i.e. Mastery Exercises and Progress Tests) across the MD Program; some remote shifts may be required.
+
+Through active invigilation, maintain the integrity of assessments by adhering to faculty and university policies and procedures. 
+
+Maintaining confidentiality and security of student and assessment information.
+
+Monitoring test/exam time allotments; Handling student concerns/problems and referring to MD Program staff where appropriate.
+
+Reporting anomalous situations
+
+Verifying student identification.
+
+Making assessment related announcements to students.
+
+In certain cases, invigilators may assist in transporting backup laptops between the Medical Sciences Building and the Exam Center at 255 McCaul Street or another exam site on the St. George campus.
+
+Invigilators are required to attend an in-person orientation session for a mock Mastery Exercise August 24, 2026.",,16,"Applicants must be currently registered as students pursuing a graduate degree with the School of Graduate Studies at the University of Toronto; Applicants must be available for in-person invigilation shifts between August 24, 2026 and June 30, 2027; Applicants must be available for virtual orientation week of August 17, 2026; Experience invigilating tests/exams is an asset; Understanding and ability to apply relevant University and government policies, procedures and legislation.",,,$35.53/hr + 4% vacation pay,,
 50144,8,TA,False,"MED 100H, MED120H, MED130H, MED200H","Concepts, Patients, and Communities - 3","August 4, 2026 to May 31, 2027",2,Anatomy,1,St. George,09-Jun-2026,30-Jun-2026,16-Jul-2026,370,Ian Bell,67,,2027-05-31T13:05:30.000000Z,2026-08-04T13:05:30.000000Z,"Please submit the following documents to Dr. Kristina Lisk by June 30th, 2026, using the MS form linked below. If you have any issues submitting your application using the linked form, please email it directly to Kristina.lisk@utoronto.ca.
 
 •	Cover letter, including a statement of teaching and dissection experience(s) and previous student evaluations, if applicable
@@ -62,6 +81,19 @@ Lab 11. Mon. Sept 28th, 2026
 Lab 12. Wed. Oct 14th, 2026
 MAPS - Neuro. Mon. Oct 26th, 2026
 MAP - Head & Neck. Mon. Dec 7th, 2026"
+50148,3,O,False,MED100H,"Assistant Invigilator Positions (CUPE 3902, Unit 1) ",17/08/2026-30/06/2027,339,Undergraduate Medical Education (Temerty Faculty of Medicine) ,1,St. George,09-Jun-2026,10-Jul-2026,26-Jul-2026,600,Robert,100,,2027-06-30T15:06:02.000000Z,2026-08-17T15:06:02.000000Z,"Please send the following to md.foundations@utoronto.ca before closing date (July 10, 2026 at 11:59pm): 
+
+Subject line: Assistant Invigilator Positions (CUPE 3902) 
+
+Up-to-date resume (cover letter is optional) 
+
+Student number 
+
+Confirmation of registration status on ACORN 
+
+Confirmation of availability for the period outlined above 
+
+Incomplete applications will not be considered.  ",300,"Responsibilities include, but are not limited to, the following:  Supervising in-person assessments (i.e. Mastery Exercises and Progress Tests) across the MD Program; some remote shifts may be required; Through active invigilation, maintain the integrity of assessments by adhering to faculty and university policies and procedures. Maintaining confidentiality and security of student and assessment information; Monitoring test/exam time allotments; Handling student concerns/problems and referring to MD Program staff where appropriate; Reporting anomalous situations; Verifying student identification; Making assessment related announcements to students; In certain cases, invigilators may assist in transporting backup laptops between the Medical Sciences Building and the Exam Center at 255 McCaul Street or another exam site on the St. George campus; Invigilators are required to attend an in-person orientation session for a mock Mastery Exercise August 24, 2026. ",,16,"Applicants must be currently registered as students pursuing a graduate degree with the School of Graduate Studies at the University of Toronto; Applicants must be available for in-person invigilation shifts between August 24, 2026 and June 30, 2027; Applicants must be available for virtual orientation week of August 17, 2026; Experience invigilating tests/exams is an asset; Understanding and ability to apply relevant University and government policies, procedures and legislation.",,,$35.53/hr + 4% vacation pay,,
 49920,8,TA,False,RSM1201H,Foundations of Strategic Management (L0103),"October 1, 2026 - December 31, 2026",175,Rotman School of Management,1,St. George,08-Jun-2026,26-Jun-2026,12-Jul-2026,462,Mark Wlodarski,Up to one hour per student enrolled,,2026-12-31T13:56:12.000000Z,2026-10-01T13:56:12.000000Z,"Apply at:
 https://tracs.utoronto.ca/",,a) Assist in grading assignments; b) proctoring final exam; c) invigilate tests and exams as required; d) holds tutorials and office hours; e) other duties as assigned. You are required to be in person.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Graduate or undergraduate student with a strong academic background in Strategy. Familiarity with the course materials and supporting educational concepts preferred.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,$53.92,,
 49921,8,TA,False,RSM1220H,Financial Accounting and Reporting: A Global Perspective,"September 1, 2026 - October 31, 2026",175,Rotman School of Management,1,St. George,08-Jun-2026,26-Jun-2026,12-Jul-2026,462,Mark Wlodarski,Up to one hour per student enrolled,,2026-10-31T13:56:12.000000Z,2026-09-01T13:56:12.000000Z,"Apply at:
