@@ -124,12 +124,12 @@ def matches_profile(row, profile):
         return False
 
     # Undergrad-only filter:
-    # UofT undergrad course codes have 3 digits after the dept letters (e.g. BIO230H1)
+    # UofT undergrad course codes have 3 digits after the dept letters (e.g. BIO230H1, BCH 242Y)
     # Grad courses have 4 digits (e.g. BIO1001H)
     if profile.get("undergrad_only"):
         import re
         course_id_raw = (row.get("course_id", "") or "").strip()
-        m = re.match(r'^[A-Za-z]+(\d+)', course_id_raw)
+        m = re.match(r'^[A-Za-z\s]+(\d+)', course_id_raw)
         if not m or len(m.group(1)) != 3:
             return False
 
@@ -137,16 +137,28 @@ def matches_profile(row, profile):
     # Supported fields: "department", "job_title", "course_id"
     match_cfg = profile.get("match", {})
     if match_cfg:
-        course_id = (row.get("course_id", "") or "").strip().lower()
-        field_map = {
-            "department": dept,
-            "job_title":  title,
-            "course_id":  course_id,
-        }
-        found = any(
-            any(kw.lower() in field_map.get(field, "") for kw in keywords)
-            for field, keywords in match_cfg.items()
-        )
+        course_id_clean = (row.get("course_id", "") or "").strip().upper().replace(" ", "")
+        found = False
+        for field, keywords in match_cfg.items():
+            if field == "course_id":
+                # Prefix match for course code (e.g. BIO matches BIO120H1, BIO 230)
+                if any(course_id_clean.startswith(kw.upper().replace(" ", "")) for kw in keywords):
+                    found = True
+                    break
+            elif field == "department":
+                if any(kw.lower() in dept for kw in keywords):
+                    found = True
+                    break
+            elif field == "job_title":
+                if any(kw.lower() in title for kw in keywords):
+                    found = True
+                    break
+            else:
+                val = (row.get(field, "") or "").strip().lower()
+                if any(kw.lower() in val for kw in keywords):
+                    found = True
+                    break
+
         if not found:
             return False
 

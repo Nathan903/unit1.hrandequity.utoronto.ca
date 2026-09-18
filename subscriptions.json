@@ -14,21 +14,19 @@
     "campus": "St. George",
     "ptype": ["TA"],
     "match": {
-      "department": [
-        "biology", "biochem", "pharmacol", "toxicol",
-        "biomedical", "physiol", "genetics", "immunol",
-        "molecular", "biophysic", "tissue", "virol",
-        "cell", "chemical engineering", "environ"
-      ],
-      "job_title": [
-        "virus", "viral", "genetic", "lab", "cell", "tissue",
-        "biomedical", "pharmacol", "toxicol", "bio", "gene",
-        "microscop", "assay", "clinical", "model"
-      ],
       "course_id": [
         "CSB", "BIO", "BCH", "PCL", "PHC", "PHM",
         "PSL", "HMB", "LMP", "BME", "CHE", "MBP",
-        "MGY", "IMM"
+        "MGY", "IMM", "EEB"
+      ],
+      "department": [
+        "biology", "biochem", "pharmacology", "toxicology",
+        "biomedical", "physiology", "genetics", "immunology",
+        "medical biophysics", "molecular genetics", "cell and systems biology",
+        "human biology", "laboratory medicine", "pharmacy", "phm"
+      ],
+      "job_title": [
+        "virology", "biomechanics", "tissue engineering", "microbiology", "neuroscience"
       ]
     },
     "undergrad_only": true
