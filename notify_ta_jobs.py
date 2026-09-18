@@ -1,56 +1,89 @@
 """
 notify_ta_jobs.py
 
-Filters newly opened STEM TA jobs at St. George campus.
-Generates issue_body.md to be posted as a GitHub Issue comment.
-Exits with code 1 if there is nothing new to post (so the workflow can skip).
+Multi-profile TA job alert system.
+Reads profiles from subscriptions.json, filters result.csv per profile,
+and posts GitHub Issue comments for new matching jobs.
+Exits 0 if any profile sent a comment, exits 1 if nothing was posted.
 """
 
 import csv
+import json
 import os
+import subprocess
 import sys
 from datetime import datetime, timedelta
 
-# ── Configuration ────────────────────────────────────────────────────────────
-CSV_FILE        = "result.csv"
-STATE_FILE      = "ta_alert_state.json" # single file: sent IDs + last sent date
-OUTPUT_MD       = "issue_body.md"
-CAMPUS_FILTER      = "St. George"         # exact match (case-insensitive)
-PTYPE_FILTER       = "TA"                 # exact match
-DEPT_KEYWORDS      = ["engineering", "computer", "math", "fase"]
-MIN_INTERVAL_DAYS  = 7                    # never send more than once per week
-URGENT_DAYS        = 5                    # send immediately if a job closes within this many days
-# ─────────────────────────────────────────────────────────────────────────────
+CSV_FILE          = "result.csv"
+STATE_FILE        = "ta_alert_state.json"
+SUBS_FILE         = "subscriptions.json"
+MIN_INTERVAL_DAYS = 7   # never send more than once per week per profile
+URGENT_DAYS       = 5   # bypass throttle if any job closes within this many days
 
 
-def load_state(path):
-    """Load state from JSON. Returns (sent_ids: set, last_sent: datetime|None)."""
-    import json
-    if not os.path.exists(path):
-        return set(), None
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    sent_ids = set(data.get("sent_ids", []))
-    raw_date = data.get("last_sent", "")
+# ── State helpers ─────────────────────────────────────────────────────────────
+
+def _parse_date_str(s):
+    if not s:
+        return None
     try:
-        last_sent = datetime.strptime(raw_date, "%Y-%m-%d") if raw_date else None
+        return datetime.strptime(s, "%Y-%m-%d")
     except ValueError:
-        last_sent = None
-    return sent_ids, last_sent
+        return None
 
 
-def save_state(path, sent_ids, last_sent):
-    import json
-    data = {
-        "last_sent": last_sent.strftime("%Y-%m-%d") if last_sent else None,
-        "sent_ids":  sorted(sent_ids),
-    }
+def load_state(path, profiles):
+    """
+    Load per-profile state from JSON.
+    Auto-migrates from the old single-profile format if needed.
+    Returns: {profile_name: {"last_sent": datetime|None, "sent_ids": set}}
+    """
+    default = {p["profile"]: {"last_sent": None, "sent_ids": set()} for p in profiles}
+
+    if not os.path.exists(path):
+        return default
+
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Detect old single-profile format (top-level "last_sent" + "sent_ids")
+    if "last_sent" in data and "sent_ids" in data:
+        print("Migrating ta_alert_state.json to multi-profile format...")
+        result = default.copy()
+        first_profile = profiles[0]["profile"] if profiles else None
+        if first_profile:
+            result[first_profile] = {
+                "last_sent": _parse_date_str(data.get("last_sent")),
+                "sent_ids":  set(data.get("sent_ids", [])),
+            }
+        return result
+
+    # New multi-profile format
+    result = default.copy()
+    for name, pdata in data.items():
+        result[name] = {
+            "last_sent": _parse_date_str(pdata.get("last_sent")),
+            "sent_ids":  set(pdata.get("sent_ids", [])),
+        }
+    return result
+
+
+def save_state(path, state):
+    data = {}
+    for name, pdata in state.items():
+        data[name] = {
+            "last_sent": pdata["last_sent"].strftime("%Y-%m-%d") if pdata["last_sent"] else None,
+            "sent_ids":  sorted(pdata["sent_ids"]),
+        }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")
 
+
+# ── Date parsing ──────────────────────────────────────────────────────────────
+
 def parse_date(s):
-    """Parse a date string in any format using dateutil (bundled with pandas)."""
+    """Parse any date format using dateutil (bundled with pandas)."""
     if not s or not s.strip():
         return None
     try:
@@ -60,28 +93,131 @@ def parse_date(s):
         return None
 
 
-def is_stem(department):
-    dept_lower = (department or "").lower()
-    return any(kw in dept_lower for kw in DEPT_KEYWORDS)
+# ── Profile matching ──────────────────────────────────────────────────────────
+
+def matches_profile(row, profile):
+    """
+    Return True if the CSV row satisfies all of the profile's filter criteria.
+
+    Profile schema:
+      campus  : str   — exact match on campus field (case-insensitive)
+      ptype   : str | list[str] — exact match on ptype field
+      match   : dict  — {field_name: [keywords]}
+                  A job passes if ANY keyword matches in ANY listed field (OR logic).
+                  Supported fields: "department", "job_title"
+    """
+    campus = (row.get("campus", "") or "").strip()
+    ptype  = (row.get("ptype",  "") or "").strip()
+    dept   = (row.get("department", "") or "").strip().lower()
+    title  = (row.get("job_title",  "") or "").strip().lower()
+
+    # Campus: exact, case-insensitive
+    expected_campus = profile.get("campus", "")
+    if expected_campus and campus.lower() != expected_campus.lower():
+        return False
+
+    # Ptype: exact, case-insensitive; accepts string or list
+    allowed_ptypes = profile.get("ptype", [])
+    if isinstance(allowed_ptypes, str):
+        allowed_ptypes = [allowed_ptypes]
+    if allowed_ptypes and ptype.lower() not in [p.lower() for p in allowed_ptypes]:
+        return False
+
+    # Undergrad-only filter:
+    # UofT undergrad course codes have 3 digits after the dept letters (e.g. BIO230H1)
+    # Grad courses have 4 digits (e.g. BIO1001H)
+    if profile.get("undergrad_only"):
+        import re
+        course_id_raw = (row.get("course_id", "") or "").strip()
+        m = re.match(r'^[A-Za-z]+(\d+)', course_id_raw)
+        if not m or len(m.group(1)) != 3:
+            return False
+
+    # Keyword matching across specified fields (OR logic)
+    # Supported fields: "department", "job_title", "course_id"
+    match_cfg = profile.get("match", {})
+    if match_cfg:
+        course_id = (row.get("course_id", "") or "").strip().lower()
+        field_map = {
+            "department": dept,
+            "job_title":  title,
+            "course_id":  course_id,
+        }
+        found = any(
+            any(kw.lower() in field_map.get(field, "") for kw in keywords)
+            for field, keywords in match_cfg.items()
+        )
+        if not found:
+            return False
+
+    return True
 
 
-def is_st_george(campus):
-    return (campus or "").strip().lower() == CAMPUS_FILTER.lower()
-
-
-def is_ta(ptype):
-    return (ptype or "").strip().lower() == PTYPE_FILTER.lower()
-
+# ── Notification helpers ──────────────────────────────────────────────────────
 
 def job_url(job_id):
     return f"https://unit1.hrandequity.utoronto.ca/posting/{job_id}"
 
 
+def build_comment(profile_name, new_jobs, today):
+    def short(d):
+        return d[:10] if d and len(d) >= 10 else (d or "—")
+
+    lines = [
+        f"## 🎓 {profile_name} — TA Job Alert · {today.strftime('%Y-%m-%d')}",
+        "",
+        f"**{len(new_jobs)} new posting(s)** at **St. George**.",
+        "",
+        "| Course | Title | Department | Posted | Closes | Link |",
+        "|--------|-------|------------|--------|--------|------|",
+    ]
+    for job in new_jobs:
+        course = job.get("course_id", "—")
+        title  = job.get("job_title",  "—")
+        dept   = job.get("department", "—")
+        posted = short(job.get("posting_date", ""))
+        closes = short(job.get("closing_date", ""))
+        jid    = job.get("id", "")
+        link   = f"[Apply]({job_url(jid)})" if jid else "—"
+        lines.append(f"| {course} | {title} | {dept} | {posted} | {closes} | {link} |")
+    lines += [
+        "",
+        "---",
+        f"*Auto-generated by GitHub Actions · Profile: **{profile_name}***",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def post_comment(issue_number, body):
+    """Write body to issue_body.md and post via gh CLI. Returns True on success."""
+    with open("issue_body.md", "w", encoding="utf-8") as f:
+        f.write(body)
+    result = subprocess.run(
+        ["gh", "issue", "comment", str(issue_number), "--body-file", "issue_body.md"],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        print(f"  ERROR: {result.stderr.strip()}")
+        return False
+    return True
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
 def main():
     today = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
-    sent_ids, last_sent_dt = load_state(STATE_FILE)
 
-    # ── Load all rows and collect current IDs ─────────────────────────────────
+    # Load subscriptions
+    if not os.path.exists(SUBS_FILE):
+        print(f"ERROR: {SUBS_FILE} not found.")
+        sys.exit(1)
+    with open(SUBS_FILE, encoding="utf-8") as f:
+        profiles = json.load(f)
+
+    # Load per-profile state (auto-migrates old format)
+    state = load_state(STATE_FILE, profiles)
+
+    # Load CSV once
     all_rows = []
     current_ids = set()
     with open(CSV_FILE, newline="", encoding="utf-8") as f:
@@ -93,115 +229,86 @@ def main():
                 current_ids.add(job_id)
             all_rows.append((job_id, row))
 
-    # Prune sent_ids: remove any ID that no longer appears in the CSV.
-    # If it reappears in the future it will be treated as a new job.
-    sent_ids &= current_ids
+    any_sent = False
 
-    # ── Filter for new alertable jobs ─────────────────────────────────────────
-    new_jobs = []
-    for job_id, row in all_rows:
-        if not job_id or job_id in sent_ids:
+    for profile in profiles:
+        name  = profile["profile"]
+        issue = profile["issue"]
+
+        pstate   = state.setdefault(name, {"last_sent": None, "sent_ids": set()})
+        sent_ids = pstate["sent_ids"]
+
+        # Prune IDs of jobs that no longer exist in the CSV
+        # (they'll be treated as new if they ever reappear)
+        sent_ids &= current_ids
+
+        # ── Filter new matching jobs ──────────────────────────────────────────
+        new_jobs = []
+        for job_id, row in all_rows:
+            if not job_id or job_id in sent_ids:
+                continue
+            if not matches_profile(row, profile):
+                continue
+            closing = parse_date(row.get("closing_date", ""))
+            if closing is None:
+                continue
+            closing = closing.replace(hour=0, minute=0, second=0, microsecond=0)
+            if closing < today:
+                continue          # skip expired
+            new_jobs.append(row)
+
+        if not new_jobs:
+            print(f"[{name}] No new jobs. Skipping.")
             continue
 
-        campus      = row.get("campus", "")
-        ptype       = row.get("ptype", "")
-        department  = row.get("department", "")
-        closing_raw = row.get("closing_date", "")
+        # ── Send-frequency gate ───────────────────────────────────────────────
+        #
+        #   New jobs found?
+        #   └── Yes → Any closing within URGENT_DAYS?
+        #             ├── Yes (urgent) → send now
+        #             └── No → last send ≥ MIN_INTERVAL_DAYS ago?
+        #                       ├── Yes → send now
+        #                       └── No  → skip (don't mark as sent)
+        #
+        last_sent  = pstate["last_sent"]
+        days_since = (today - last_sent).days if last_sent else MIN_INTERVAL_DAYS
 
-        if not is_st_george(campus):
-            continue
-        if not is_ta(ptype):
-            continue
-        if not is_stem(department):
-            continue
+        urgent = any(
+            (parse_date(j.get("closing_date", "")) or datetime.max)
+            .replace(hour=0, minute=0, second=0, microsecond=0)
+            <= today + timedelta(days=URGENT_DAYS)
+            for j in new_jobs
+        )
 
-        closing = parse_date(closing_raw)
-        if closing is None:
-            continue
-        closing = closing.replace(hour=0, minute=0, second=0, microsecond=0)
+        if urgent:
+            print(f"[{name}] Urgent — {len(new_jobs)} job(s) — sending now.")
+        elif days_since >= MIN_INTERVAL_DAYS:
+            print(f"[{name}] Weekly send ({days_since}d since last) — {len(new_jobs)} job(s).")
+        else:
+            remaining = MIN_INTERVAL_DAYS - days_since
+            print(f"[{name}] Throttled — sent {days_since}d ago, next non-urgent in {remaining}d.")
+            continue   # do NOT mark jobs as sent
 
-        # Skip expired jobs; include all future jobs regardless of how far out
-        if closing < today:
-            continue
-        new_jobs.append(row)
+        # ── Sort and post ─────────────────────────────────────────────────────
+        new_jobs.sort(key=lambda r: parse_date(r.get("closing_date", "")) or datetime.max)
 
-    if not new_jobs:
-        print("No new STEM TA jobs found. Nothing to post.")
-        sys.exit(1)  # signal to the workflow: skip posting
+        body = build_comment(name, new_jobs, today)
+        print(f"[{name}] Posting to issue #{issue}...")
 
-    # ── Send-frequency gate (mirrors decision tree) ───────────────────────────
-    #
-    #   New jobs found?
-    #   └── Yes → Any closing within URGENT_DAYS?
-    #             ├── Yes (urgent) → send now
-    #             └── No → last send ≥ MIN_INTERVAL_DAYS ago?
-    #                       ├── Yes → send now
-    #                       └── No  → skip (don't mark as sent)
-    #
-    last_sent  = last_sent_dt
-    days_since = (today - last_sent).days if last_sent else MIN_INTERVAL_DAYS
+        if post_comment(issue, body):
+            for job in new_jobs:
+                jid = str(job.get("id", "")).strip()
+                if jid:
+                    sent_ids.add(jid)
+            pstate["last_sent"] = today
+            pstate["sent_ids"]  = sent_ids
+            any_sent = True
+            print(f"[{name}] ✓ Done.")
+        else:
+            print(f"[{name}] ✗ Post failed — state not updated.")
 
-    urgent = any(
-        (parse_date(j.get("closing_date", "")) or datetime.max)
-        .replace(hour=0, minute=0, second=0, microsecond=0)
-        <= today + timedelta(days=URGENT_DAYS)
-        for j in new_jobs
-    )
-
-    if urgent:
-        print(f"Urgent: {sum(1 for j in new_jobs if (parse_date(j.get('closing_date','')) or datetime.max).replace(hour=0,minute=0,second=0,microsecond=0) <= today + timedelta(days=URGENT_DAYS))} job(s) closing within {URGENT_DAYS} days — sending now.")
-    elif days_since >= MIN_INTERVAL_DAYS:
-        print(f"Weekly send: {days_since}d since last notification — sending now.")
-    else:
-        remaining = MIN_INTERVAL_DAYS - days_since
-        print(f"New jobs found but throttled: sent {days_since}d ago, next non-urgent send in {remaining}d.")
-        sys.exit(1)  # skip posting; do NOT mark jobs as sent
-
-    # Sort by closing date ascending
-    new_jobs.sort(key=lambda r: parse_date(r.get("closing_date", "")) or datetime.max)
-
-    # ── Build Markdown body ───────────────────────────────────────────────────
-    lines = []
-    lines.append(f"## 🎓 STEM TA Job Alert — {today.strftime('%Y-%m-%d')}")
-    lines.append("")
-    lines.append(f"**{len(new_jobs)} new posting(s)** at **St. George**.")
-    lines.append("")
-    lines.append("| Course | Title | Department | Posted | Closes | Link |")
-    lines.append("|--------|-------|------------|--------|--------|------|")
-
-    for job in new_jobs:
-        course  = job.get("course_id", "—")
-        title   = job.get("job_title", "—")
-        dept    = job.get("department", "—")
-        posted  = job.get("posting_date", "—")
-        closes  = job.get("closing_date", "—")
-        jid     = job.get("id", "")
-
-        # Compact date display: keep only date part
-        def short(d):
-            return d[:10] if d and len(d) >= 10 else d
-
-        url  = job_url(jid) if jid else ""
-        link = f"[Apply]({url})" if url else "—"
-        lines.append(f"| {course} | {title} | {dept} | {short(posted)} | {short(closes)} | {link} |")
-
-    lines.append("")
-    lines.append("---")
-    lines.append(f"*Auto-generated by [unit1.hrandequity.utoronto.ca](https://github.com) workflow · Filters: STEM TA · St. George*")
-
-    with open(OUTPUT_MD, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
-
-    print(f"Found {len(new_jobs)} new job(s). issue_body.md written.")
-
-    # ── Update sent IDs and last-sent date ───────────────────────────────────
-    for job in new_jobs:
-        job_id = str(job.get("id", "")).strip()
-        if job_id:
-            sent_ids.add(job_id)
-    save_state(STATE_FILE, sent_ids, today)
-
-    sys.exit(0)  # signal to the workflow: go ahead and post
+    save_state(STATE_FILE, state)
+    sys.exit(0 if any_sent else 1)
 
 
 if __name__ == "__main__":

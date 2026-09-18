@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas==3.0.1 requests
+        pip install pandas==3.0.1 requests python-dateutil
 
     - name: Run download.py
       run: python download.py
@@ -40,15 +40,10 @@ jobs:
 
     - name: Run notify_ta_jobs.py
       id: notify
-      run: python notify_ta_jobs.py
-      continue-on-error: true  # exit code 1 means "nothing to post" — don't fail the job
-
-    - name: Post alert as GitHub Issue comment
-      if: steps.notify.outcome == 'success'
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh issue comment 1 --body-file issue_body.md
+      run: python notify_ta_jobs.py
+      continue-on-error: true  # exit 1 = nothing to post, not a failure
 
     - name: Commit and push all changes
       run: |

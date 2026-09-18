@@ -1,0 +1,36 @@
+[
+  {
+    "profile": "STEM & programming",
+    "issue": 1,
+    "campus": "St. George",
+    "ptype": ["TA"],
+    "match": {
+      "department": ["engineering", "computer", "math", "fase"]
+    }
+  },
+  {
+    "profile": "Bio",
+    "issue": 2,
+    "campus": "St. George",
+    "ptype": ["TA"],
+    "match": {
+      "department": [
+        "biology", "biochem", "pharmacol", "toxicol",
+        "biomedical", "physiol", "genetics", "immunol",
+        "molecular", "biophysic", "tissue", "virol",
+        "cell", "chemical engineering", "environ"
+      ],
+      "job_title": [
+        "virus", "viral", "genetic", "lab", "cell", "tissue",
+        "biomedical", "pharmacol", "toxicol", "bio", "gene",
+        "microscop", "assay", "clinical", "model"
+      ],
+      "course_id": [
+        "CSB", "BIO", "BCH", "PCL", "PHC", "PHM",
+        "PSL", "HMB", "LMP", "BME", "CHE", "MBP",
+        "MGY", "IMM"
+      ]
+    },
+    "undergrad_only": true
+  }
+]
