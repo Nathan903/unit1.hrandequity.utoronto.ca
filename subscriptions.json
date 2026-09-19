@@ -16,17 +16,19 @@
     "match": {
       "course_id": [
         "CSB", "BIO", "BCH", "PCL", "PHC", "PHM",
-        "PSL", "HMB", "LMP", "BME", "CHE", "MBP",
+        "PSL", "HMB", "LMP", "BME", "CHE",
         "MGY", "IMM", "EEB"
       ],
       "department": [
         "biology", "biochem", "pharmacology", "toxicology",
         "biomedical", "physiology", "genetics", "immunology",
-        "medical biophysics", "molecular genetics", "cell and systems biology",
+        "molecular genetics", "cell and systems biology",
         "human biology", "laboratory medicine", "pharmacy", "phm"
       ],
       "job_title": [
-        "virology", "biomechanics", "tissue engineering", "microbiology", "neuroscience"
+        "virology", "biomechanics", "tissue engineering", "microbiology", "neuroscience",
+        "biofluid", "biosensor", "biomaterial", "bioinformatics",
+        "drug discovery", "pharmacokinetics"
       ]
     },
     "undergrad_only": true
