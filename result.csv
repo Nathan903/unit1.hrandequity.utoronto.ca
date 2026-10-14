@@ -1,4 +1,5 @@
 id,position_type_fk,ptype,emergency,course_id,job_title,appointment_date,department_fk,department,campus_fk,campus,posting_date,closing_date,expiry_date,user_fk,staff,appointment_size,appointment_duration,appointment_enddate,appointment_startdate,application_procedure,course_enrolment,duties,experience,positions,qualifications,qualifications_minimum,qualifications_preferred,salery,ta_support,tutorial
+54299,9,CI,False,FOR3005HS,Stresses in the Forest Environment,"January 1, 2027 - April 30, 2027",226,"John H. Daniels Faculty of Architecture, Landscape, and Design",1,St. George,14-Oct-2026,02-Nov-2026,18-Nov-2026,580,Niveca,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,Please submit your cover letter and CV to: https://tracs.utoronto.ca/session/392/postings,50,"All duties associated with the design and teaching of a university credit course, including preparation and delivery of course content; development, administration, and marking of assignments, tests, and exams; calculation and submission of grades; holding regular office hours; supervising TAs assigned to the course, if applicable. This course will be taught in person.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,"Completion of Graduate Training in Forestry with specialization in research on tree stress, response, and mitigation.",PhD degree with practical research experience in biotic and abiotic forest disturbance at an advanced level. In-depth knowledge of tree physiology and soil/pest interactions.,"$10,553.15 ",Yes (30 hours),TH 09:00-13:00
 54210,8,TA,True,APD1200H,Foundations of Human Development and Education,"Sept 1, 2026 - December 31, 2026",259,Applied Psychology and Human Development,1,St. George,14-Oct-2026,15-Oct-2026,31-Oct-2026,490,Ying,110,,2026-12-31T00:00:00.000000Z,2026-09-01T00:00:00.000000Z,Please apply via OISE hiring system: https://hiring.oise.utoronto.ca/. ,40,Preparing course resources; Meeting with students about assignments; Grading assignments; Grade tracking and aggregation,The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,1,,Undergraduate and graduate course work on child development; Students engaged in research on issues of development as part of their graduate program will be particularly appropriate for this course.,Prior experience in APD1200 is a major asset.,$53.92 per hour plus vacation pay,,
 54211,8,TA,False,CDN221H1S,Culture and the Media in Canada,"Jan 1, 2027 - Apr 30, 3037",341,University College,1,St. George,14-Oct-2026,04-Nov-2026,20-Nov-2026,594,Leila Farrow,120 hours,,3037-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter including the names of two references (preferably academic), examples of teaching evaluations (if available), and CV to the UC TA Online application site at: https://taships.iit.artsci.utoronto.ca/uc/login by Wednesday, November 4, 2026.  If during the application and/or selection process you require accommodation due to a disability, please contact Leila Farrow at uc.academicprograms@utoronto.ca or 416-978-8083.",120,"Meeting with instructor, responding to student inquiries and marking papers and tests.  The position may also include attending some lectures. Duties of this position shall be performed at the campus on which the position is located. Final availability of the position(s) is contingent upon enrolment, budgetary considerations and the determination of appointments as governed by the collective agreement.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Minimum Master’s degree required.,"Expertise in social sciences, media studies and/or communication studies preferred. Relevant degree and academic background an asset. Preference will be given to University of Toronto graduate students.","$53.92/hour plus 4% vacation pay (UG, SGS1, II, PDF)",,Mondays 3pm-5pm
 54212,8,TA,False,CDN265H1S,Race and Racialization in Canada,"Jan 1, 2027 - Apr 30, 3038",341,University College,1,St. George,14-Oct-2026,04-Nov-2026,20-Nov-2026,594,Leila Farrow,50 hours,,3038-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter including the names of two references (preferably academic), examples of teaching evaluations (if available), and CV to the UC TA Online application site at: https://taships.iit.artsci.utoronto.ca/uc/login by Wednesday, November 4, 2026.  If during the application and/or selection process you require accommodation due to a disability, please contact Leila Farrow at uc.academicprograms@utoronto.ca or 416-978-8083.",45,"Meeting with instructor, responding to student inquiries and marking papers and tests.  The position may also include attending some lectures. The delivery method for this course is currently in-person. Please note that, in keeping with public health advisories, the course delivery method may change as determined by the Faculty or the College. Duties of this position shall be performed at the campus on which the position is located. Final availability of the position(s) is contingent upon enrolment, budgetary considerations and the determination of appointments as governed by the collective agreement.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,MA in cognate field in Humanities or Social Sciences preferred.,Research and/or teaching experience on anti-racist and decolonial approaches to Canadian Studies and pluralism an asset i.e. critical race theory. Relevant degree and academic background an asset. Preference will be given to University of Toronto graduate students.,"$53.92/hour plus 4% vacation pay (UG, SGS1, II, PDF)",,Mondays 1pm-3pm
@@ -25,7 +26,9 @@ o	Must demonstrate to have successfully completed this course or equivalent in i
 o	Good facilitation and presentation skills
 o	Good oral and interpersonal skills, particularly able to show tact when communicating with students",UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	Please refer to Timetable Builder (tentative)
 			Tutorials:	Please refer to Timetable Builder (tentative)"
+54298,9,CI,False,FOR3005HS,Stresses in the Forest Environment,"January 1, 2027 - April 30, 2027",226,"John H. Daniels Faculty of Architecture, Landscape, and Design",1,St. George,14-Oct-2026,02-Nov-2026,18-Nov-2026,580,Niveca,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,Please submit your cover letter and CV to: https://tracs.utoronto.ca/session/392/postings,50,"All duties associated with the design and teaching of a university credit course, including preparation and delivery of course content; development, administration, and marking of assignments, tests, and exams; calculation and submission of grades; holding regular office hours; supervising TAs assigned to the course, if applicable. This course will be taught in person.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,"Completion of Graduate Training in Forestry with specialization in research on tree stress, response, and mitigation.",PhD degree with practical research experience in biotic and abiotic forest disturbance at an advanced level. In-depth knowledge of tree physiology and soil/pest interactions.,"$10,553.15",Yes (30 hours),TH 09:00-13:00
 54215,9,CI,False,CHL3002H,Teaching Bioethics (.25 FCE),"January 6, 2027 - April 30, 2027",35,Dalla Lana School of Public Health,1,St. George,14-Oct-2026,04-Nov-2026,20-Nov-2026,428,Christine Lowe,,,2027-04-30T00:00:00.000000Z,2027-01-06T00:00:00.000000Z,"All individuals interested in this position must submit, via email, a cover letter, Curriculum Vitae (including previous teaching evaluations (if applicable)), and a list of three (3) references to Christine Lowe at christine.lowe@utoronto.ca",15,"All normal duties related to teaching of a university credit course, including preparation and delivery of course content; development, administration and marking of assignments; calculation and submission of grades; maintaining regular communication with students. As well as normal teaching duties, the course instructor will monitor student progress; maintain the course Quercus page; attend MHSc program meetings; and maintain regular contact with the MHSc Program Director. Duties of this position shall be performed in accordance with the hybrid course format, including both in-person and online components as outlined in the Schedule.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Master’s Degree in Bioethics or related field. Evidence of good progress in PhD program required (e.g., PhD candidacy achieved). Advanced knowledge of bioethics as a field of practice. Advanced knowledge of pedagogical theories of adult education, particularly related to professional learners. Experience with the development and implementation of bioethics curriculum for professional learners. Experience teaching health professions in a professional and/or academic settings.",Previous experience teaching graduate bioethics courses to professional learners. Expertise in health professions education,"4,721.49",None,"In-Person: MHSc Residency Week - Mar 2 (8:30am-5:00pm); Online: Seminar Sessions - Thursdays, 9 - 11:30 am - Jan 7 &28, Feb 11&15, Mar 18 and Apr 1; Online: Asynchronous Session - 2hrs TBD"
+54216,8,TA,True,FAH101H1S,Monuments of Art History,"January 1, 2026-April 30, 2026",5,Art History,1,St. George,14-Oct-2026,21-Oct-2026,06-Nov-2026,226,Jeremy Nichols,150,,2026-05-01T00:00:00.000000Z,2026-01-01T00:00:00.000000Z,Submit applications on-line to: https://taships.iit.artsci.utoronto.ca/art,500,Current PhD Student or Postdoctoral Fellow in Art History is preferred.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,4,,"Background in Art History and/or Architecture including historical and geographical breadth as relevant to the course material. Interest in pedagogical methods should include student engagement as well as innovative assessment and assignment development. Postdoctoral Fellow, or doctoral candidate in Art History or related field is preferred.","Completed Master's degree in Art History, with historical and geographical breadth of knowledge as relevant to the course material, and previous Teaching Assistant experience.",$53.92 + vacation pay,,Two 1-hour tutorials per week; see Timetable (https://ttb.utoronto.ca/) for days/times
 54158,9,CI,False,IRE260H1S,Organizational Behaviour,"January 1, 2027 to April 30, 2027",19,Centre for Industrial Relations & Human Resources,1,St. George,13-Oct-2026,02-Nov-2026,18-Nov-2026,204,Tanya Pitel,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"For detailed information on the application procedure go to https://www.cirhr.utoronto.ca/employment-opportunities/cirhr-job-postings.   Select the accordion named: ""CUPE Unit 1 Opportunities - Course Instructor Positions - Undergraduate""  and follow the instructions listed there.",Cap of 180,"The design, preparation and delivery of course content, including teaching lectures or seminars; creation of courseware; the development and administration of assignments, tests and examinations; invigilation of the final examination; the marking and grading of student work, and the submission of grades to the CIRHR in accordance with established policies and procedures; the maintenance of reasonable hours of student contact outside scheduled classroom hours; and, if applicable,  the supervision of the day-to-day work of teaching assistants assigned to the course. ",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,A PhD or a PhD with ABD status required. ,Teaching experience in this course preferred.,"$9,442.98, plus vacation pay","approx. 180 TA hours, depending on course enrolment.",This course is in-person delivery.  Lectures are Wednesdays 11:00-13:00 on the St. George campus.
 54173,8,TA,False,SOC100H5S,Introduction to Sociology,"Jan 1, 2027 - Apr 30, 2027",183,Sociology,2,UTM,13-Oct-2026,02-Nov-2026,18-Nov-2026,152,Pamela Armah,115,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,https://taships.iit.artsci.utoronto.ca/soc/postings (use your UTORid and password).  Contact socgrad.assist@utoronto.ca if you you encouneter problems and/or need help with the online application,1000,"Preparation for classes; preparation of written or audio-visual materials; possibly attending lectures; rating students' work; holding office hours; consulting with students (including electronic consultation); writing, grading and/or invigilation of tests/examinations; grading term papers and essays; communicating with course instructor and other TAs; other ad hoc tasks.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Minimum MA in Sociology/Criminology or related discipline, or currently accepted or enrolled in the graduate Sociology/Criminology program; knowledge in the subject area; strong knowledge of the subject matter; TA experience; demonstrated ability in advising students and helping them learn; ability to instruct in writing.",Previous TA experience; having taken this course or a similar course; demonstrated proficiency in the subject area of the course.,$53.92 ,,
 54174,8,TA,False,SOC109H5S,"Introduction to Criminology, Law and Society","Jan 1, 2027 - Apr 30, 2027",183,Sociology,2,UTM,13-Oct-2026,02-Nov-2026,18-Nov-2026,152,Pamela Armah,60,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,https://taships.iit.artsci.utoronto.ca/soc/postings (use your UTORid and password).  Contact socgrad.assist@utoronto.ca if you you encouneter problems and/or need help with the online application,500,"Preparation for classes; preparation of written or audio-visual materials; possibly attending lectures; rating students' work; holding office hours; consulting with students (including electronic consultation); writing, grading and/or invigilation of tests/examinations; grading term papers and essays; communicating with course instructor and other TAs; other ad hoc tasks.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Minimum MA in Sociology/Criminology or related discipline, or currently accepted or enrolled in the graduate Sociology/Criminology program; knowledge in the subject area; strong knowledge of the subject matter; TA experience; demonstrated ability in advising students and helping them learn; ability to instruct in writing.",Previous TA experience; having taken this course or a similar course; demonstrated proficiency in the subject area of the course.,$53.92 ,,
@@ -127,7 +130,6 @@ Must know SAS and understand techniques in the course, including SEM, HLM, Panel
 54140,9,CI,False,GGR271H1S,Social Research Methods,"January 01, 2027 to April 30, 2027",62,Department of Geography & Planning,1,St. George,09-Oct-2026,03-Nov-2026,19-Nov-2026,563,Charles Taylor,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and names of two possible references by November 03, 2026. Applications should be sent to: OFFICE OF THE CHAIR via Email: jobs.geoplan@utoronto.ca.",200,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; hold regular office hours and supervise teaching assistants. Duties of this position shall be performed at the campus on which the position is located.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",440,Thursday | 1:00 PM - 3:00 PM
 54141,9,CI,False,GGR329H1S,The Global Food System,"January 01, 2027 to April 30, 2027",62,Department of Geography & Planning,1,St. George,09-Oct-2026,03-Nov-2026,19-Nov-2026,563,Charles Taylor,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and names of two possible references by November 03, 2026. Applications should be sent to: OFFICE OF THE CHAIR via Email: jobs.geoplan@utoronto.ca.",90,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; hold regular office hours and supervise teaching assistants. Duties of this position shall be performed at the campus on which the position is located.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",100,Friday | 11:00 AM - 1:00 PM
 54142,9,CI,False,JGU216H1S,Globalization and Urban Change,"January 01, 2027 to April 30, 2027",62,Department of Geography & Planning,1,St. George,09-Oct-2026,03-Nov-2026,19-Nov-2026,563,Charles Taylor,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and names of two possible references by November 03, 2026. Applications should be sent to: OFFICE OF THE CHAIR via Email: jobs.geoplan@utoronto.ca.",200,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; hold regular office hours and supervise teaching assistants. Duties of this position shall be performed at the campus on which the position is located.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",320,Thursday | 5:00 PM - 7:00 PM
-54143,9,CI,False,URB236H1S,A Multidisciplinary Introduction to Urban Studies II - Urban Challenges and Theoretical Application,"January 01, 2027 to April 30, 2027",62,Department of Geography & Planning,1,St. George,09-Oct-2026,03-Nov-2026,19-Nov-2026,563,Charles Taylor,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and names of two possible references by November 03, 2026. Applications should be sent to: OFFICE OF THE CHAIR via Email: jobs.geoplan@utoronto.ca.",160,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; hold regular office hours; oversee tutorials and supervise teaching assistants. Duties of this position shall be performed at the campus on which the position is located.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",200,Wednesday | 3:00 PM - 5:00 PM
 54145,8,TA,False,ACT245H1S L0101,Financial Principles for Actuarial Science I,"January 1, 2027 to April 30, 2027",185,Statistical Sciences,1,St. George,09-Oct-2026,02-Nov-2026,18-Nov-2026,395,Angela Niazmand,1@77.5 hrs,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. The deadline to submit your application is November 2, 2026. For more information, you may contact:
 Angela Niazmand
 Undergraduate and TA Administrator
@@ -357,6 +359,7 @@ Preparation for classes, preparation of written or audio-visual materials, desig
 Duties of this position shall be performed on the St. George Campus.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1@71.5 hrs,,"o	Applicants must demonstrate successful completion of an equivalent course in time series analysis 
 o	Experienced in performing time series analyses using R and R Studio and other software(s)",o	Experience with Markdown/Quarto,UG/SGS I/II - $53.92/hour (+4% vacation pay),,"Meeting Schedule: 	Lecture:	TU: 1 PM-3 PM & TH:6 PM-7 PM; MO: 5 PM-8 PM (tentative) 
 			Tutorials:	N/A"
+54143,9,CI,False,URB236H1S,A Multidisciplinary Introduction to Urban Studies II - Urban Challenges and Theoretical Application,"January 01, 2027 to April 30, 2027",62,Department of Geography & Planning,1,St. George,09-Oct-2026,03-Nov-2026,19-Nov-2026,563,Charles Taylor,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and names of two possible references by November 03, 2026. Applications should be sent to: OFFICE OF THE CHAIR via Email: jobs.geoplan@utoronto.ca.",160,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; supervise teaching assistants, and hold regular office hours. Duties of this position shall be performed at the campus on which the position is located.",Past teaching experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",200,Wednesday | 3:00 PM - 5:00 PM
 54144,9,CI,False,SSM1070,Course Instructor - SSM1070H: Sustainability Law and Policy,"January 01, 2027 to April 30, 2027",292,Master of Science in Sustainability Management ,2,UTM,09-Oct-2026,30-Oct-2026,15-Nov-2026,183,Shena Neermul,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"The application package for each course must include a single file in PDF format, containing the following in order: (1) Completed application form available online here: https://www.utm.utoronto.ca/imi/about-imi/employment and (2) Current resume. Please submit your application package to mscsm.utm@utoronto.ca. PDF file format name must be “LastName, FirstName_CourseCode”. Email subject must be “LastName, FirstName_CourseCode”.",35,"Instructors will lecture on the themes of the course; prepare the syllabus and lectures; develop and administer grading, course assignments, tests and exams; mark and invigilate exams; hold regular office hours and supervise teaching assistants. Duties of this position shall be performed at the campus on which the position is located.",The need to acquire experience is the more relevant criterion than past teaching experience in respect of this posted position.,1,,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,A PhD or a PhD in progress is required. Knowledge of the course topics is required. Completion of a professional development course on teaching preferred.,"Course Instructor (Half Course, FCE 0.50): Regular: $9442.98, First Appointment: $10553.15",60,Tuesday 9am - noon
 54113,8,TA,False,GGR101H1S ,Histories of Environmental Change,"January 6, 2027 to May 6, 2027",105,Geography & Planning,1,St. George,08-Oct-2026,29-Oct-2026,14-Nov-2026,439,Parveen Malli,160,,2027-05-06T00:00:00.000000Z,2027-01-06T00:00:00.000000Z,https://taships.iit.artsci.utoronto.ca/ggr/postings,330,"Marking, holding office hours, invigilating tests. Online support via Quercus. TAs are expected to be available at the St. George campus to complete duties required.",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,1-2,,"Background in physical geography, environmental science, or closely related subjects",,$53.92 ,,https://ttb.utoronto.ca/
 54114,8,TA,False,GGR112H1S ,"Geographies of Globalization, Development and Inequality","January 6, 2027 to May 6, 2027",105,Geography & Planning,1,St. George,08-Oct-2026,29-Oct-2026,14-Nov-2026,439,Parveen Malli,120,,2027-05-06T00:00:00.000000Z,2027-01-06T00:00:00.000000Z,https://taships.iit.artsci.utoronto.ca/ggr/postings,220,"Leading tutorial sessions, marking, holding office hours, and invigilating tests.",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,1-2,,"Background in human geography, international development studies, or closely related subjects.",,$53.92 ,,https://ttb.utoronto.ca/
@@ -378,6 +381,612 @@ Thurs, 4-5pm",,$53.92,,https://ttb.utoronto.ca/
 54128,8,TA,False,HIS349H1S,History of Britain: Struggle for Power,"January 1, 2027 to April 30, 2027",65,Department of History,1,St. George,08-Oct-2026,30-Oct-2026,15-Nov-2026,284,Christine Leonardo,117,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"To apply, please complete the online application form at https://taships.iit.artsci.utoronto.ca/his/postings. Applicants must have a valid UTORid and plan to be registered as a graduate students during the 2026-2027 Fall/Winter Academic Session. Before applying, we kindly remind you to ensure your CV is updated on the TA portal.",100,Grade assignments and exams; consult with supervisor/students; invigilate final exams; other duties as needed in consultation with instructor.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Minimum MA in History or related discipline; good knowledge of the subject matter; teaching experience in this or a similar course is preferred.,,$53.92 plus vacation pay,,
 54129,8,TA,False,HIS367H1S,"The British Home Front: Britain in the Second World War, 1939-45","January 1, 2027 to April 30, 2027",65,Department of History,1,St. George,08-Oct-2026,30-Oct-2026,15-Nov-2026,284,Christine Leonardo,94,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"To apply, please complete the online application form at https://taships.iit.artsci.utoronto.ca/his/postings. Applicants must have a valid UTORid and plan to be registered as a graduate students during the 2026-2027 Fall/Winter Academic Session. Before applying, we kindly remind you to ensure your CV is updated on the TA portal.",80,Grade assignments and exams; consult with supervisor/students; invigilate final exams; other duties as needed in consultation with instructor.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Minimum MA in History or related discipline; good knowledge of the subject matter; teaching experience in this or a similar course is preferred.,,$53.92 plus vacation pay,,
 54130,8,TA,False,HIS375H1S,Crime and Punishment in the Early Modern World,"January 1, 2027 to April 30, 2027",65,Department of History,1,St. George,08-Oct-2026,30-Oct-2026,15-Nov-2026,284,Christine Leonardo,70,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"To apply, please complete the online application form at https://taships.iit.artsci.utoronto.ca/his/postings. Applicants must have a valid UTORid and plan to be registered as a graduate students during the 2026-2027 Fall/Winter Academic Session. Before applying, we kindly remind you to ensure your CV is updated on the TA portal.",45,Grade assignments and exams; consult with supervisor/students; invigilate final exams; other duties as needed in consultation with instructor.,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Minimum MA in History or related discipline; good knowledge of the subject matter; teaching experience in this or a similar course is preferred.,,$53.92 plus vacation pay,,
+35725,8,TA,False,MIJ485,Vaccines and Immunity,"January 07, 2027 to April 30, 2027",75,Department of Molecular Genetics,1,St. George,07-Oct-2026,30-Oct-2026,15-Nov-2026,318,Abhishek Atre,70,,2027-04-30T23:00:00.000000Z,2027-01-07T18:56:00.000000Z,Please submit an application through the Talent Recruitment and Appointment Coordination System (TRACS): https://tracs.utoronto.ca/,40,"•	Attend lectures; meet with instructors
+•	Mark assignments
+•	Leading tutorial discussion on the material
+•	Proctoring the final exam & midterm
+•	Promptly answering student questions on Quercus and discussion boards",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Applicants will be considered on the basis of their practical familiarity with microbiology/
+bacteriology (or any other relevant background) as gained through some combination of coursework & research project work. Further details about the Department’s hiring policy are available in the Department office and in the CUPE, Local 3902 office.","Applicants will be considered on the basis of their practical familiarity with microbiology/
+bacteriology (or any other relevant background) as gained through some combination of coursework & research project work. Further details about the Department’s hiring policy are available in the Department office and in the CUPE, Local 3902 office.",53.92,,
+54300,8,TA,False,HLTA02H3S,Foundations in Health Studies,05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 100 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,240,"Duties for the position vary and will include:
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+Moderating discussion boards, developing materials, supporting group projects
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,Up to 3 positions,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+
+
+Advanced knowledge of:
+Foundational concepts in health research methodology, health policy, health systems, and health services; the Canadian health care system
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate or graduate student in health studies, public health, health policy, health services research, political science, sociology, nursing, or a closely related field; previously taken this course or a similar course.
+
+Graduate-level training or specialization in health policy, health systems, public health, health services research, population health, bioethics, or a related social science or health-science field.
+
+Previous experience in:
+
+Grading or teaching-assistant work in introductory health studies, public health, policy, or social science courses; supporting tutorials or discussion sections; or assisting students with research, policy analysis, or written assignments.
+
+Demonstrated strengths in:
+
+Explaining health systems, policy, research, and ethical concepts clearly to undergraduate students.
+
+Facilitating discussion on Canadian and international health care issues.
+
+Providing high-quality, rubric-based feedback on written and analytical work.
+
+Working effectively in a collaborative and coordinated teaching team in large courses (> 300 students).",$53.92/hr,,TBA
+54301,8,TA,False,HLTA20H3S,Physiology Through the Life Course: From Birth Through,05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 100 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,300,"Duties for the position vary and will include:
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+Additional course-specific duties may include:
+
+Leading exam review sessions and helping students build a working scientific vocabulary for cross-disciplinary health communication
+
+Moderating discussion boards and responding to conceptual questions about course material
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus.
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+
+
+Facilitating tutorials or review sessions on health research, health systems, policy, and ethics.
+
+Moderating discussion boards and responding to conceptual questions about course material.
+
+Supporting grading of written assignments, policy-oriented work, and exams using course rubrics.
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,Up to 2 positions,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+Advanced knowledge of:
+
+Human physiology, including prenatal and developmental physiology, childhood and adolescent development, and adult and aging physiology; the structure and function of the body’s major interacting systems (e.g., cardiovascular, respiratory, renal, nervous, endocrine, digestive, musculoskeletal, and reproductive); and homeostatic regulation across the lifespan.
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate or graduate student in the subject area; previously taken this course or a similar course
+
+Graduate-level training or specialization in physiology, cell and systems biology, kinesiology, biomedical science, neuroscience, or a closely related health-science field
+
+Previous experience in:
+
+Grading or teaching-assistant work in large first-year science courses; leading tutorials, labs, or review sessions in physiology, anatomy, or biology; or supporting introductory courses with a substantial scientific-vocabulary component
+
+Demonstrated strengths in:
+
+Explaining complex physiological concepts clearly to first-year students from a range of academic backgrounds
+
+Facilitating discussions, tutorials, or review sessions
+
+Providing high-quality, rubric-based feedback on short-answer and written work
+
+Working effectively in a collaborative teaching team
+
+Other assets:
+
+Familiarity with anatomy/physiology visualization tools or question banks; or experience supporting students in scientific writing and terminology
+
+
+
+Advanced knowledge of:
+Foundational concepts in health research methodology, health policy, health systems, and health services; the Canadian health care system; international comparisons of health systems; political and institutional influences on health policy; and ethical considerations in health research and practice.
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate or graduate student in health studies, public health, health policy, health services research, political science, sociology, nursing, or a closely related field; previously taken this course or a similar course.
+
+Graduate-level training or specialization in health policy, health systems, public health, health services research, population health, bioethics, or a related social science or health-science field.
+
+Previous experience in:
+
+Grading or teaching-assistant work in introductory health studies, public health, policy, or social science courses; supporting tutorials or discussion sections; or assisting students with research, policy analysis, or written assignments.
+
+Demonstrated strengths in:
+
+Explaining health systems, policy, research, and ethical concepts clearly to undergraduate students.
+
+Facilitating discussion on Canadian and international health care issues.
+
+Providing high-quality, rubric-based feedback on written and analytical work.
+
+Working effectively in a collaborative and coordinated teaching team in large courses (> 300 students). ",$53.92/hr,,TBA
+54302,8,TA,False,HLTB24H3S,Aging With Agility,05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 60 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,89,"Duties for the position vary and will include:
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+N/A
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,Up to 2 positions,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+
+
+Advanced knowledge of:
+Aging, gerontology, health and aging, social determinants of health, ageism, healthy aging, and/or contemporary issues affecting older adults; familiarity with interdisciplinary approaches to the study of aging and the ability to engage critically with scholarly literature.
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate student or graduate student in the subject area; previously taken this course or a similar course
+
+Completion of multiple undergraduate or graduate-level courses in health studies, gerontology, sociology, social sciences, public health, or related fields. Preference will be given to applicants with graduate-level training and demonstrated expertise in aging, health, or related areas
+
+Previous experience in:
+
+Facilitating tutorials, leading small-group discussions, grading written assignments, and providing constructive feedback to students. Experience working in undergraduate teaching environments is preferred.
+
+Demonstrated strengths in:
+
+Facilitating engaging and inclusive discussions; supporting student learning and participation; evaluating written work fairly and consistently; communicating effectively with students and instructional staff; and working collaboratively as part of a teaching team.
+
+Other assets:
+
+Experience with aging-related research, community engagement with older adults, teaching or learning support in health studies courses, and/or completion of university teaching and learning training programs. ",$53.92/hr,,TBA
+54303,8,TA,False,HLTC22H3S,"Health, Aging and the Life Cycle",05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 55 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,109,"Duties for the position vary and will include:
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+Supporting grading of written assignments, reflections, and exams using course rubrics.
+
+Participating in course content development or revision (e.g., assignments).
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1 position,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+
+
+Advanced knowledge of:
+Health and aging across the life course, including the transition from birth to older adulthood and derived effects on health; socio-cultural perspectives on aging; chronic and degenerative diseases; health status changes across the lifespan; and issues related to caring for older adults within health and social care contexts.
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate or graduate student in gerontology, aging studies, sociology of health, public health, nursing, or a closely related field; previously taken this course or a similar course.
+
+Graduate-level training or specialization in aging, gerontology, population health, health services research, public health, nursing, sociology, or a related health or social science field.
+
+Previous experience in:
+
+Grading or teaching-assistant work in health studies or social science courses; supporting courses with written assignments and course content development; or working with course content related to aging, chronic disease, health systems, or older adult care.
+
+Demonstrated strengths in:
+
+Providing high-quality, rubric-based feedback on written work.
+
+Working effectively and proactively in a collaborative teaching team.
+
+Other assets:
+Experience supporting students in academic writing, critical reflection, literature-based assignments, or applied discussions related to aging, chronic illness, caregiving, or health care for older adults. ",$53.92/hr,,TBA
+54304,8,TA,False,HLTC24H3S,Environment and Health,05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 55 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,60,"Duties for the position vary and will include:
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+developing materials, supporting group projects
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1 position,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+
+
+Advanced knowledge of:
+environmental change issues
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate student or graduate student in the subject area; previously taken this course or a similar course
+
+Masters in Environment & Health
+
+Previous experience in:
+
+Field-based environment & health research and knowledge translation
+
+Demonstrated strengths in:
+
+Providing high-quality feedback on scaffolded assignments
+
+Other assets:
+pedagogical training and/or pedagogical certificates ",$53.92/hr,,TBA
+54305,8,TA,False,HLTC27H3S,Community Health and Epidemiology,05/01/27 - 05/05/27,251,Health and Society,3,UTSC,07-Oct-2026,28-Oct-2026,13-Nov-2026,119,Louis Tentsos,Up to 40 hours,,2027-05-05T00:00:00.000000Z,2027-05-01T00:00:00.000000Z,Apply at https://www.utsc.utoronto.ca/webapps/cupehiring/dept/chs/app/ta,103,"Duties for the position vary and will include:
+
+
+
+Preparing for and supporting classes
+
+Leading or assisting with tutorials or other forms of classroom instruction
+
+Holding office hours in-person and/or online
+
+Grading assignments, tests, and examinations in accordance with provided rubrics
+
+Invigilating examinations
+
+Providing timely responses to student inquiries
+
+Supporting course administration using Quercus
+
+Attending team meetings and training sessions as required
+
+
+
+Additional course-specific duties may include:
+N/A
+
+
+
+Specific duties are defined in the Description of Duties and Allocation of Hours form by the instructor in charge of the course. Please note duties are performed in person at the UTSC campus. ",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1 position,,"Applicants must demonstrate the following:
+
+
+
+Strong knowledge of the subject matter
+
+Academic qualifications:
+Applicants must (a) hold a Bachelor's degree in a health-related discipline and (b) be currently enrolled in a graduate-level (Master's or Doctoral) program in a health-related discipline. Strong academic preparation in health studies is required, including appropriate background knowledge in the relevant subject or specialty.
+
+Ability to:
+
+Provide clear, constructive, and timely feedback that supports student learning and development
+
+Communicate professionally and responsively with instructors, teaching team members, and students
+
+Uphold a professional standard of conduct befitting an academic environment, including punctuality, reliable attendance, and a demeanor that models expectations for students
+
+Maintain accuracy and consistency when grading and handling course materials
+
+Manage time effectively and meet strict deadlines in a high-volume academic environment
+
+Technical proficiency:
+
+Quercus or equivalent learning management system
+
+Microsoft Office Suite: Word, Excel, PowerPoint
+
+Other requirements:
+
+Excellent written and oral communication skills in English
+
+Strong attention to detail and organizational skills
+
+Ability to uphold academic integrity and confidentiality ","Preference may be given to applicants who demonstrate:
+
+
+
+Advanced knowledge of:
+Epidemiologic study design, disease frequency and association, causation, and bias
+
+Academic qualifications:
+
+Multiple courses completed as an undergraduate student or graduate student in the subject area; previously taken this course or a similar course
+
+Graduate-level training in epidemiology or public health
+
+Previous experience in:
+
+Previous experience in large-class grading, teaching quantitative skills
+
+Demonstrated strengths in:
+
+Strengths facilitating discussions, tutorials, or labs; providing high-quality feedback on written or technical work; working effectively in collaborative teaching teams",$53.92/hr,,TBA
 54100,8,TA,False,APS106H1,Fundamentals of Computer Programming,"January 1, 2027 - April 30, 2027",334,Engineering First Year Office,1,St. George,07-Oct-2026,28-Oct-2026,13-Nov-2026,240,Mojgan Cossaro,73.5,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"For detailed posting information and application procedure, go to: http://uoft.me/fyojobs",650,"The successful candidates will facilitate high‐quality Tutorials and/or Labs for APS106, as well as grading duties as assigned.Teaching Assistant positions are available for APS 106, from January 2027 to April 2027. The contract will be for 73.5 hours, Includes 3.5 hours of exam invigilation during the exam period(April),",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,16,,"Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position. Good understanding of Python3 software language; strong, demonstrated interest in teaching/mentoring. Experience working with first‐year students is considered an asset. At least 16 Teaching Assistant ",,"$53.92 per hour + vacation pay. Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Please refer to https://ttb.utoronto.ca/ for the most current course schedule.
 54101,8,TA,False,MAT186H1,Calculus I,"January 1, 2027 - April 30, 2027",334,Engineering First Year Office,1,St. George,07-Oct-2026,28-Oct-2026,13-Nov-2026,240,Mojgan Cossaro,63.5,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"For detailed posting information and application procedure, go to: http://uoft.me/fyojobs",75,"The TA duties will include running weekly tutorials, completing test, assignment, and exam marking, and providing general support for the delivery of the course.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position. We are looking for an applicant with at least an M.Sc. in either Mathematics or Engineering, with experience teaching first‐year engineering calculus. The applicant should be very comfortable working with Quercus and be able to handle administrative duties that use its applications. Familiarity with pedagogical ideas of both calculus and online courses would be an asset.",,"$53.92 per hour + vacation pay. Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Please refer to https://ttb.utoronto.ca/ for the most current course schedule.
 54102,8,TA,False,MAT186H1,Calculus I,"January 1, 2027 - April 30, 2027",334,Engineering First Year Office,1,St. George,07-Oct-2026,28-Oct-2026,13-Nov-2026,240,Mojgan Cossaro,40,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"For detailed posting information and application procedure, go to: http://uoft.me/fyojobs",75,"The Junior TA duties centre around shadowing the activities of the full TA assigned to the course. The Junior TA will attend tutorials and follow along with the marking of assessments. Once they have gained some experience, they will begin to assist with grading assessments and running tutorials. It is expected that the Junior TA will run at least one tutorial during the semester. Other support for the delivery of the course may be required, as needed. ",The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position.,1,,"This position is intended as a training ground for future full TAs. Previous experience as a TA is not required . We are looking for an applicant who is interested in learning from an experienced TA and hopes to develop into a full TA or other teaching role. The need to acquire experience is the more relevant criterion than previous experience in respect of this posted position. The course is a T‐program offering of Calculus, so direct or indirect experience with the struggles of first‐ year engineering students is an important qualification, as is an understanding of what may work to help such students past their difficulties. ",,"$53.92 per hour + vacation pay. Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Please refer to https://ttb.utoronto.ca/ for the most current course schedule.
@@ -806,11 +1415,6 @@ Note, the availability of this position is entirely dependent on course enrollme
 53945,8,TA,True,CSC454H1F,The Business of Software,"October 1, 2026-December 31, 2026",31,Computer Science,1,St. George,24-Sep-2026,29-Sep-2026,15-Oct-2026,293,Patrina Seepersaud,60,,2026-12-31T00:00:00.000000Z,2026-10-01T00:00:00.000000Z,"Apply online at: https://tapp.cs.toronto.edu/hash/external/postings/NqAFAr3TbcvgomU4jMFyuy9G  In your application, you will be required to provide a CV and respond to screening questions by course found in the application questionaire For inquiries, contact: tacoord@cs.toronto.edu",40,For duties visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,see preferred qualifications,For qualifications visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,$53.92 (plus vacation pay),,see the University's Timetable Builder for section times: https://ttb.utoronto.ca
 53946,8,TA,True,CSC458H1F,Computer Networking Systems,"October 1, 2026-December 31, 2026",31,Computer Science,1,St. George,24-Sep-2026,29-Sep-2026,15-Oct-2026,293,Patrina Seepersaud,60,,2026-12-31T00:00:00.000000Z,2026-10-01T00:00:00.000000Z,"Apply online at: https://tapp.cs.toronto.edu/hash/external/postings/NqAFAr3TbcvgomU4jMFyuy9G  In your application, you will be required to provide a CV and respond to screening questions by course found in the application questionaire For inquiries, contact: tacoord@cs.toronto.edu",200,For duties visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,see preferred qualifications,For qualifications visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,$53.92 (plus vacation pay),,see the University's Timetable Builder for section times: https://ttb.utoronto.ca
 53947,8,TA,True,PRISM-Prep,"Preparation for Research through Immersion, Skills, and Mentorship","October 1, 2026-December 31, 2026",31,Computer Science,1,St. George,24-Sep-2026,29-Sep-2026,15-Oct-2026,293,Patrina Seepersaud,30,,2026-12-31T00:00:00.000000Z,2026-10-01T00:00:00.000000Z,"Apply online at: https://tapp.cs.toronto.edu/hash/external/postings/NqAFAr3TbcvgomU4jMFyuy9G  In your application, you will be required to provide a CV and respond to screening questions by course found in the application questionaire For inquiries, contact: tacoord@cs.toronto.edu",,For duties visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,see preferred qualifications,For qualifications visit official posting at: https://www.cs.toronto.edu/dcs/unit1/job_postings.html,$53.92 (plus vacation pay),,
-53949,8,TA,True,CHE299H1,Communication,"September 30, 2026 - December 31, 2026",242,Department of Chemical Engineering and Applied Chemistry,1,St. George,24-Sep-2026,28-Sep-2026,14-Oct-2026,484,Janine,35,,2026-12-31T00:00:00.000000Z,2026-09-30T00:00:00.000000Z,"Please complete the TA Application here:https://stg-tams.fase.utoronto.ca/TamsPortal/postings/che If during the application and/or selection process you require accommodation due to a disability, please contact ugradassist.chemeng@utoronto.ca",, The TA will be working with the professor to conduct tutorials and grading of assessments. ,Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"MASc or PhD candidate, preferably in Chemical Engineering and Applied Chemistry. Strong writing and editing skills and strong oral presentation skills required. Experience providing real time feedback on communication is an asset. Tutorials are a workshop-based format so the applicant should be comfortable facilitating a workshop-based class. Preference will be given to those with a background in Chemical Engineering due to the alignment with the course objectives and content. ",,"$53.92 per hour + vacation pay. Should rates stipulated in the Collective Agreement vary from rates stated in this posting, the rates stated in the Collective Agreement shall prevail.",,Tutorials: Monday 5:00 PM - 6:00 PM Please refer to https://ttb.utoronto.ca/ for the most current course schedule. 
-53950,8,TA,True,ESC203H1F,Engineering Science -Engineering and Society,"September 1, 2026 - December 31, 2026",87,Division of Engineering Science,1,St. George,24-Sep-2026,28-Sep-2026,14-Oct-2026,303,Diane Giang,50-160,,2026-12-31T00:00:00.000000Z,2026-09-01T00:00:00.000000Z,"A complete application must include a cover letter and resume that outlines relevant experience and evidence of strong communication skills in one Pdf document. Please apply on FASE TA Management system by the deadline. 
-
-https://tams.fase.utoronto.ca/TamsPortal/posting/1516.
-Candidates  may be contacted for an interview.  If during the application and/or selection process you require accommodation due to a disability, please contact Diane Giang at director.engsci@utoronto.ca. ",~200 total enrolment - each tutorial is ~ 20-23 students,"Run 1 or 2, 2-hr weekly tutorials; attend a 1 hour weekly team meeting (to be scheduled.); preferably attend most lectures (R11, F11); attend a seminar prep meeting weekly (tbd); assess written papers, exams, and student presentations. Engage a group of ~20-25 students in discussion about weekly topics that will range from ""engineering equity"" to ""sustainable development"". These topics will also be highlighted through the lectures and through assigned student readings. Grading will take place during tutorials, as well as through the marking of student presentations and written reflection pieces. Some TAs will be hired to focus primarily on the grading of written assessments.",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,"Applicants must have a broad spectrum of technical and non-technical interests and an interest in the intersection of science, engineering and society. �Must have a BA or BASc in a discipline such as Engineering, IHPST, Philosophy, or History. Must be able to adapt and respond to unexpected classroom situations, express, argue and defend opinions to both students and instructors and demonstrate strong communication skills in oral and written forms.",Previous experience in ESC203 or a similar course preferred.,$53.92 per hour + 4% or 6% vacation pay (depends on eligibility),,Please refer to https://ttb.utoronto.ca/ for the most current course schedule.
 53939,3,O,True,multiple JD courses,Assistant Invigilator,"October 1, 2026-September 30, 2027",324,Faculty of Law,1,St. George,24-Sep-2026,01-Oct-2026,17-Oct-2026,366,Jennifer Brown,"Hours of work are determined by the tests and examinations scheduled. As a result, minimum/maximum hours cannot be guaranteed",,2027-09-30T00:00:00.000000Z,2026-10-01T00:00:00.000000Z,"Applicants must submit a cover letter and resume clearly indicating any previous invigilation experience. University of Toronto student number and confirmation of registration status on ACORN is required. Applications should be addressed to the Asssistant Dean, Academic and be submitted by email to records.law@utoronto.ca. Incomplete applications will not be considered.",n/a,"Assistant Invigilators will distribute and collect test and examination materials, take attendance, collect signatures, escort students to and from washroom facilities, and monitor activities in the examination room. Responsibilities include, but are not limited to maintaining the integrity of tests and exams by adhering to departmental and university policies. Hours of work are determined by the tests and examinatins scheduled. Assistant Invigilators will not work more than 40 hours per week or more than 8 hours per day. Most JD exam invigilation shifts are from 8:30 am to 1 pm, or from 1 pm to 5:30 pm. Applicants are required to be able to invigilate exams both during the Fall exam period (December 2 through December 17, 2025) and the Winter exam period (April 13 through April 24, 2026.)",,15,"Applicants must be currently registered as students pursuing a degree at the University of Toronto and must continue to be registered as students throughout the duration of the appointment (thereby maintaining their eligibility for CUPE 3902 Unit 1 work). Any status change must be communicated to the JD program immediately, so that eligibility to continue in the appointment can be determined. This is an on-campus, in-person position. Applicants must be available for in-person invigilation shifts that take place in the evening and on weekends. Experience invigilating tests and exams is strongly preferred. Applicants must demonstrate a commitment to the principles of equity and inclusion.  Ability to manage and resolve difficult or sensitive situations effectively while maintaining boundaries, attention to detail and an ability to follow instructions closely, ability to demonstrate integrity and professionalism while remaining calm under pressure, conflict resolution, advanced communication skills (both oral and written), initiative, interpersonal skills, judgement, organizational skills, problem solving and resourcefulness,
 attention to detail, situational awareness and the ability to manage changing priorities, understanding of and the ability to apply relevant university policies, procedures and legislation, ability to collaborate with others and work in a team setting.  Students enrolled in the Faculty of Law’s JD, LLM, MSL, or GPLLM programs at the Faculty of Law are ineligible to apply for these positions.
 Preference will be given to applicants in the Faculty of Law’s SJD program. Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position. Candidates who are members of Indigenous, Black, racialized and LGBTQ2S+ communities, persons with disabilities, and other equity seeking groups are encouraged to apply.",,,"$35.53 + $1/hour worked on Saturday and Sunday shifts + 4% vacation pay. Please note that should rates stipulated in the collective agreement vary from rates stated in this posting, the rates stated in the collective agreement shall prevail.",,n/a
@@ -1168,9 +1772,6 @@ Experience grading assignments and providing feedback to students
 Excellent communication and organizational skills","Completion of an entry to practice program in Speech-Language Pathology
 Previous teaching experience is considered an asset
 Enrolled in doctoral or equivalent studies in a field related to speech-language pathology",$53.92/hour,,
-53791,8,TA,False,MBP1407H,Magnetic Resonance Imaging Overview,"Oct 19, 2026-Dec 31, 2026",74,Department of Medical Biophysics,1,St. George,08-Sep-2026,28-Sep-2026,14-Oct-2026,287,Merle Casci,27,,2026-12-31T00:00:00.000000Z,2026-10-19T00:00:00.000000Z,For detailed information on the application procedure go to  https://medbio.utoronto.ca/teaching-assistant-positions,16,"Leading hands-on laboratory. Fielding questions on lab reports from students. Marking written reports.
-
-",Previous experience is the more relevant criterion than the need to acquire experience in respect of this posted position.,1,,Enrolled in a graduate program in SGS at the UofT.  Preference given to MBP students with extensive (>2 years) graduate level experience in MRI physics and Siemens MRI data acquisition.  Strong skills in signal processing and Matlab/Python are preferred. ,Enrolled in a graduate program in SGS at the UofT.  Preference given to MBP students with extensive (>2 years) graduate level experience in MRI physics and Siemens MRI data acquisition.  Strong skills in signal processing and Matlab/Python are preferred. ,$53.92 per hour,, 
 53794,9,CI,False,STA220H1S L5101 ,The Practice of Statistics I,"January 1, 2027 to April 30, 2027",185,Statistical Sciences,1,St. George,08-Sep-2026,29-Sep-2026,15-Oct-2026,395,Angela Niazmand,,,2027-04-30T00:00:00.000000Z,2027-01-01T00:00:00.000000Z,"Application information is available at https://www.statistics.utoronto.ca/employment-opportunities/cupe-positions-unit-1. Applicants should submit a cover letter, C.V. (including previous teaching evaluations (if applicable)), and two references by September 29, 2026. Applications should be sent to:
 
 Angela Niazmand
